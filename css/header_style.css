@@ -1,254 +1,257 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --primary-color: #1a1a1a;
-    --accent-color: #ff3e3e;
-    --hover-color: #ff5252;
-    --text-color: #ffffff;
-    --button-bg: #2d2d2d;
-    --button-hover: #3d3d3d;
-    --transition-speed: 0.3s;
+  --primary-color: #1a1a1a;
+  --text-color: #ffffff;
+  --button-bg: #2d2d2d;
+  --button-hover: #3d3d3d;
+  --transition-speed: 0.3s;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    background-color: var(--primary-color);
-    padding: 1rem;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .imgLogo {
-    width: 180px;
-    height: 90px;
-    object-fit: contain;
-    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+  width: 180px;
+  height: 90px;
+  object-fit: contain;
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
 }
 
 .imgLogo:hover {
-    transform: scale(1.05) rotate(2deg);
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
+  transform: scale(1.05) rotate(2deg);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .navbar ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.125rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-    position: relative;
-    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  position: relative;
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Efecto hover para enlaces*/
 .navbar ul li a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: var(--text-color);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--text-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar ul li a:hover {
-    color: white;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
+  color: white;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 /*Subrayado*/
 .navbar ul li a:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-    background: #ffffff;
+  transform: scaleX(1);
+  transform-origin: left;
+  background: #ffffff;
 }
 
 /*Hover para Iniciar sesión y Carrito de compras*/
 .login-button:hover {
-    background-color: white;
-    color: var(--text-color);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: var(--text-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .carrito-button:hover {
-    background-color: white;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /*Hover para los íconos dentro de los botones*/
 .carrito-button:hover .carrito-icon,
 .login-button:hover .carrito-icon {
-    transform: scale(1.1) rotate(-10deg);
-    filter: brightness(0) invert(0);
+  transform: scale(1.1) rotate(-10deg);
+  filter: brightness(0) invert(0);
 }
 
 /*Botones*/
-.login-button, .carrito-button {
-    background-color: var(--button-bg);
-    color: var(--text-color);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.375rem;
-    font-size: 1.125rem;
-    cursor: pointer;
-    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.login-button,
+.carrito-button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.login-button::before, .carrito-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, var(--text-color) 0%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
+.login-button::before,
+.carrito-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, var(--text-color) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
 }
 
-.login-button:hover::before, .carrito-button:hover::before {
-    width: 300px;
-    height: 300px;
-    opacity: 0.2;
+.login-button:hover::before,
+.carrito-button:hover::before {
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
 }
 
-.login-button:hover, .carrito-button:hover {
-    background-color: var(--button-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(255, 62, 62, 0.3);
-    border-color: var(--text-color);
+.login-button:hover,
+.carrito-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 62, 62, 0.3);
+  border-color: var(--text-color);
 }
 
 .carrito-button {
-    position: relative;
-    padding: 0.75rem;
+  position: relative;
+  padding: 0.75rem;
 }
 
 .carrito-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    filter: brightness(0) invert(1);
-    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: brightness(0) invert(1);
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carrito-button:hover .carrito-icon {
-    transform: scale(1.1) rotate(-10deg);
-    filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  transform: scale(1.1) rotate(-10deg);
+  filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
 /*Animación de entrada*/
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .navbar ul li {
-    animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: calc(var(--item-index) * 0.1s);
-    opacity: 0;
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: calc(var(--item-index) * 0.1s);
+  opacity: 0;
 }
 
 /*Media queries*/
 @media (max-width: 991px) {
-    .container {
-        padding: 0 0.5rem;
-    }
+  .container {
+    padding: 0 0.5rem;
+  }
 
-    .navbar ul {
-        gap: 1rem;
-        justify-content: center;
-    }
+  .navbar ul {
+    gap: 1rem;
+    justify-content: center;
+  }
 
-    .navbar ul li a {
-        font-size: 1rem;
-        padding: 0.25rem 0.5rem;
-    }
+  .navbar ul li a {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
 
-    .login-button, .carrito-button {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-    }
+  .login-button,
+  .carrito-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 
-    .imgLogo {
-        width: 70px;
-        height: 70px;
-    }
+  .imgLogo {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .navbar {
-        width: 100%;
-    }
+  .navbar {
+    width: 100%;
+  }
 
-    .navbar ul {
-        justify-content: center;
-        width: 100%;
-        padding: 0.5rem 0;
-    }
+  .navbar ul {
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
 }

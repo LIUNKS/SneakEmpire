@@ -43,7 +43,7 @@ function loadHeader() {
 
   document.body.prepend(header);
 
-  // Lógica de interacción (como la que tenías antes)
+  /*// Lógica de interacción (como la que tenías antes)
   const menuIcono = document.getElementById("menu-icono");
   const navbar = document.querySelector(".navbar");
   const storedName = localStorage.getItem("name");
@@ -78,5 +78,7 @@ function loadHeader() {
   if (isLoggedIn) {
     document.getElementById("loginButton").style.display = "none";
     document.getElementById("welcomeMessage").style.display = "inline";
-  }
+  }*/
+
+ 
 }

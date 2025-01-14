@@ -48,9 +48,7 @@ function loadFooter() {
                     <li><a href="inicio.html" class="menu-link">Inicio</a></li>
                     <li><a href="Nosotros.html" class="menu-link">Nosotros</a></li>
                     <li><a href="RedesSociales.html" class="menu-link">Redes Sociales</a></li>
-                    <li><a href="Contactanos.html" class="menu-link">Ubícanos</a></li>
                     <li><a href="Contactanos.html" class="menu-link">Contáctanos</a></li>
-                    <li><a href="Contactanos.html" class="menu-link">Libro de Reclamaciones</a></li>
                     <li><a href="carrito.html" class="menu-link">Carrito</a></li>
                 </ul>
             </div>

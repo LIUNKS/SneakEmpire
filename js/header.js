@@ -9,34 +9,34 @@ function loadHeader() {
   header.innerHTML = `
       <div class="container">
         <div class="menu">
-          <a href="inicio.html"><img src="../img/logo.avif" alt="logo" class="imgLogo" /></a>
+          <a href="inicio.html" class="contenedor-imagen">
+            <img src="../img/logo.avif" alt="logo" class="imgLogo" />
+          </a>
           <div class="menu-icono" id="menu-icono">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <nav class="navbar">
-                    <ul>
-                        <li style="--item-index: 0"><a href="inicio.html">Inicio</a></li>
-                        <li style="--item-index: 1"><a href="Nosotros.html">Nosotros</a></li>
-                        <li style="--item-index: 2"><a href="Contactanos.html">Contacto</a></li>
-                        <li style="--item-index: 3"><a href="RedesSociales.html">Redes</a></li>
-                        <li style="--item-index: 4">
-                            <a href="login.html">
-                                <button class="login-button" aria-label="Iniciar Sesión">
-                                    Iniciar Sesión
-                                </button>
-                            </a>
-                        </li>
-                        <li style="--item-index: 5">
-                            <a href="carrito.html">
-                                <button class="carrito-button" aria-label="Carrito de compras">
-                                    <img src="../img/carrito_compras.avif" alt="" class="carrito-icon">
-                                </button>
-                            </a>
-                        </li>
-                    </ul>
-            </nav>
+          <nav class="navbar" id="navbar">
+            <ul>
+              <li style="--item-index: 0"><a href="inicio.html">Inicio</a></li>
+              <li style="--item-index: 1"><a href="Nosotros.html">Nosotros</a></li>
+              <li style="--item-index: 2"><a href="Contactanos.html">Contacto</a></li>
+              <li style="--item-index: 3"><a href="RedesSociales.html">Redes</a></li>
+              <li style="--item-index: 4">
+                <a href="login.html">
+                  <button class="login-button" aria-label="Iniciar Sesión">Iniciar Sesión</button>
+                </a>
+              </li>
+              <li style="--item-index: 5">
+                <a href="carrito.html">
+                  <button class="carrito-button" aria-label="Carrito de compras">
+                    <img src="../img/carrito_compras.avif" alt="" class="carrito-icon">
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     `;
@@ -79,6 +79,4 @@ function loadHeader() {
     document.getElementById("loginButton").style.display = "none";
     document.getElementById("welcomeMessage").style.display = "inline";
   }*/
-
- 
 }

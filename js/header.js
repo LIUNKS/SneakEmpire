@@ -24,7 +24,7 @@ function loadHeader() {
               <li style="--item-index: 2"><a href="Contactanos.html">Contacto</a></li>
               <li style="--item-index: 3"><a href="RedesSociales.html">Redes</a></li>
               <li style="--item-index: 4">
-                <a href="login.html">
+                <a href="../html/login.html">
                   <button class="login-button" aria-label="Iniciar Sesión">Iniciar Sesión</button>
                 </a>
               </li>

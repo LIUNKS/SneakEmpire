@@ -357,3 +357,25 @@ input:focus {
     transition: none !important;
   }
 }
+
+/*Mensaje de error*/
+.error-message {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #fef2f2;
+}
+
+.error-message.hidden {
+  display: none;
+}
+
+.error-icon {
+  color: #dc2626;
+}
+
+.error-message p {
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+  color: #991b1b;
+}

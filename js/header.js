@@ -20,7 +20,7 @@ function loadHeader() {
           <nav class="navbar" id="navbar">
             <ul>
               <li style="--item-index: 0"><a href="inicio.html">Inicio</a></li>
-              <li style="--item-index: 1"><a href="Nosotros.html">Nosotros</a></li>
+              <li style="--item-index: 1"><a href="../html/nosotros.html">Nosotros</a></li>
               <li style="--item-index: 2"><a href="Contactanos.html">Contacto</a></li>
               <li style="--item-index: 3"><a href="RedesSociales.html">Redes</a></li>
               <li style="--item-index: 4">

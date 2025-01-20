@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/icon.ico" />
+    <title>Sneak Empire</title>
+    <link rel="stylesheet" href="../css/contacto_style.css" />
+    <link rel="stylesheet" href="../css/header_style.css" />
+    <link rel="stylesheet" href="../css/footer_style.css" />
+  </head>
+  <body>
+    <script src="../js/header.js"></script>
+    <script>
+      loadHeader();
+    </script>
+
+    <main>
+      <section class="contact-hero">
+        <div class="hero-content">
+          <h1 class="fade-in">Contáctenos</h1>
+          <p class="fade-in">Nos encantaría escuchar tu opinión</p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2>Información de contacto</h2>
+              <div class="info-items">
+                <div class="info-item">
+                  <div class="info-icon">📍</div>
+                  <div class="info-content">
+                    <h3>Ubicación</h3>
+                    <p>C. H, San Martín de Porres 15316</p>
+                    <p>Lima, Perú</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">📞</div>
+                  <div class="info-content">
+                    <h3>Teléfono</h3>
+                    <p><a href="tel:+51936654321">(51) 936-654-321</a></p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">✉️</div>
+                  <div class="info-content">
+                    <h3>Correo electrónico</h3>
+                    <p>
+                      <a href="mailto:contacto@sneakempire.com"
+                        >contacot@sneakempire.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">🕒</div>
+                  <div class="info-content">
+                    <h3>Horarios</h3>
+                    <p>Lun - Vier: 9AM - 6PM</p>
+                    <p>Sab - Dom: 9AM - 3PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="socialMedia-links">
+                <h3>Síguenos</h3>
+                <div class="socialMedia-icons">
+                  <a href="https://www.instagram.com/nike" class="socialMedia-icon">
+                    <span class="icon">📱</span>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="https://www.facebook.com/nike" class="socialMedia-icon">
+                    <span class="icon">👥</span>
+                    <span>Facebook</span>
+                  </a>
+                  <a href="https://x.com/Nike" class="socialMedia-icon">
+                    <span class="icon">🐦</span>
+                    <span>Twitter</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-container">
+              <h2>Envíenos un mensaje</h2>
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Nombre completo</label>
+                  <input type="text" id="name" name="name" required />
+                  <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" id="email" name="email" required />
+                  <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Tema</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Selecciona un tema</option>
+                    <option value="general">Consulta general</option>
+                    <option value="support">Atención al cliente</option>
+                    <option value="business">Colaboración</option>
+                    <option value="other">Otro</option>
+                  </select>
+                  <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Mensaje</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <span class="error-message"></span>
+                </div>
+
+                <button type="submit" class="submit-button">
+                  <span class="button-text">Enviar mensaje</span>
+                  <span class="loading-spinner hidden"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <div class="container">
+          <h2>Encuéntrenos</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.6980297343207!2d-77.07339852506182!3d-11.926090788301348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1b99e1c6b0f%3A0xadae612660b91ceb!2sCorcinsa%20S.R.L.%20%7C%20San%20Mart%C3%ADn%20de%20Porres!5e0!3m2!1ses-419!2spe!4v1737410448809!5m2!1ses-419!2spe"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="notification" class="notification hidden">
+      <div class="notification-content">
+        <span class="notification-message"></span>
+        <button class="close-notification">×</button>
+      </div>
+    </div>
+    <script src="../js/footer.js"></script>
+    <script>
+      loadFooter();
+    </script>
+    <script src="../js/contacto.js"></script>
+  </body>
+</html>

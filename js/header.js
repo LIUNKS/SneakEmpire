@@ -21,8 +21,8 @@ function loadHeader() {
             <ul>
               <li style="--item-index: 0"><a href="inicio.html">Inicio</a></li>
               <li style="--item-index: 1"><a href="../html/nosotros.html">Nosotros</a></li>
-              <li style="--item-index: 2"><a href="/html/contacto.html">Contacto</a></li>
-              <li style="--item-index: 3"><a href="RedesSociales.html">Redes</a></li>
+              <li style="--item-index: 2"><a href="../html/contacto.html">Contacto</a></li>
+              <li style="--item-index: 3"><a href="../html/redes.html">Redes</a></li>
               <li style="--item-index: 4">
                 <a href="../html/login.html">
                   <button class="login-button" aria-label="Iniciar Sesión">Iniciar Sesión</button>

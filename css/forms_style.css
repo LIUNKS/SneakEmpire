@@ -14,9 +14,9 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #f3f4f6;
   color: #1f2937;
   line-height: 1.5;
+  background: transparent;
 }
 
 .container {
@@ -28,10 +28,11 @@ body {
 }
 
 .form-card {
-  background: white;
+  Backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   width: 100%;
   max-width: 28rem;
   overflow: hidden;
@@ -42,7 +43,7 @@ body {
 
 .form-card:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .header {
@@ -64,7 +65,7 @@ body {
   font-weight: 1200;
 }
 
-.header-link{
+.header-link {
   text-decoration: none;
   color: white;
 }
@@ -176,7 +177,8 @@ input:focus {
   transform: scale(1.1);
 }
 
-.forgot-password, .signup-link {
+.forgot-password,
+.signup-link {
   color: var(--primary-color);
   text-decoration: none;
   font-size: 0.875rem;
@@ -185,8 +187,9 @@ input:focus {
   transition: all 0.2s ease;
 }
 
-.forgot-password::after, .signup-link::after {
-  content: '';
+.forgot-password::after,
+.signup-link::after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 1px;
@@ -197,7 +200,8 @@ input:focus {
   transition: transform 0.3s ease;
 }
 
-.forgot-password:hover::after, .signup-link:hover::after {
+.forgot-password:hover::after,
+.signup-link:hover::after {
   transform: scaleX(1);
 }
 
@@ -289,6 +293,65 @@ input:focus {
   display: none;
 }
 
+/* Add these styles to your existing CSS */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #1a1a1a,
+    #2d2d2d,
+    #404040,
+    #2d2d2d,
+    #1a1a1a
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+.animated-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  animation: floatCircle 8s infinite;
+}
+
+.circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.circle:nth-child(3) {
+  width: 300px;
+  height: 300px;
+  left: 25%;
+  top: 50%;
+  animation-delay: 4s;
+}
+
 /* Animaciones */
 @keyframes slideUp {
   from {
@@ -339,9 +402,43 @@ input:focus {
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatCircle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-100px) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 0.5;
+  }
 }
 
 /* Media query*/
@@ -349,7 +446,7 @@ input:focus {
   .form {
     padding: 1.5rem;
   }
-  
+
   .header {
     padding: 1.25rem;
   }

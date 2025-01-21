@@ -1,83 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../img/icon.ico">
-  <title>Sneak Empire</title>
-  <link rel="stylesheet" href="../css/forms_style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="form-card" style="max-width: 28rem;">
-      <div class="header">
-        <div class="header-content">
-          <a href="../index.html" class="header-link">
-            <h1>Sneak Empire</h1>
-          </a>
-        </div>
-      </div>
-
-      <div id="signupContainer">
-        <form id="signupForm" class="form">
-          <div class="form-section">
-            <div class="form-group">
-              <label for="fullName">Nombre completo</label>
-              <input type="text" id="fullName" name="fullName" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-              <label for="password">Contraseña</label>
-              <div class="password-input-container">
-                <input type="password" id="password" name="password" required>
-                <button type="button" id="togglePassword" class="toggle-password">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                    <circle cx="12" cy="12" r="3"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="confirmPassword">Confirmar contraseña</label>
-              <div class="password-input-container">
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-                <button type="button" id="toggleConfirmPassword" class="toggle-password">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                    <circle cx="12" cy="12" r="3"/>
-                  </svg>
-                </button>
-              </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/icon.ico" />
+    <title>Sneak Empire</title>
+    <link rel="stylesheet" href="../css/forms_style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-card" style="max-width: 28rem">
+        <div class="header">
+          <div class="header-content">
+            <a href="../index.html" class="header-link">
+              <h1>Sneak Empire</h1>
+            </a>
           </div>
-
-          <button type="submit" class="submit-button">Crear cuenta</button>
-
-          <p class="signup-text">
-            ¿Ya tienes una cuenta? <a href="../html/login.html" class="signup-link">Inicia sesión</a>
-          </p>
-        </form>
-      </div>
-
-      <div id="signupError" class="error-message hidden">
-        <div class="error-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
         </div>
-        <p id="errorText">Error message will appear here.</p>
+
+        <div id="signupContainer">
+          <form id="signupForm" class="form">
+            <div class="form-section">
+              <div class="form-group">
+                <label for="fullName">Nombre completo</label>
+                <input type="text" id="fullName" name="fullName" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <div class="password-input-container">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="togglePassword"
+                    class="toggle-password"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Confirmar contraseña</label>
+                <div class="password-input-container">
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="toggleConfirmPassword"
+                    class="toggle-password"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-button">Crear cuenta</button>
+
+            <p class="signup-text">
+              ¿Ya tienes una cuenta?
+              <a href="../html/login.html" class="signup-link">Inicia sesión</a>
+            </p>
+          </form>
+        </div>
+
+        <div id="signupError" class="error-message hidden">
+          <div class="error-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+          </div>
+          <p id="errorText">Aquí aparecerá el mensaje de error</p>
+        </div>
+      </div>
+      <div class="animated-background"></div>
+      <div class="animated-circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
       </div>
     </div>
-  </div>
-  <script src="../js/registro.js"></script>
-</body>
+    <script src="../js/registro.js"></script>
+  </body>
 </html>

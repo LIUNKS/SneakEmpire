@@ -1,96 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/icon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/icon.ico" />
     <title>Sneak Empire</title>
-    <link rel="stylesheet" href="../css/forms_style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/forms_style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="form-card">
-            <div class="header">
-                <div class="header-content">
-                    <a href="../index.html" class="header-link">
-                        <h1>Sneak Empire</h1>
-                    </a>
-                </div>
-            </div>
-
-            <div id="loginContainer">
-                <form id="loginForm" class="form">
-                    <div class="form-section">
-                        <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="nombre@ejemplo.com"
-                                autocomplete="email"
-                                required
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <div class="password-header">
-                                <label for="password">Contraseña</label>
-                                <a href="/forgot-password" class="forgot-password">¿Olvidaste tu contraseña?</a>
-                            </div>
-                            <div class="password-input-container">
-                                <input 
-                                    type="password" 
-                                    id="password" 
-                                    name="password" 
-                                    autocomplete="current-password"
-                                    required
-                                >
-                                <button 
-                                    type="button" 
-                                    id="togglePassword" 
-                                    class="toggle-password"
-                                    aria-label="Toggle password visibility"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                                        <circle cx="12" cy="12" r="3"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-footer">
-                        <label class="remember-me">
-                            <input type="checkbox" id="remember" name="remember">
-                            <span>Recordar contraseña</span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="submit-button" id="submitButton">
-                        <span class="button-text">Iniciar Sesión</span>
-                        <span class="loading-spinner hidden"></span>
-                    </button>
-
-                    <p class="signup-text">
-                        ¿Eres nuevo? <a href="../html/registro.html" class="signup-link">Regístrate</a>
-                    </p>
-                </form>
-            </div>
-
-            <div id="loginError" class="error-message hidden" role="alert">
-                <div class="error-content">
-                    <svg class="error-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="12" y1="8" x2="12" y2="12"/>
-                        <line x1="12" y1="16" x2="12.01" y2="16"/>
-                    </svg>
-                    <p>Correo electrónico o contraseña inválidos</p>
-                </div>
-            </div>
+      <div class="form-card">
+        <div class="header">
+          <div class="header-content">
+            <a href="../index.html" class="header-link">
+              <h1>Sneak Empire</h1>
+            </a>
+          </div>
         </div>
+
+        <div id="loginContainer">
+          <form id="loginForm" class="form">
+            <div class="form-section">
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="nombre@ejemplo.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <div class="password-header">
+                  <label for="password">Contraseña</label>
+                  <a href="/forgot-password" class="forgot-password"
+                    >¿Olvidaste tu contraseña?</a
+                  >
+                </div>
+                <div class="password-input-container">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="current-password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="togglePassword"
+                    class="toggle-password"
+                    aria-label="Toggle password visibility"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <label class="remember-me">
+                <input type="checkbox" id="remember" name="remember" />
+                <span>Recordar contraseña</span>
+              </label>
+            </div>
+
+            <button type="submit" class="submit-button" id="submitButton">
+              <span class="button-text">Iniciar Sesión</span>
+              <span class="loading-spinner hidden"></span>
+            </button>
+
+            <p class="signup-text">
+              ¿Eres nuevo?
+              <a href="../html/registro.html" class="signup-link">Regístrate</a>
+            </p>
+          </form>
+        </div>
+
+        <div id="loginError" class="error-message hidden" role="alert">
+          <div class="error-content">
+            <svg
+              class="error-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+            <p>Correo electrónico o contraseña inválidos</p>
+          </div>
+        </div>
+      </div>
+      <div class="animated-background"></div>
+      <div class="animated-circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
     </div>
     <script src="../js/login.js"></script>
-</body>
+  </body>
 </html>

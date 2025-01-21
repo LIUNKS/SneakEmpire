@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon.ico">
+    <title>Sneak Empire</title>
+    <link rel="stylesheet" href="../css/redes_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
+</head>
+<body>
+    <script src="../js/header.js"></script>
+    <script>
+        loadHeader();
+    </script>
+
+    <main>
+        <section class="social-hero">
+            <div class="hero-content">
+                <h1 class="fade-in">Redes Sociales</h1>
+                <p class="fade-in">Manténgase conectado con Sneak Empire</p>
+            </div>
+        </section>
+
+        <section class="social-feed-section">
+            <div class="container">
+                <div class="feed-filters">
+                    <button class="filter-btn active" data-filter="all">Ver todas</button>
+                    <button class="filter-btn" data-filter="news">Noticias</button>
+                    <button class="filter-btn" data-filter="releases">Lanzamientos</button>
+                    <button class="filter-btn" data-filter="community">Comunidad</button>
+                </div>
+
+                <div class="social-feed" id="socialFeed">
+                    <!-- Posts will be dynamically inserted here -->
+                </div>
+
+                <button id="loadMoreBtn" class="load-more-btn">
+                    <span class="button-text">Load More</span>
+                    <span class="loading-spinner hidden"></span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Post Modal -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification hidden">
+        <div class="notification-content">
+            <span class="notification-message"></span>
+            <button class="close-notification">×</button>
+        </div>
+    </div>
+
+    <script src="../js/footer.js"></script>
+    <script>
+        loadFooter();
+    </script>
+
+    <script src="../js/redes.js"></script>
+</body>
+</html>

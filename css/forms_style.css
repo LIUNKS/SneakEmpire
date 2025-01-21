@@ -61,7 +61,12 @@ body {
 .header h1 {
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 1200;
+}
+
+.header-link{
+  text-decoration: none;
+  color: white;
 }
 
 .form {

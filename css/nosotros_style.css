@@ -95,7 +95,6 @@ body {
 /*Valores*/
 .values-section {
   padding: 5rem 0;
-  background-color: var(--secondary-color);
 }
 
 .values-grid {
@@ -130,7 +129,7 @@ body {
 /*Equipo*/
 .team-section {
   padding: 5rem 0;
-  background-color: white;
+  background-color: var(--secondary-color);
 }
 
 .team-grid {
@@ -168,8 +167,8 @@ body {
 /*Estadisticas*/
 .stats-section {
   padding: 5rem 0;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .stats-grid {
@@ -186,7 +185,7 @@ body {
 .stat-number {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: var(--accent-color);
+  color: #0e3368;
 }
 
 /* Animations */

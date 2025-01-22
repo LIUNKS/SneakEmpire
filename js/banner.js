@@ -7,9 +7,9 @@ function loadBanner() {
                     <path id="circle-text" d="M50,10 A40,40 0 0,1 50,90 A40,40 0 0,1 50,10" fill="none"/>
                 </defs>
                 <path d="M50,0 A50,50 0 0,1 50,100 A50,50 0 0,1 50,0" fill="none" stroke="white"/>
-                <text fill="white" font-size="8">
+                <text fill="white" font-size="8" aria-hidden="true">
                     <textPath xlink:href="#circle-text">
-                        NEW PRODUCT • NEW PRODUCT • NEW PRODUCT • NEW PRODUCT
+                        • NEW PRODUCT • NEW PRODUCT • NEW PRODUCT • NEW PRODUCT
                     </textPath>
                 </text>
             </svg>

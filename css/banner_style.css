@@ -90,6 +90,11 @@
 }
 
 @media (max-width: 768px) {
+
+    .new-product {
+        display: none;
+    }
+
     .banner {
         padding: 1rem;
         min-height: 600px;

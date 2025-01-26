@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        #slideCart {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 100vh;        
+            padding: 20px 20px 20px 30px;
+            justify-content: space-between;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 4px #000000;
+        }
+
+        #title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            height: 30px;
+            font-size: 12px;
+            line-height: 15px;
+            align-items: center;
+        }        
+
+        #buttonCloseSlide {
+            background-color: transparent;
+            border-color: transparent;
+            font-size: 20px;
+            border-radius: 40px;
+        }
+
+        #buttonCloseSlide:hover {
+            /* Cambia el fondo cuando el mouse está sobre el botón */
+            background: rgb(241, 241, 241);   
+        } 
+
+        #containerCard {
+            display: flex;
+            position: relative;
+            height: 100%;            
+            flex-direction: column;
+            overflow-y: auto; /* Esto agrega la barra de desplazamiento vertical */
+        }
+
+        .card {
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);            
+            height: 222px;
+            padding: 20px;
+            margin: 20px 0px 0px 0px;
+            justify-content: space-between;
+        }
+
+        .imageCard {
+            height: 115px;
+            width: 115px;            
+        }
+
+        #productInformation {
+            display: flex;
+            width: 325px;
+        }
+
+        #purchaseSummary {
+            display: flex;
+            flex-direction: column;  
+            align-items: center;    
+        }
+
+        #purchaseInformation {
+            width: 100%; /* Asegura que la tabla ocupe todo el espacio disponible */
+            border-collapse: collapse; /* Opcional, pero elimina los espacios entre las celdas */
+        }
+
+        #purchaseInformation td {
+            padding: 0; /* Elimina el padding de las celdas */
+        }
+
+        #purchaseInformation td:first-child {
+            text-align: left; /* Alinea el contenido de la primera celda a la izquierda */
+        }
+
+        #purchaseInformation td:last-child {
+            text-align: right; /* Alinea el contenido de la segunda celda a la derecha */
+        }
+        
+        #buttonContinuarCompra {
+            width: 470px;
+            height: 45px;
+
+            color: white;
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;   
+            margin: 0px 0px 10px 0px;   
+            font-size: 17px;  
+        }
+
+        #buttonContinuarCompra:hover {
+            background: rgba(0, 0, 0, 0.83);   
+        }    
+
+        #verCarrito {
+            color: #000000;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="slideCart">
+        <div id="title">
+            <h2>Mi carrito de compras</h2>
+            <button id="buttonCloseSlide">X</button>
+        </div>
+        <div id="containerCard">
+            <div class="card">
+                <div>
+                    <a href="">
+                        <img src="/img/post-2.webp" alt="" class="imageCard">
+                    </a>    
+                </div>                
+                <div id="productInformation">
+                    <div>
+                        <div id="name"></div>
+                        <div id="price"></div>
+                    </div>
+
+                    <div>
+                        <div id="color"></div>
+                        <img src="" alt="" id="delete">
+                    </div>
+
+                    <div>
+                        <div id="size"></div>
+                        <input type="number" min="1" max="100" step="1" id="amount">
+                    </div>
+                </div>
+            </div>  
+            <div class="card">
+                <div>
+                    <a href="">
+                        <img src="/img/post-2.webp" alt="" class="imageCard">
+                    </a>    
+                </div>                
+                <div id="productInformation">
+                    <div>
+                        <div id="name"></div>
+                        <div id="price"></div>
+                    </div>
+
+                    <div>
+                        <div id="color"></div>
+                        <img src="" alt="" id="delete">
+                    </div>
+
+                    <div>
+                        <div id="size"></div>
+                        <input type="number" min="1" max="100" step="1" id="amount">
+                    </div>
+                </div>
+            </div>  <div class="card">
+                <div>
+                    <a href="">
+                        <img src="/img/post-2.webp" alt="" class="imageCard">
+                    </a>    
+                </div>                
+                <div id="productInformation">
+                    <div>
+                        <div id="name"></div>
+                        <div id="price"></div>
+                    </div>
+
+                    <div>
+                        <div id="color"></div>
+                        <img src="" alt="" id="delete">
+                    </div>
+
+                    <div>
+                        <div id="size"></div>
+                        <input type="number" min="1" max="100" step="1" id="amount">
+                    </div>
+                </div>
+            </div>  <div class="card">
+                <div>
+                    <a href="">
+                        <img src="/img/post-2.webp" alt="" class="imageCard">
+                    </a>    
+                </div>                
+                <div id="productInformation">
+                    <div>
+                        <div id="name"></div>
+                        <div id="price"></div>
+                    </div>
+
+                    <div>
+                        <div id="color"></div>
+                        <img src="" alt="" id="delete">
+                    </div>
+
+                    <div>
+                        <div id="size"></div>
+                        <input type="number" min="1" max="100" step="1" id="amount">
+                    </div>
+                </div>
+            </div>            
+            <div class="card">
+                <div>
+                    <a href="">
+                        <img src="/img/post-2.webp" alt="" class="imageCard">
+                    </a>    
+                </div>                
+                <div id="productInformation">
+                    <div>
+                        <div id="name"></div>
+                        <div id="price"></div>
+                    </div>
+
+                    <div>
+                        <div id="color"></div>
+                        <img src="" alt="" id="delete">
+                    </div>
+
+                    <div>
+                        <div id="size"></div>
+                        <input type="number" min="1" max="100" step="1" id="amount">
+                    </div>
+                </div>
+            </div>             
+        </div>
+        <div id="purchaseSummary">       
+            <table id="purchaseInformation">
+                <tr>
+                    <td>
+                        <p>Costo de envio</p>
+                    </td>
+                    <td>
+                        <p id="shippingCost">Por calcular</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Total estimado</p>
+                    </td>
+                    <td>
+                        <p id="estimatedTotal">S/ 0.00</p>
+                    </td>
+                </tr>
+            </table>   
+            <button type="button" id="buttonContinuarCompra"><strong>CONTINUAR COMPRA</strong></button>
+            <a href="" id="verCarrito"><strong>VER CARRITO</strong></a>
+            <p></p>               
+        </div>        
+    </nav>
+</body>
+</html>

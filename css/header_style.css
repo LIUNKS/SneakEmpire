@@ -1,15 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --primary-color: #1a1a1a;
   --text-color: #ffffff;
   --button-bg: #2d2d2d;
   --button-hover: #3d3d3d;
   --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,9 +19,9 @@ body {
 }
 
 .header {
-  top: 0;
-  background-color: #1a1a1a;
+  background-color: var(--primary-color);
   padding: 1rem;
+  width: 100%;
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -39,9 +39,13 @@ body {
   align-items: center;
 }
 
+.contenedor-imagen {
+  display: block;
+}
+
 .imgLogo {
   width: 180px;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
@@ -62,7 +66,6 @@ body {
   list-style: none;
   align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
 }
 
 .navbar ul li a {
@@ -71,12 +74,10 @@ body {
   font-size: 1.125rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  white-space: nowrap;
   position: relative;
   transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*Efecto hover para enlaces*/
 .navbar ul li a::before {
   content: "";
   position: absolute;
@@ -96,43 +97,16 @@ body {
   transform: translateY(-2px);
 }
 
-/*Subrayado*/
 .navbar ul li a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
-  background: #ffffff;
 }
 
-/*Hover para Iniciar sesión y Carrito de compras*/
-.login-button:hover {
-  background-color: white;
-  color: var(--text-color);
-  border-color: var(--primary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.carrito-button:hover {
-  background-color: white;
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/*Hover para los íconos dentro de los botones*/
-.carrito-button:hover .carrito-icon,
-.login-button:hover .carrito-icon {
-  transform: scale(1.1) rotate(-10deg);
-  filter: brightness(0) invert(0);
-}
-
-/*Botones*/
 .login-button,
 .carrito-button {
   background-color: var(--button-bg);
   color: var(--text-color);
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   font-size: 1.125rem;
@@ -143,41 +117,9 @@ body {
   gap: 0.5rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.login-button::before,
-.carrito-button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: radial-gradient(circle, var(--text-color) 0%, transparent 70%);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-}
-
-.login-button:hover::before,
-.carrito-button:hover::before {
-  width: 300px;
-  height: 300px;
-  opacity: 0.2;
-}
-
-.login-button:hover,
-.carrito-button:hover {
-  background-color: var(--button-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(255, 62, 62, 0.3);
-  border-color: var(--text-color);
 }
 
 .carrito-button {
-  position: relative;
   padding: 0.75rem;
 }
 
@@ -188,12 +130,32 @@ body {
   transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.carrito-button:hover .carrito-icon {
-  transform: scale(1.1) rotate(-10deg);
-  filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+.login-button:hover,
+.carrito-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 62, 62, 0.3);
+  border-color: var(--text-color);
 }
 
-/*Animación de entrada*/
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 5px 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -211,15 +173,13 @@ body {
   opacity: 0;
 }
 
-/*Media queries*/
 @media (max-width: 991px) {
-  .container {
-    padding: 0 0.5rem;
+  .imgLogo {
+    width: 120px;
   }
 
   .navbar ul {
     gap: 1rem;
-    justify-content: center;
   }
 
   .navbar ul li a {
@@ -232,26 +192,79 @@ body {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
-
-  .imgLogo {
-    width: 70px;
-    height: 70px;
-  }
 }
 
 @media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    gap: 1rem;
+  .header {
+    position: fixed;
+    top: 0;
+  }
+
+  body::before {
+    content: "";
+    display: block;
+    height: calc(73px);
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 1001;
   }
 
   .navbar {
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    right: 0;
   }
 
   .navbar ul {
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -5px);
+  }
+
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 0.5rem 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
 }

@@ -98,7 +98,7 @@
     .banner {
         padding: 1rem;
         min-height: 600px;
-        background: linear-gradient(165deg, #000 40%, #fff 40%);
+        background: linear-gradient(165deg, #1a1a1a 40%, #fff 40%);
     }
 
     .shoe-image {

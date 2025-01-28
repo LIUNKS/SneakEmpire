@@ -44,8 +44,6 @@ body {
 }
 
 .imgLogo {
-  width: 180px;
-  height: auto;
   object-fit: contain;
   transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));

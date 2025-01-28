@@ -66,16 +66,70 @@
             padding: 20px;
             margin: 20px 0px 0px 0px;
             justify-content: space-between;
+            min-height: 222px;
         }
 
         .imageCard {
-            height: 115px;
-            width: 115px;            
+            height: 120px;
+            width: 120px;            
         }
 
         #productInformation {
-            display: flex;
-            width: 325px;
+            width: 320px;
+            display: grid;
+            grid-template-columns: 205px 80px;
+            grid-template-rows: 60px 60px 50px auto;
+            justify-content: space-between;            
+            align-items: start;            
+        }
+
+        #productInformation div {
+            word-wrap: break-word; /* Permite que el texto largo se ajuste */
+            width: 100%;
+        }
+        /*24 caracteres*/
+        #name {
+            font-size: 20px;
+            overflow-y: auto; /* Esto agrega la barra de desplazamiento vertical */
+            overscroll-behavior: contain; /* Evita que el scroll del padre se active */
+            max-height: 60px; /* Limita la altura del div */
+        }
+	
+        #name::-webkit-scrollbar {
+            width: 8px; /* Ancho de la barra de desplazamiento */
+        }
+
+        #name::-webkit-scrollbar-thumb {
+            background: black; /* Color del pulgar de la barra de desplazamiento */
+            border-radius: 4px; /* Radio del borde del pulgar */
+        }
+
+        #price {
+            font-size: 19px;
+        }
+
+        #color {
+            margin: 5px 0px 0px 0px;
+            font-size: 14px;
+        }
+
+        #size {
+            margin: 5px 0px 0px 0px;
+            font-size: 13px;
+        }
+
+        #amount {
+            width: 80px;
+            height: 30px;
+            font-size: 14px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        #delete {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
         }
 
         #purchaseSummary {
@@ -130,7 +184,7 @@
             <h2>Mi carrito de compras</h2>
             <button id="buttonCloseSlide">X</button>
         </div>
-        <div id="containerCard">
+        <div id="containerCard">                       
             <div class="card">
                 <div>
                     <a href="">
@@ -138,22 +192,15 @@
                     </a>    
                 </div>                
                 <div id="productInformation">
-                    <div>
-                        <div id="name"></div>
-                        <div id="price"></div>
-                    </div>
-
-                    <div>
-                        <div id="color"></div>
-                        <img src="" alt="" id="delete">
-                    </div>
-
-                    <div>
-                        <div id="size"></div>
-                        <input type="number" min="1" max="100" step="1" id="amount">
-                    </div>
+                    <div id="name"><strong>ada</strong></div>
+                    <div id="price"><Strong>12346789</Strong></div>
+                    <div id="color">BLANCO</div>
+                    <img src="" alt="" id="delete">
+                    <div id="size">TALA</div>
+                    <div class="relleno"></div>
+                    <input type="number" min="1" max="100" step="1" id="amount">
                 </div>
-            </div>  
+            </div>   
             <div class="card">
                 <div>
                     <a href="">
@@ -161,66 +208,15 @@
                     </a>    
                 </div>                
                 <div id="productInformation">
-                    <div>
-                        <div id="name"></div>
-                        <div id="price"></div>
-                    </div>
-
-                    <div>
-                        <div id="color"></div>
-                        <img src="" alt="" id="delete">
-                    </div>
-
-                    <div>
-                        <div id="size"></div>
-                        <input type="number" min="1" max="100" step="1" id="amount">
-                    </div>
+                    <div id="name"><strong>ada</strong></div>
+                    <div id="price"><Strong>12346789</Strong></div>
+                    <div id="color">BLANCO</div>
+                    <img src="" alt="" id="delete">
+                    <div id="size">TALA</div>
+                    <div class="relleno"></div>
+                    <input type="number" min="1" max="100" step="1" id="amount">
                 </div>
-            </div>  <div class="card">
-                <div>
-                    <a href="">
-                        <img src="/img/post-2.webp" alt="" class="imageCard">
-                    </a>    
-                </div>                
-                <div id="productInformation">
-                    <div>
-                        <div id="name"></div>
-                        <div id="price"></div>
-                    </div>
-
-                    <div>
-                        <div id="color"></div>
-                        <img src="" alt="" id="delete">
-                    </div>
-
-                    <div>
-                        <div id="size"></div>
-                        <input type="number" min="1" max="100" step="1" id="amount">
-                    </div>
-                </div>
-            </div>  <div class="card">
-                <div>
-                    <a href="">
-                        <img src="/img/post-2.webp" alt="" class="imageCard">
-                    </a>    
-                </div>                
-                <div id="productInformation">
-                    <div>
-                        <div id="name"></div>
-                        <div id="price"></div>
-                    </div>
-
-                    <div>
-                        <div id="color"></div>
-                        <img src="" alt="" id="delete">
-                    </div>
-
-                    <div>
-                        <div id="size"></div>
-                        <input type="number" min="1" max="100" step="1" id="amount">
-                    </div>
-                </div>
-            </div>            
+            </div>   
             <div class="card">
                 <div>
                     <a href="">
@@ -228,22 +224,30 @@
                     </a>    
                 </div>                
                 <div id="productInformation">
-                    <div>
-                        <div id="name"></div>
-                        <div id="price"></div>
-                    </div>
-
-                    <div>
-                        <div id="color"></div>
-                        <img src="" alt="" id="delete">
-                    </div>
-
-                    <div>
-                        <div id="size"></div>
-                        <input type="number" min="1" max="100" step="1" id="amount">
-                    </div>
+                    <div id="name"><strong>ada</strong></div>
+                    <div id="price"><Strong>12346789</Strong></div>
+                    <div id="color">BLANCO</div>
+                    <img src="" alt="" id="delete">
+                    <div id="size">TALA</div>
+                    <div class="relleno"></div>
+                    <input type="number" min="1" max="100" step="1" id="amount">
                 </div>
-            </div>             
+            </div> <div class="card">
+                <div>
+                    <a href="">
+                        <img src="/img/post-2.webp" alt="" class="imageCard">
+                    </a>    
+                </div>                
+                <div id="productInformation">
+                    <div id="name"><strong>ada</strong></div>
+                    <div id="price"><Strong>12346789</Strong></div>
+                    <div id="color">BLANCO</div>
+                    <img src="" alt="" id="delete">
+                    <div id="size">TALA</div>
+                    <div class="relleno"></div>
+                    <input type="number" min="1" max="100" step="1" id="amount">
+                </div>
+            </div> 
         </div>
         <div id="purchaseSummary">       
             <table id="purchaseInformation">

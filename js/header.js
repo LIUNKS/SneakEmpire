@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="container">
           <div class="menu">
               <a href="inicio.html" class="contenedor-imagen">
-                  <img src="../img/logo.avif" alt="logo" class="imgLogo" />
+                  <img src="../img/logo.avif" alt="logo" class="imgLogo" width="180" height="auto"/>
               </a>
               <nav class="navbar" id="navbar">
                   <ul>

@@ -16,17 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
                       <li style="--item-index: 2"><a href="../html/contacto.html">Contacto</a></li>
                       <li style="--item-index: 3"><a href="../html/redes.html">Redes</a></li>
                       <li style="--item-index: 4">
-                          <a href="../html/login.html">
-                              <button class="login-button" aria-label="Iniciar Sesión">Iniciar Sesión</button>
-                          </a>
+                        <a href="../html/login.html" class="login-button">Iniciar Sesión</a>
                       </li>
                       <li style="--item-index: 5">
-                          <a href="carrito.html">
-                              <button class="carrito-button" aria-label="Carrito de compras">
-                                  <img src="../img/carrito_compras.avif" alt="" class="carrito-icon">
-                              </button>
-                          </a>
-                      </li>
+                        <a href="carrito.html" class="carrito-button">
+                            <img src="../img/carrito_compras.avif" alt="Carrito de compras" class="carrito-icon">
+                        </a>
+                     </li>
                   </ul>
               </nav>
               <button class="hamburger" aria-label="Menú">

@@ -28,6 +28,8 @@ function generateCard(name, price, color, size, image, linkDetails, stock) {
     return card;
 }
 
-function insertCard() {
+function insertCard() { 
+    const card = generateCard("Camisa", "R$ 50,00", "Azul", "M", "https://via.placeholder.com/150", "details.html", 10);
+    document.getElementById("container").innerHTML += card;
 
 }

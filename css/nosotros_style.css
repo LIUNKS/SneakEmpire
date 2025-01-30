@@ -202,6 +202,11 @@ body {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.fade-in-2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
@@ -209,6 +214,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero {
+    height: 95vh;
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
   }

@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
   header.innerHTML = `
       <div class="container">
           <div class="menu">
-              <a href="inicio.html" class="contenedor-imagen">
-                  <img src="../img/logo.avif" alt="logo" class="imgLogo" width="180" height="auto"/>
+              <a href="javascript:document.location.reload()" class="contenedor-imagen">
+                  <img src="../img/logo.avif" alt="logo de la empresa Sneak Empire" class="imgLogo" width="180" height="auto"/>
               </a>
               <nav class="navbar" id="navbar">
                   <ul>
-                      <li style="--item-index: 0"><a href="inicio.html">Inicio</a></li>
+                      <li style="--item-index: 0"><a href="../html/inicio.html">Inicio</a></li>
                       <li style="--item-index: 1"><a href="../html/nosotros.html">Nosotros</a></li>
                       <li style="--item-index: 2"><a href="../html/contacto.html">Contacto</a></li>
                       <li style="--item-index: 3"><a href="../html/redes.html">Redes</a></li>

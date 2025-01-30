@@ -311,6 +311,11 @@ textarea:focus {
     color: var(--text-primary);
 }
 
+.fade-in-2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
 /*Animaciones*/
 @keyframes fadeInUp {
     to {

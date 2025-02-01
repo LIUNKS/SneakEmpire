@@ -19,7 +19,7 @@ function loadBanner() {
             <div class="discount-text">20%<br>OFF</div>
         </div>
 
-        <img src="" alt="Zapatilla deportiva" class="shoe-image">
+        <img src="../img/banner_imagen.webp" alt="Zapatilla deportiva" class="shoe-image">
 
         <div class="content">
             <h1 class="title">¡Pisa fuerte con estilo!</h1>

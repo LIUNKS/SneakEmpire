@@ -161,7 +161,7 @@ body {
 }
 
 .team-member p {
-  color: var(--text-secondary);
+  color: var(--primary-color);
 }
 
 /*Estadisticas*/

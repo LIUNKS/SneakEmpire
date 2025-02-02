@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "community",
       image: "../img/post-3.webp?height=400&width=600",
       avatar: "../img/avatar-cliente.webp?height=100&width=100",
-      author: "John D.",
+      author: "John Quispe",
       date: "Hace 2 días",
       content:
         "¡Acabo de recoger mis nuevas zapatillas de Sneak Empire! ¡El mejor servicio al cliente! 🙌",
@@ -77,12 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }" data-id="${post.id}">
                 <img src="${
                   post.image
-                }" alt="Imagen de la publicación" class="post-image">
+                }" alt="Imagen de la publicación ${post.id}" class="post-image">
                 <div class="post-content">
                     <div class="post-header">
                         <img src="${
                           post.avatar
-                        }" alt="Avatar" class="post-avatar">
+                        }" alt="Avatar ${post.author}" class="post-avatar">
                         <div class="post-info">
                             <h3>${post.author}</h3>
                             <span class="post-date">${post.date}</span>

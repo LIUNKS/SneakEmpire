@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+iniciar();
+function iniciar() {
   const socialFeed = document.getElementById("socialFeed");
   const loadMoreBtn = document.getElementById("loadMoreBtn");
   const filterBtns = document.querySelectorAll(".filter-btn");
@@ -265,4 +266,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Carga inicial
   loadPosts();
-});
+};

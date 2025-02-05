@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+iniciar();
+function iniciar() {
     const contactForm = document.getElementById('contactForm');
     const submitButton = contactForm.querySelector('.submit-button');
     const buttonText = submitButton.querySelector('.button-text');
@@ -136,4 +137,4 @@ document.addEventListener('DOMContentLoaded', function() {
     fadeElements.forEach(element => {
         observer.observe(element);
     });
-});
+};

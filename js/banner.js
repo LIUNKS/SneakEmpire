@@ -1,4 +1,4 @@
-function loadBanner() {
+export function loadBanner() {
     const bannerHTML = `
      <div class="banner">
         <div class="new-product">
@@ -34,6 +34,5 @@ function loadBanner() {
     bannerContainer.className = "banner-container";
     bannerContainer.innerHTML = bannerHTML;
 
-    // Insertar el contenedor en el body
-    document.body.appendChild(bannerContainer);
+    return bannerContainer;
 }

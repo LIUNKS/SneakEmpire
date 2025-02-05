@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,8 +52,27 @@
       position: relative;
       height: 100%;
       flex-direction: column;
-      overflow-y: auto;
       /* Esto agrega la barra de desplazamiento vertical */
+      overflow-y: auto;      
+      /* Evita que el scroll del padre se active */
+      overscroll-behavior: contain;      
+    }
+
+    /* Personalizar la barra de desplazamiento */
+    #containerCard::-webkit-scrollbar {
+      width: 5px;         
+    }
+
+    /* Estilo del "thumb" (la parte que se mueve) */
+    #containerCard::-webkit-scrollbar-thumb {
+      background-color: rgb(111, 111, 111); 
+      border-radius: 4px;
+    }
+
+    /* Estilo de la "track" (el fondo de la barra de desplazamiento) */
+    #containerCard::-webkit-scrollbar-track {
+      background: rgb(177, 177, 177); 
+      border-radius: 5px; 
     }
 
     .card {
@@ -76,7 +94,7 @@
       width: 120px;
     }
 
-    #productInformation {
+    .productInformation {
       width: 320px;
       display: grid;
       grid-template-columns: 205px 80px;
@@ -85,62 +103,50 @@
       align-items: start;
     }
 
-    #productInformation div {
+    .productInformation div {
       word-wrap: break-word;
       /* Permite que el texto largo se ajuste */
       width: 100%;
     }
 
-    /*24 caracteres*/
-    #name {
-      font-size: 20px;
-      overflow-y: auto;
-      /* Esto agrega la barra de desplazamiento vertical */
-      overscroll-behavior: contain;
-      /* Evita que el scroll del padre se active */
+    /*24 caracteres como maximo para que se vea bien*/
+    .name {
+      font-size: 16px;
       max-height: 60px;
-      /* Limita la altura del div */
+    }  
+
+    .price {
+      font-size: 16px;
     }
 
-    #name::-webkit-scrollbar {
-      width: 8px;
-      /* Ancho de la barra de desplazamiento */
-    }
-
-    #name::-webkit-scrollbar-thumb {
-      background: black;
-      /* Color del pulgar de la barra de desplazamiento */
-      border-radius: 4px;
-      /* Radio del borde del pulgar */
-    }
-
-    #price {
-      font-size: 19px;
-    }
-
-    #color {
+    .color {
       margin: 5px 0px 0px 0px;
-      font-size: 14px;
+      font-size: 12px;
     }
 
-    #size {
+    .deleteButton {      
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    .iconDelete {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .size {
       margin: 5px 0px 0px 0px;
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    #amount {
+    .amount {
       width: 80px;
       height: 30px;
       font-size: 14px;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 5px;
-    }
-
-    #delete {
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-    }
+    }  
 
     #purchaseSummary {
       display: flex;
@@ -150,9 +156,6 @@
 
     #purchaseInformation {
       width: 100%;
-      /* Asegura que la tabla ocupe todo el espacio disponible */
-      border-collapse: collapse;
-      /* Opcional, pero elimina los espacios entre las celdas */
     }
 
     #purchaseInformation td {
@@ -183,7 +186,7 @@
     }
 
     #buttonContinuarCompra:hover {
-      background: rgba(0, 0, 0, 0.83);
+      background: rgba(0, 0, 0, 0.83);      
     }
 
     #verCarrito {
@@ -193,7 +196,6 @@
     }
   </style>
 </head>
-
 <body>
   <nav id="slideCart">
     <div id="title">
@@ -207,64 +209,18 @@
             <img src="/img/post-2.webp" alt="" class="imageCard" />
           </a>
         </div>
-        <div id="productInformation">
-          <div id="name"><strong>ada</strong></div>
-          <div id="price"><strong>12346789</strong></div>
-          <div id="color">BLANCO</div>
-          <img src="" alt="" id="delete" />
-          <div id="size">TALA</div>
-          <div class="relleno"></div>
-          <input type="number" min="1" max="100" step="1" id="amount" />
+        <div class="productInformation">
+          <div class="name"><strong>ada</strong></div>
+          <div class="price"><strong>12346789</strong></div>
+          <div class="color">BLANCO</div>
+          <button type="button" class="deleteButton">
+            <img src="" alt="" class="iconDelete" />
+          </button>          
+          <div class="size">TALA</div>
+          <div></div> 
+          <input type="number" min="1" max="100" step="1" class="amount" />
         </div>
-      </div>
-      <div class="card">
-        <div>
-          <a href="">
-            <img src="/img/post-2.webp" alt="" class="imageCard" />
-          </a>
-        </div>
-        <div id="productInformation">
-          <div id="name"><strong>ada</strong></div>
-          <div id="price"><strong>12346789</strong></div>
-          <div id="color">BLANCO</div>
-          <img src="" alt="" id="delete" />
-          <div id="size">TALA</div>
-          <div class="relleno"></div>
-          <input type="number" min="1" max="100" step="1" id="amount" />
-        </div>
-      </div>
-      <div class="card">
-        <div>
-          <a href="">
-            <img src="/img/post-2.webp" alt="" class="imageCard" />
-          </a>
-        </div>
-        <div id="productInformation">
-          <div id="name"><strong>ada</strong></div>
-          <div id="price"><strong>12346789</strong></div>
-          <div id="color">BLANCO</div>
-          <img src="" alt="" id="delete" />
-          <div id="size">TALA</div>
-          <div class="relleno"></div>
-          <input type="number" min="1" max="100" step="1" id="amount" />
-        </div>
-      </div>
-      <div class="card">
-        <div>
-          <a href="">
-            <img src="/img/post-2.webp" alt="" class="imageCard" />
-          </a>
-        </div>
-        <div id="productInformation">
-          <div id="name"><strong>ada</strong></div>
-          <div id="price"><strong>12346789</strong></div>
-          <div id="color">BLANCO</div>
-          <img src="" alt="" id="delete" />
-          <div id="size">TALA</div>
-          <div class="relleno"></div>
-          <input type="number" min="1" max="100" step="1" id="amount" />
-        </div>
-      </div>
+      </div>          
     </div>
     <div id="purchaseSummary">
       <table id="purchaseInformation">
@@ -293,5 +249,4 @@
     </div>
   </nav>
 </body>
-
 </html>

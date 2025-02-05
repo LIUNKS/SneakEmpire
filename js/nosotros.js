@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+ inciar();
+ function inciar () {
   // Efecto de desvanecimiento al hacer scroll
   const fadeElements = document.querySelectorAll(".fade-in"); // Selecciona los elementos con la clase 'fade-in'
   const observer = new IntersectionObserver(
@@ -89,4 +90,4 @@ document.addEventListener("DOMContentLoaded", function () {
       card.style.transform = "translateY(0)"; // Restaura la posición de la tarjeta al quitar el mouse
     });
   });
-});
+};

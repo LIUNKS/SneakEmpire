@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     createOverlay();
     setUpMenuToggle();
     handleWindowResize();
-    loadStyles();
 });
   
 // Función para crear el header
@@ -15,15 +14,15 @@ function createHeader() {
     header.innerHTML = `
         <div class="container">
         <div class="menu">
-            <a href="inicio.html" class="contenedor-imagen">
+            <a class="contenedor-imagen">
             <img src="../img/logo.avif" alt="logo" class="imgLogo" width="180" height="auto"/>
             </a>
             <nav class="navbar" id="navbar">
             <ul>
-                <li style="--item-index: 0"><a onclick="loadHTML('../html/inicio.html')">Inicio</a></li>
-                <li style="--item-index: 1"><a href="../html/nosotros.html">Nosotros</a></li>
-                <li style="--item-index: 2"><a href="../html/contacto.html">Contacto</a></li>
-                <li style="--item-index: 3"><a href="../html/redes.html">Redes</a></li>
+                <li style="--item-index: 0"><a class="inicio">Inicio</a></li>
+                <li style="--item-index: 1"><a class="nosotros">Nosotros</a></li>
+                <li style="--item-index: 2"><a class="contacto">Contacto</a></li>
+                <li style="--item-index: 3"><a class="redes">Redes</a></li>
                 <li style="--item-index: 4">
                 <a href="../html/login.html">
                     <button class="login-button" aria-label="Iniciar Sesión">Iniciar Sesión</button>
@@ -48,7 +47,7 @@ function createHeader() {
     `;
 
     // Agregar el header al body
-    document.body.prepend(header);
+    document.body.prepend(header);   
 }
 
 // Función para crear el overlay
@@ -105,11 +104,4 @@ window.addEventListener('resize', () => {
     }
     }, 250);
 });
-}
-
-function loadStyles() {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = '../css/header_style.css';
-    document.head.appendChild(link);
 }

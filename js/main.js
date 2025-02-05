@@ -6,15 +6,10 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function addEventListener() {
-    const contenedorImagen = document.querySelector('.contenedor-imagen');
     const inicio = document.querySelector('.inicio');
     const nosotros = document.querySelector('.nosotros');
     const contacto = document.querySelector('.contacto');
     const redes = document.querySelector('.redes');
-
-    contenedorImagen.addEventListener('click', () => {    
-        loadInicio();
-    });
 
     inicio.addEventListener('click', () => {    
         loadInicio();
@@ -59,7 +54,7 @@ function loadContacto() {
 
 function loadRedes() {
     addStyles('../css/redes_style.css')
-    
+
     loadHTML('../html/redes.html').then(htmlContent => {
         updateMainInnerHTML(htmlContent);
         addScript('../js/redes.js');

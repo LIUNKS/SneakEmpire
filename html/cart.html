@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon.ico">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../css/carrito_compra_style.css">
+    <link rel="stylesheet" href="../css/header_style.css" />
+    <link rel="stylesheet" href="../css/footer_style.css" />
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="cart-title">Mi carrito de compras (1)</h1>
+
+            <div class="cashback">
+                <img src="../img/back arrow.png" alt="devolucion" class="return-arrow">
+                <span>Devolución gratuita hasta 30 días de recibir tu producto.</span>
+            </div>
+            <!-- Izquierda: Producto -->
+            <div class="producto-vista">
+                <div class="cart-content">
+                    <div class="cart-item">
+                        <img src="../img/zap_ejemplo.jpg" alt="zapatillas" class="img-1">
+                    </div>
+                </div>
+            </div>
+            <!-- Derecha: Resumen -->
+            <div class="resumen">
+                <div class="promotion-section">
+                    <h3>Aplicar código de promoción</h3>
+                    <p>Introduce el código de promoción</p>
+                    <div class="promotion-input">
+                        <input type="text"/>
+                        <button>APLICAR</button>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <div class="summary-item">
+                        <span>Costo de envío</span>
+                        <span>Por calcular</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Descuento</span>
+                        <span>- s/ 0.00</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total estimado</span>
+                        <span>s/ 97.30</span>
+                    </div>
+                    <small>Incluyendo IGV</small>
+                </div>
+
+                <div class="checkout-button">
+                    <button>CONTINUAR COMPRA</button>
+                </div>
+            </div>
+            <section class="security">
+                <h2>SIÉNTETE SEGURO CON TU COMPRA EN SNEAK EMPIRE</h2>
+                <div class="security-items">
+                    <div class="item">
+                        <span class="icon">v</span>
+                        <p>Envío gratis por compras mayores a S/. 250</p>
+                    </div>
+                    <div class="item">
+                        <span class="icon">v</span>
+                        <p>Hasta 6 cuotas sin intereses</p>
+                    </div>
+                    <div class="item">
+                        <span class="icon">v</span>
+                        <p>Devolución gratuita y fácil hasta en 30 días</p>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <script src="../js/footer.js"></script>
+    <script>
+        loadFooter();
+    </script>
+</body>
+
+</html>

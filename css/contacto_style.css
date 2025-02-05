@@ -28,7 +28,7 @@ body {
 
 /*Background*/
 .contact-hero {
-    height: 82vh;
+    height: 88vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('../img/background_contacto.webp');
     background-size: cover;
@@ -309,6 +309,11 @@ textarea:focus {
 
 .close-notification:hover {
     color: var(--text-primary);
+}
+
+.fade-in-2 {
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 
 /*Animaciones*/

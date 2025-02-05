@@ -14,7 +14,7 @@ function createHeader() {
     header.innerHTML = `
         <div class="container">
         <div class="menu">
-            <a class="contenedor-imagen">
+            <a href="javascript:document.location.reload()" class="contenedor-imagen">
             <img src="../img/logo.avif" alt="logo" class="imgLogo" width="180" height="auto"/>
             </a>
             <nav class="navbar" id="navbar">

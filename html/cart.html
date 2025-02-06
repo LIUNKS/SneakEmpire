@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/icon.ico">
     <title>Sneak Empire</title>
+    <link rel="stylesheet" href="../css/slide_cart_style.css">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/header_style.css" />
     <link rel="stylesheet" href="../css/footer_style.css" />
@@ -20,16 +21,10 @@
                 <img src="../img/backArrow.webp" alt="devolucion" class="return-arrow">
                 <span>Devolución gratuita hasta 30 días de recibir tu producto.</span>
             </div>
-            <div style="display: flex;">
+            <div class="information">
                 <!-- Izquierda: Producto -->
-                <div class="containerCart">
-                    <div class="producto-vista">
-                        <div class="cart-content">
-                            <div class="cart-item">
-                                <img src="../img/zap_ejemplo.jpg" alt="zapatillas" class="img-1">
-                            </div>
-                        </div>
-                    </div>
+                <div class="containerCard">
+                    
                 </div>                
                 <!-- Derecha: Resumen -->
                 <div class="resumen">
@@ -53,7 +48,7 @@
                         </div>
                         <div class="summary-total">
                             <span>Total estimado</span>
-                            <span>s/ 97.30</span>
+                            <span class="precioTotal">s/ 00.00</span>
                         </div>
                         <small>Incluyendo IGV</small>
                     </div>
@@ -82,11 +77,15 @@
                 </div>
             </section>
     </main>
-    <script src="../js/header.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        renderizarCart();
+    </script>
     <script src="../js/footer.js"></script>
     <script>
         loadFooter();
     </script>
+    <script src="../js/header.js"></script>    
 </body>
 
 </html>

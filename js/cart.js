@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   recepcionDatos(mockProducts);
   comprar();
+  addEventListenerTrash();
 });
 
 //CLASES
@@ -17,7 +18,7 @@ class Calzado {
   }
 }
 
-function renderizarSlideCard() {
+function renderizarSlideCart() {
   const containerCard = document.getElementById('containerCard');
   containerCard.innerHTML = '';
   for (let i = 0; i < cartUser.length; i++) {
@@ -35,8 +36,45 @@ function renderizarSlideCard() {
   actualizarPrecioSlide()
 }
 
+function insertSlideCard(card) {
+  const container = document.getElementById(`containerCard`)
+  container.appendChild(card);
+}
+
 function actualizarPrecioSlide() {
   const precioTotal = document.getElementById('estimatedTotal');
+  precioTotal.innerHTML = "S/ " + calcularPrecioTotal();
+}
+
+function renderizarCart() {
+  const containerCard = document.querySelector('.containerCard');
+  containerCard.innerHTML = '';
+  recepcionDatos(mockProducts);
+  comprar();
+  for (let i = 0; i < cartUser.length; i++) {
+    let card = generateCard(
+      cartUser[i].name, 
+      cartUser[i].price, 
+      cartUser[i].color, 
+      cartUser[i].size, 
+      cartUser[i].stock, 
+      cartUser[i].imageSrc, 
+      cartUser[i].linkDetails
+    );
+    insertCard(card);
+  }
+  actualizarPrecioCart()
+}
+
+function insertCard(card) {
+  const containerCard = document.querySelector('.containerCard');
+  containerCard.appendChild(card);
+}
+
+function actualizarPrecioCart() {
+  const precioTotal = document.querySelector('.precioTotal');
+  console.log(cartUser)
+  console.log(calcularPrecioTotal())
   precioTotal.innerHTML = "S/ " + calcularPrecioTotal();
 }
 
@@ -89,11 +127,6 @@ function comprar() {
   }
 }
 
-function insertSlideCard(card) {
-  const container = document.getElementById(`containerCard`)
-  container.appendChild(card);
-}
-
 function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
   const card = document.createElement(`div`);
   card.classList.add(`card`);
@@ -107,7 +140,7 @@ function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
       <div class="name"><strong>${name}</strong></div>
       <div class="price"><strong>S/${price}</strong></div>
       <div class="color">Color: ${color}</div>
-      <button type="button" class="deleteButton">
+      <button type="button" class="deleteButton" class=${name} class=${color} class=${size}>
           <img src="../img/trash.webp" alt="" class="iconDelete" />
       </button>          
       <div class="size">Talla: ${size}</div>
@@ -115,8 +148,31 @@ function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
       <input type="number" min="1" max="${stock}" step="1" class="amount" value="1"/>
       </div>
       `;
-
   return card;
+}
+
+function addEventListenerTrash() {
+  const buttonTrash = document.querySelector(`.deleteButton`);
+  console.log("A")
+
+  if (buttonTrash) {    
+    console.log("A")
+
+    buttonTrash.addEventListener(`click`, () => {
+      console.log("A")
+      for (let i = 0; i < buttonTrash.classList.length; i++) {
+        console.log(i)
+        buttonTrash.classList[i]
+        
+      }
+      //let product = new Calzado();
+      //deleteProduct(product, 0);
+      //renderizarCart();
+      //renderizarSlideCart();
+    });
+  } else {
+    console.error('No se encontró el botón de eliminar');
+  }
 }
 
 function loadSlideCart() {
@@ -157,10 +213,10 @@ function loadSlideCart() {
       </div>    
       `;
   document.body.appendChild(nav);   
-  addEventListener();
+  addEventListenerClose();
 }
 
-function addEventListener() {
+function addEventListenerClose() {
   const nav = document.getElementById(`slideCart`)
   const buttonClose = document.getElementById(`buttonCloseSlide`);
   buttonClose.addEventListener(`click`, () => {
@@ -205,7 +261,7 @@ const mockProducts = [
       "size": "40, 41, 42, 43",
       "stock": 15,
       "imageSrc": "../img/zapatilla_2.avif",
-      "linkDetails": "/product/air-force-1",
+      "linkDetails": "",
       "info": "Zapatilla Adidas Samba negra con detalles blancos y suela de goma.",
     },
     {
@@ -215,7 +271,7 @@ const mockProducts = [
       "size": "41, 42, 43, 44",
       "stock": 5,
       "imageSrc": "../img/zapatilla_3.avif",
-      "linkDetails": "/product/ultraboost",
+      "linkDetails": "",
       "info": "Zapatilla deportiva en tonos grises con suela beige y detalles blancos."
     },
     {
@@ -225,7 +281,7 @@ const mockProducts = [
       "size": "40, 41, 42, 44, 45",
       "stock": 8,
       "imageSrc": "../img/zapatilla_4.avif",
-      "linkDetails": "/product/rs-x3",
+      "linkDetails": "",
       "info": "Calzado deportivo negro con suela de goma marrón y diseño minimalista.",
     },
     {
@@ -235,7 +291,7 @@ const mockProducts = [
       "size": "42, 43, 44, 45",
       "stock": 12,
       "imageSrc": "../img/zapatilla_5.avif",
-      "linkDetails": "/product/990v5",
+      "linkDetails": "",
       "info": "Zapatilla urbana verde y negra y detalles en paneles superpuestos."
     },
     {
@@ -245,7 +301,7 @@ const mockProducts = [
       "size": "38, 39, 40, 41",
       "stock": 25,
       "imageSrc": "../img/zapatilla_6.avif",
-      "linkDetails": "/product/old-skool",
+      "linkDetails": "",
       "info": "Zapatilla urbana blanca, suela gruesa marrón y paneles superpuestos."
     },
     {
@@ -255,7 +311,7 @@ const mockProducts = [
       "size": "40, 41, 42, 43, 44",
       "stock": 18,
       "imageSrc": "../img/zapatilla_7.avif",
-      "linkDetails": "/product/react-element-55",
+      "linkDetails": "",
       "info": "Zapatilla blanca, diseño bajo y cordones blancos."
     },
     {
@@ -265,7 +321,7 @@ const mockProducts = [
       "size": "42, 43, 44, 45",
       "stock": 6,
       "imageSrc": "../img/zapatilla_8.avif",
-      "linkDetails": "/product/jordan-1-retro",
+      "linkDetails": "",
       "info": "Zapatillas deportivas azules con logo que simboliza la marca."
     },
     {
@@ -275,7 +331,7 @@ const mockProducts = [
       "size": "38, 39, 40, 41, 42",
       "stock": 20,
       "imageSrc": "../img/zapatilla_9.avif",
-      "linkDetails": "/product/jazz-original",
+      "linkDetails": "",
       "info": "Zapatillas urbanas blancas con tonos rojos y de caña baja."
     },
     {
@@ -285,7 +341,7 @@ const mockProducts = [
       "size": "40, 41, 42, 43",
       "stock": 10,
       "imageSrc": "../img/zapatilla_10.avif",
-      "linkDetails": "/product/classic-leather",
+      "linkDetails": "",
       "info": "Zapatillas urbanas negras con cordones blancos de caña media."
     },
     {
@@ -295,7 +351,7 @@ const mockProducts = [
       "size": "41, 42, 43, 44",
       "stock": 7,
       "imageSrc": "../img/zapatilla_11.avif",
-      "linkDetails": "/product/hover-phantom",
+      "linkDetails": "",
       "info": "Zapatillas completamente negras de caña baja."
     }
   ];

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  recepcionDatos(mockProducts);3
-  comprar()
+  recepcionDatos(mockProducts);
+  comprar();
 });
 
 //CLASES
@@ -15,6 +15,29 @@ class Calzado {
       this.imageSrc = imageSrc;  
       this.linkDetails = linkDetails;  
   }
+}
+
+function renderizarSlideCard() {
+  const containerCard = document.getElementById('containerCard');
+  containerCard.innerHTML = '';
+  for (let i = 0; i < cartUser.length; i++) {
+    let card = generateCard(
+      cartUser[i].name, 
+      cartUser[i].price, 
+      cartUser[i].color, 
+      cartUser[i].size, 
+      cartUser[i].stock, 
+      cartUser[i].imageSrc, 
+      cartUser[i].linkDetails
+    );
+    insertSlideCard(card);
+  }
+  actualizarPrecioSlide()
+}
+
+function actualizarPrecioSlide() {
+  const precioTotal = document.getElementById('estimatedTotal');
+  precioTotal.innerHTML = "S/ " + calcularPrecioTotal();
 }
 
 let cartUser = [];
@@ -50,6 +73,14 @@ function deleteProduct(product, amount) {
   }
 }
 
+function calcularPrecioTotal() {
+  let precioTotal = 0;
+  for (let i = 0; i < cartUser.length; i++) {
+    precioTotal += cartUser[i].price;    
+  }
+  return precioTotal;
+}
+
 // ESTA FUNCION SIMULA QUE EL CLIENTE ESTA COMPRANDO
 function comprar() {
   // -2 Porque no quiero que compre toda la tienda xd
@@ -58,7 +89,7 @@ function comprar() {
   }
 }
 
-function insertCard(card) {
+function insertSlideCard(card) {
   const container = document.getElementById(`containerCard`)
   container.appendChild(card);
 }

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   recepcionDatos(mockProducts);
   comprar();
-  addEventListenerTrash();
+  //addEventListenerTrash();
 });
 
 //CLASES
@@ -150,7 +150,7 @@ function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
       `;
   return card;
 }
-
+/*
 function addEventListenerTrash() {
   const buttonTrash = document.querySelector(`.deleteButton`);
   console.log("A")
@@ -173,7 +173,7 @@ function addEventListenerTrash() {
   } else {
     console.error('No se encontró el botón de eliminar');
   }
-}
+}*/
 
 function loadSlideCart() {
   const nav = document.createElement("nav");

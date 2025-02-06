@@ -1,3 +1,4 @@
+//JS que se encarga de registrar todos los productos con sus caracteristicas que se usaran para la pagina web
 const productos = [
     {
         id: 0,

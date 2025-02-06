@@ -8,12 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="../img/icon.ico" />
         <title>Sneak Empire</title>
-        <link rel="stylesheet" href="../css/nosotros_style.css" />
+
+        <!--Añade los estilos o CSS al header, footer e info-->
+
         <link rel="stylesheet" href="../css/header_style.css" />
         <link rel="stylesheet" href="../css/footer_style.css" />
         <link rel="stylesheet" href="../css/info_style.css"/> 
-
     </head>
+
     <body>
         <nav>
             <!--La 2da Barra-->
@@ -25,7 +27,7 @@
                 <b><li class="medio"><a class="letras"  href="">Accesorios</a></li></b>
                 <b><li class="medio"><a class="letras"  href="">Deportes</a></li></b>
 
-
+                <!--Boton de busqueda-->
                 <div class="busqueda">
                     <input class="tamaño" type="text" placeholder="Buscar" required>
                     <div class="btn">
@@ -34,23 +36,23 @@
                     </div>
                 </div>
             </ul>
-            
         </nav>
 
-
+        <!--Pestaña para cambiar de productos. Tiene relacion con el script inferior-->
         <select id="selectorProductos">
             <option value="">Selecciona un producto</option>
             <option value="0">Sport Casual Easy-on</option>
             <option value="1">Zapatillas Running Pro</option>
-            <!-- Agregar más opciones-->
+            <!--Agregar mas opciones es opcional-->
         </select>
 
 
-
+        <!--Contenido principal del html info-->
         <div class="cont">                            
             <div class="image-section">
                 <img src="" alt="Zapatillas">
             </div>
+
             <div class="detalles">
                 <h1></h1>
                 <p class="price"></p>
@@ -84,20 +86,23 @@
             </p>
         </div>
 
-        <script src="../js/footer.js"></script>
 
+        <!--Scripts que permiten cargar los footer y header-->
+        <script src="../js/footer.js"></script>
         <script>
         loadFooter();
         </script>
-
         <script src="../js/header.js"></script>
 
+
+        <!--Script que añade la funcion para mostrar distintos productos-->
         <script>
-            const selectorProductos = document.getElementById("selectorProductos");
+            const selectorProductos = document.getElementById("selectorProductos"); //Metodo de JS que permite obtener un elemento HTML a partir de su ID
+            //registra eventos 
             selectorProductos.addEventListener("change", function () {
-                const indice = parseInt(selectorProductos.value); // Obtener el índice seleccionado
-                if (!isNaN(indice)) {
-                    mostrarProducto(productos[indice]); // Mostrar el producto seleccionado
+                const indice = parseInt(selectorProductos.value); //Obtener el índice seleccionado
+                if (!isNaN(indice)) { //Numero valido?
+                    mostrarProducto(productos[indice]); //Mostrar el producto seleccionado
                 }
             });
         </script>

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="../html/login.html" class="login-button">Iniciar Sesión</a>
                       </li>
                       <li style="--item-index: 5">
-                        <a class="carrito-button">
+                        <a href="#" class="carrito-button">
                             <img src="../img/carrito_compras.avif" alt="Carrito de compras" class="carrito-icon">
                         </a>
                      </li>

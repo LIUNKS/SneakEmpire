@@ -143,18 +143,24 @@
   }  
 
   #purchaseSummary {
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   #purchaseInformation {
     width: 100%;
+    margin-bottom: 15px;
   }
 
-  #purchaseInformation td {
+  #purchaseInformation p {
     padding: 0;
-    /* Elimina el padding de las celdas */
+    margin: 8px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* O puede ser normal, bolder, lighter, o un número entre 100 y 900 */
+    color: rgb(48, 48, 48);
   }
 
   #purchaseInformation td:first-child {

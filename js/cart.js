@@ -1,103 +1,161 @@
 document.addEventListener('DOMContentLoaded', function() {
-    insertarDatosArtificial();
+  recepcionDatos(mockProducts);
+  comprar()
 });
-let totalPagar = 0;
-let cantProductos = 0;
-function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
-    const card = document.createElement(`div`);
-    card.classList.add(`card`);
-    card.innerHTML = `
-        <div>
-        <a href=${linkDetails}>
-            <img src=${imageSrc} alt="" class="imageCard" />
-        </a>
-        </div>
-        <div class="productInformation">
-        <div class="name"><strong>${name}</strong></div>
-        <div class="price"><strong>S/${price}</strong></div>
-        <div class="color">Color: ${color}</div>
-        <button type="button" class="deleteButton">
-            <img src="../img/trash.webp" alt="" class="iconDelete" />
-        </button>          
-        <div class="size">Talla: ${size}</div>
-        <div></div> 
-        <input type="number" min="1" max="${stock}" step="1" class="amount" value="1"/>
-        </div>
-        `;
 
-    return card;
+//CLASES
+class Calzado {
+  constructor(name, price, color, size, stock, info, imageSrc, linkDetails) {
+      this.name = name;          
+      this.price = price;        
+      this.color = color;       
+      this.size = size;          
+      this.stock = stock;   
+      this.info = info;     
+      this.imageSrc = imageSrc;  
+      this.linkDetails = linkDetails;  
+  }
 }
 
-function addEventListener() {
-    const nav = document.getElementById(`slideCart`)
-    const buttonClose = document.getElementById(`buttonCloseSlide`);
-    buttonClose.addEventListener(`click`, () => {
-        nav.style.visibility = `hidden`;
-    })
+let cartUser = [];
+function addProduct(product, amount) {
+  if(product.stock >= amount) {
+    for (let i = 0; i < amount; i++) {
+      cartUser.push(product);  
+    } 
+  }   
 }
-  
-function loadSlideCart() {
-    const nav = document.createElement("nav");
-    nav.id = "slideCart"
-    nav.innerHTML = `
-        <div id="title">
-        <h2>Mi carrito de compras</h2>
-        <button id="buttonCloseSlide">X</button>
-        </div>
-        <div id="containerCard">
-                
-        </div>
-        <div id="purchaseSummary">
-        <table id="purchaseInformation">
-            <tr>
-            <td>
-                <p>Costo de envio</p>
-            </td>
-            <td>
-                <p id="shippingCost">Por calcular</p>
-            </td>
-            </tr>
-            <tr>
-            <td>
-                <p>Total estimado</p>
-            </td>
-            <td>
-                <p id="estimatedTotal">S/ 0.00</p>
-            </td>
-            </tr>
-        </table>
-        <button type="button" id="buttonContinuarCompra">
-            <strong>CONTINUAR COMPRA</strong>
-        </button>
-        <a href="../html/cart.html" id="verCarrito"><strong>VER CARRITO</strong></a>
-        <p></p>
-        </div>    
-        `;
-    document.body.appendChild(nav);   
-    addEventListener();
+
+// Si amount recibe como parametro cero se procedera a borrar todo
+function deleteProduct(product, amount) {
+  if(amount === 0) {
+    for (let i = 0; i < cartUser.length; i++) {
+      if (cartUser[i].name === product.name && cartUser[i].color === product.color && cartUser[i].size === product.size) {
+        cartUser.splice(indice[i], 1);      
+      } 
+    }
+  }
+  let indice = [];
+  for (let i = 0; i < cartUser.length; i++) {
+    if (cartUser[i].name === product.name && cartUser[i].color === product.color && cartUser[i].size === product.size) {
+      indice.push(i);
+    } 
+  }
+  if (indice.length >= amount) {
+    for (let i = 0; i < indice.length; i++) {
+      cartUser.splice(indice[i], 1);      
+    }
+  } else {
+    console.error("no se puede borrar el prodcuto porque la cantidad que desea borrar execede el que hay en el carrito")
+  }
+}
+
+// ESTA FUNCION SIMULA QUE EL CLIENTE ESTA COMPRANDO
+function comprar() {
+  // -2 Porque no quiero que compre toda la tienda xd
+  for (let i = 0; i < almacen.length -2; i++) {
+    addProduct(almacen[i],1);
+  }
 }
 
 function insertCard(card) {
-    const container = document.getElementById(`containerCard`)
-    container.appendChild(card);
+  const container = document.getElementById(`containerCard`)
+  container.appendChild(card);
 }
 
-function calcularPrecio() {
-  mockProducts.forEach(product => {
-    totalPagar += product.price;
-  });
+function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
+  const card = document.createElement(`div`);
+  card.classList.add(`card`);
+  card.innerHTML = `
+      <div>
+      <a href=${linkDetails}>
+          <img src=${imageSrc} alt="" class="imageCard" />
+      </a>
+      </div>
+      <div class="productInformation">
+      <div class="name"><strong>${name}</strong></div>
+      <div class="price"><strong>S/${price}</strong></div>
+      <div class="color">Color: ${color}</div>
+      <button type="button" class="deleteButton">
+          <img src="../img/trash.webp" alt="" class="iconDelete" />
+      </button>          
+      <div class="size">Talla: ${size}</div>
+      <div></div> 
+      <input type="number" min="1" max="${stock}" step="1" class="amount" value="1"/>
+      </div>
+      `;
+
+  return card;
 }
 
-function insertarDatosArtificial() {
-    mockProducts.forEach(product => {
-        const card = generateCard(product.name, product.price, product.color, product.size, product.stock, product.imageSrc, product.linkDetails);
-        insertCard(card);
-    });
+function loadSlideCart() {
+  const nav = document.createElement("nav");
+  nav.id = "slideCart"
+  nav.innerHTML = `
+      <div id="title">
+      <h2>Mi carrito de compras</h2>
+      <button id="buttonCloseSlide">X</button>
+      </div>
+      <div id="containerCard">
+              
+      </div>
+      <div id="purchaseSummary">
+      <table id="purchaseInformation">
+          <tr>
+          <td>
+              <p>Costo de envio</p>
+          </td>
+          <td>
+              <p id="shippingCost">Por calcular</p>
+          </td>
+          </tr>
+          <tr>
+          <td>
+              <p>Total estimado</p>
+          </td>
+          <td>
+              <p id="estimatedTotal">S/ 0.00</p>
+          </td>
+          </tr>
+      </table>
+      <button type="button" id="buttonContinuarCompra">
+          <strong>CONTINUAR COMPRA</strong>
+      </button>
+      <a href="../html/cart.html" id="verCarrito"><strong>VER CARRITO</strong></a>
+      <p></p>
+      </div>    
+      `;
+  document.body.appendChild(nav);   
+  addEventListener();
 }
 
-let product = [];
+function addEventListener() {
+  const nav = document.getElementById(`slideCart`)
+  const buttonClose = document.getElementById(`buttonCloseSlide`);
+  buttonClose.addEventListener(`click`, () => {
+      nav.style.visibility = `hidden`;
+  })
+} 
 
+let almacen = [];
+// Como parametro recibe un json
+function recepcionDatos(products) {
+  for (let i = 0; i < products.length; i++) {
+    let calzado = new Calzado(
+      products[i].name, 
+      products[i].price, 
+      products[i].color, 
+      products[i].size, 
+      products[i].stock, 
+      //products[i].info, 
+      products[i].imageSrc, 
+      products[i].linkDetails)
 
+      almacen.push(calzado);
+  }
+}
+
+// SIMULACION DE BASE DE DATOS
 const mockProducts = [
     {
       "name": "Zapatillas Air Max 97",

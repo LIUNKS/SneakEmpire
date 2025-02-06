@@ -62,7 +62,7 @@ body {
 /*Historia*/
 .story-section {
   padding: 5rem 0;
-  background-color: white;
+  background-color: var(--secondary-color);
 }
 
 .section-title {
@@ -95,6 +95,7 @@ body {
 /*Valores*/
 .values-section {
   padding: 5rem 0;
+  background-color: var(--secondary-color);
 }
 
 .values-grid {
@@ -129,7 +130,7 @@ body {
 /*Equipo*/
 .team-section {
   padding: 5rem 0;
-  background-color: var(--secondary-color);
+  background-color: white;
 }
 
 .team-grid {
@@ -167,7 +168,7 @@ body {
 /*Estadisticas*/
 .stats-section {
   padding: 5rem 0;
-  background-color: var(--secondary-color);
+  background-color: white;
   color: var(--primary-color);
 }
 

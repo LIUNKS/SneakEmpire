@@ -91,8 +91,7 @@ carritoButton.addEventListener('click', () => {
         const slideCart = document.getElementById('slideCart');
         slideCart.style.visibility = "visible";
     } else {
-        
+        window.location.href = "./cart.html";
     }
 })
-
 });

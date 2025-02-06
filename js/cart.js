@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     insertarDatosArtificial();
 });
+let totalPagar = 0;
+let cantProductos = 0;
 function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
     const card = document.createElement(`div`);
     card.classList.add(`card`);
@@ -12,10 +14,10 @@ function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
         </div>
         <div class="productInformation">
         <div class="name"><strong>${name}</strong></div>
-        <div class="price"><strong>S/ ${price}</strong></div>
+        <div class="price"><strong>S/${price}</strong></div>
         <div class="color">Color: ${color}</div>
         <button type="button" class="deleteButton">
-            <img src="" alt="" class="iconDelete" />
+            <img src="../img/trash.webp" alt="" class="iconDelete" />
         </button>          
         <div class="size">Talla: ${size}</div>
         <div></div> 
@@ -80,12 +82,21 @@ function insertCard(card) {
     container.appendChild(card);
 }
 
+function calcularPrecio() {
+  mockProducts.forEach(product => {
+    totalPagar += product.price;
+  });
+}
+
 function insertarDatosArtificial() {
     mockProducts.forEach(product => {
         const card = generateCard(product.name, product.price, product.color, product.size, product.stock, product.imageSrc, product.linkDetails);
         insertCard(card);
     });
 }
+
+let product = [];
+
 
 const mockProducts = [
     {
@@ -94,8 +105,8 @@ const mockProducts = [
       "color": "Blanco/Plata",
       "size": "42, 43, 44, 45",
       "stock": 10,
-      "imageSrc": "../img/zapatillas.webp",
-      "linkDetails": "/product/air-max-97"
+      "imageSrc": "../img/zapatilla_1.avif",
+      "linkDetails": ""
     },
     {
       "name": "Zapatillas Nike Air Force 1",
@@ -103,7 +114,7 @@ const mockProducts = [
       "color": "Negro/Blanco",
       "size": "40, 41, 42, 43",
       "stock": 15,
-      "imageSrc": "../img/zapatilla-m.webp",
+      "imageSrc": "../img/zapatilla_2.avif",
       "linkDetails": "/product/air-force-1"
     },
     {
@@ -112,7 +123,7 @@ const mockProducts = [
       "color": "Azul/Blanco",
       "size": "41, 42, 43, 44",
       "stock": 5,
-      "imageSrc": "../img/product-3.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_3.avif",
       "linkDetails": "/product/ultraboost"
     },
     {
@@ -121,7 +132,7 @@ const mockProducts = [
       "color": "Rojo/Negro",
       "size": "40, 41, 42, 44, 45",
       "stock": 8,
-      "imageSrc": "../img/product-4.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_4.avif",
       "linkDetails": "/product/rs-x3"
     },
     {
@@ -130,7 +141,7 @@ const mockProducts = [
       "color": "Gris/Negro",
       "size": "42, 43, 44, 45",
       "stock": 12,
-      "imageSrc": "../img/product-5.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_5.avif",
       "linkDetails": "/product/990v5"
     },
     {
@@ -139,7 +150,7 @@ const mockProducts = [
       "color": "Blanco/Negro",
       "size": "38, 39, 40, 41",
       "stock": 25,
-      "imageSrc": "../img/product-6.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_6.avif",
       "linkDetails": "/product/old-skool"
     },
     {
@@ -148,7 +159,7 @@ const mockProducts = [
       "color": "Gris/Amarillo",
       "size": "40, 41, 42, 43, 44",
       "stock": 18,
-      "imageSrc": "../img/product-7.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_7.avif",
       "linkDetails": "/product/react-element-55"
     },
     {
@@ -157,7 +168,7 @@ const mockProducts = [
       "color": "Rojo/Blanco/Negro",
       "size": "42, 43, 44, 45",
       "stock": 6,
-      "imageSrc": "../img/product-8.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_8.avif",
       "linkDetails": "/product/jordan-1-retro"
     },
     {
@@ -166,7 +177,7 @@ const mockProducts = [
       "color": "Azul/Gris",
       "size": "38, 39, 40, 41, 42",
       "stock": 20,
-      "imageSrc": "../img/product-9.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_9.avif",
       "linkDetails": "/product/jazz-original"
     },
     {
@@ -175,7 +186,7 @@ const mockProducts = [
       "color": "Blanco/Beige",
       "size": "40, 41, 42, 43",
       "stock": 10,
-      "imageSrc": "../img/product-10.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_10.avif",
       "linkDetails": "/product/classic-leather"
     },
     {
@@ -184,7 +195,7 @@ const mockProducts = [
       "color": "Negro/Gris",
       "size": "41, 42, 43, 44",
       "stock": 7,
-      "imageSrc": "../img/product-11.webp?height=400&width=600",
+      "imageSrc": "../img/zapatilla_11.avif",
       "linkDetails": "/product/hover-phantom"
     }
   ];

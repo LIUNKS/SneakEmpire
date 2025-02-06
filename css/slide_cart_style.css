@@ -79,6 +79,7 @@
     margin: 20px 0px 0px 0px;
     justify-content: space-between;
     min-height: 222px;
+    gap: 10px;
   }
 
   .imageCard {
@@ -90,7 +91,7 @@
     width: 320px;
     display: grid;
     grid-template-columns: 205px 80px;
-    grid-template-rows: 60px 60px 50px auto;
+    grid-template-rows: 60px 40px 40px auto;
     justify-content: space-between;
     align-items: start;
   }
@@ -138,6 +139,7 @@
     font-size: 14px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    margin-bottom: 10px;
   }  
 
   #purchaseSummary {

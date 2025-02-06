@@ -164,7 +164,8 @@ const mockProducts = [
       "size": "42, 43, 44, 45",
       "stock": 10,
       "imageSrc": "../img/zapatilla_1.avif",
-      "linkDetails": ""
+      "linkDetails": "",
+      "detalles": "Parte superior de piel resistente con velcros y de color blanco.",
     },
     {
       "name": "Zapatillas Nike Air Force 1",
@@ -173,7 +174,8 @@ const mockProducts = [
       "size": "40, 41, 42, 43",
       "stock": 15,
       "imageSrc": "../img/zapatilla_2.avif",
-      "linkDetails": "/product/air-force-1"
+      "linkDetails": "/product/air-force-1",
+      "detalles": "Zapatilla Adidas Samba negra con detalles blancos y suela de goma.",
     },
     {
       "name": "Zapatillas Adidas Ultraboost",
@@ -182,7 +184,8 @@ const mockProducts = [
       "size": "41, 42, 43, 44",
       "stock": 5,
       "imageSrc": "../img/zapatilla_3.avif",
-      "linkDetails": "/product/ultraboost"
+      "linkDetails": "/product/ultraboost",
+      "detalles": "Zapatilla deportiva en tonos grises con suela beige y detalles blancos."
     },
     {
       "name": "Zapatillas Puma RS-X3",
@@ -191,7 +194,8 @@ const mockProducts = [
       "size": "40, 41, 42, 44, 45",
       "stock": 8,
       "imageSrc": "../img/zapatilla_4.avif",
-      "linkDetails": "/product/rs-x3"
+      "linkDetails": "/product/rs-x3",
+      "detalles": "Calzado deportivo negro con suela de goma marrón y diseño minimalista.",
     },
     {
       "name": "Zapatillas New Balance 990v5",
@@ -200,7 +204,8 @@ const mockProducts = [
       "size": "42, 43, 44, 45",
       "stock": 12,
       "imageSrc": "../img/zapatilla_5.avif",
-      "linkDetails": "/product/990v5"
+      "linkDetails": "/product/990v5",
+      "detalles": "Zapatilla urbana verde y negra y detalles en paneles superpuestos."
     },
     {
       "name": "Zapatillas Vans Old Skool",
@@ -209,7 +214,8 @@ const mockProducts = [
       "size": "38, 39, 40, 41",
       "stock": 25,
       "imageSrc": "../img/zapatilla_6.avif",
-      "linkDetails": "/product/old-skool"
+      "linkDetails": "/product/old-skool",
+      "detalles": "Zapatilla urbana blanca, suela gruesa marrón y paneles superpuestos."
     },
     {
       "name": "Zapatillas Nike React Element 55",
@@ -218,7 +224,8 @@ const mockProducts = [
       "size": "40, 41, 42, 43, 44",
       "stock": 18,
       "imageSrc": "../img/zapatilla_7.avif",
-      "linkDetails": "/product/react-element-55"
+      "linkDetails": "/product/react-element-55",
+      "detalles": "Zapatilla blanca, diseño bajo y cordones blancos."
     },
     {
       "name": "Zapatillas Jordan 1 Retro",
@@ -227,7 +234,8 @@ const mockProducts = [
       "size": "42, 43, 44, 45",
       "stock": 6,
       "imageSrc": "../img/zapatilla_8.avif",
-      "linkDetails": "/product/jordan-1-retro"
+      "linkDetails": "/product/jordan-1-retro",
+      "detalles": "Zapatillas deportivas azules con logo que simboliza la marca."
     },
     {
       "name": "Zapatillas Saucony Jazz Original",
@@ -236,7 +244,8 @@ const mockProducts = [
       "size": "38, 39, 40, 41, 42",
       "stock": 20,
       "imageSrc": "../img/zapatilla_9.avif",
-      "linkDetails": "/product/jazz-original"
+      "linkDetails": "/product/jazz-original",
+      "detalles": "Zapatillas urbanas blancas con tonos rojos y de caña baja."
     },
     {
       "name": "Zapatillas Reebok Classic Leather",
@@ -245,7 +254,8 @@ const mockProducts = [
       "size": "40, 41, 42, 43",
       "stock": 10,
       "imageSrc": "../img/zapatilla_10.avif",
-      "linkDetails": "/product/classic-leather"
+      "linkDetails": "/product/classic-leather",
+      "detalles": "Zapatillas urbanas negras con cordones blancos de caña media."
     },
     {
       "name": "Zapatillas Under Armour HOVR Phantom",
@@ -254,6 +264,7 @@ const mockProducts = [
       "size": "41, 42, 43, 44",
       "stock": 7,
       "imageSrc": "../img/zapatilla_11.avif",
-      "linkDetails": "/product/hover-phantom"
+      "linkDetails": "/product/hover-phantom",
+      "detalles": "Zapatillas completamente negras de caña baja."
     }
   ];

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="../html/login.html" class="login-button">Iniciar Sesión</a>
                       </li>
                       <li style="--item-index: 5">
-                        <a href="carrito.html" class="carrito-button">
+                        <a class="carrito-button">
                             <img src="../img/carrito_compras.avif" alt="Carrito de compras" class="carrito-icon">
                         </a>
                      </li>
@@ -84,4 +84,15 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       }, 250);
   });
+
+const carritoButton = document.querySelector('.carrito-button');
+carritoButton.addEventListener('click', () => {
+    if (window.innerWidth > 768) {
+        const slideCart = document.getElementById('slideCart');
+        slideCart.style.visibility = "visible";
+    } else {
+        
+    }
+})
+
 });

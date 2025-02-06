@@ -167,6 +167,7 @@ body {
     .containerCard {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .information {
         display: flex;

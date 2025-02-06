@@ -189,7 +189,7 @@ body {
   color: #0e3368;
 }
 
-/* Animations */
+/* Animaciones */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -213,7 +213,7 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive Design */
+/*Diseño responsivo*/
 @media (max-width: 768px) {
   .hero {
     height: 95vh;

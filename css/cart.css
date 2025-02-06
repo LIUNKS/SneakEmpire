@@ -163,3 +163,26 @@ body {
     margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+    .resumen {
+      max-width: 90%;
+      padding: 1rem;
+      align-items: stretch;
+    }
+
+    .promotion-input {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .checkout-button button {
+        flex-direction: column;
+        font-size: auto;
+    }
+
+    .security-items {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }

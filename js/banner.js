@@ -29,7 +29,7 @@ function loadBanner() {
     </div>
     `;
 
-    // Crear un contenedor específico para el banner
+    // Crear Contenedor
     const bannerContainer = document.createElement('div');
     bannerContainer.className = "banner-container";
     bannerContainer.innerHTML = bannerHTML;

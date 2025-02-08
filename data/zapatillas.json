@@ -1,0 +1,113 @@
+[
+    {
+      "name": "Zapatillas Air Max 97",
+      "price": 120,
+      "color": "Blanco/Plata",
+      "size": [42, 43, 44, 45],
+      "stock": 10,
+      "imageSrc": "../img/zapatilla_1.avif",
+      "linkDetails": "",
+      "info": "Parte superior de piel resistente con velcros y de color blanco."
+    },
+    {
+      "name": "Zapatillas Nike Air Force 1",
+      "price": 100,
+      "color": "Negro/Blanco",
+      "size": [40, 41, 42, 43],
+      "stock": 15,
+      "imageSrc": "../img/zapatilla_2.avif",
+      "linkDetails": "",
+      "info": "Zapatilla Adidas Samba negra con detalles blancos y suela de goma."
+    },
+    {
+      "name": "Zapatillas Adidas Ultraboost",
+      "price": 180,
+      "color": "Azul/Blanco",
+      "size": [41, 42, 43, 44],
+      "stock": 5,
+      "imageSrc": "../img/zapatilla_3.avif",
+      "linkDetails": "",
+      "info": "Zapatilla deportiva en tonos grises con suela beige y detalles blancos."
+    },
+    {
+      "name": "Zapatillas Puma RS-X3",
+      "price": 95,
+      "color": "Rojo/Negro",
+      "size": [40, 41, 42, 44, 45],
+      "stock": 8,
+      "imageSrc": "../img/zapatilla_4.avif",
+      "linkDetails": "",
+      "info": "Calzado deportivo negro con suela de goma marrón y diseño minimalista."
+    },
+    {
+      "name": "Zapatillas New Balance 990v5",
+      "price": 160,
+      "color": "Gris/Negro",
+      "size": [42, 43, 44, 45],
+      "stock": 12,
+      "imageSrc": "../img/zapatilla_5.avif",
+      "linkDetails": "",
+      "info": "Zapatilla urbana verde y negra y detalles en paneles superpuestos."
+    },
+    {
+      "name": "Zapatillas Vans Old Skool",
+      "price": 70,
+      "color": "Blanco/Negro",
+      "size": [38, 39, 40, 41],
+      "stock": 25,
+      "imageSrc": "../img/zapatilla_6.avif",
+      "linkDetails": "",
+      "info": "Zapatilla urbana blanca, suela gruesa marrón y paneles superpuestos."
+    },
+    {
+      "name": "Zapatillas Nike React Element 55",
+      "price": 130,
+      "color": "Gris/Amarillo",
+      "size": [40, 41, 42, 43, 44],
+      "stock": 18,
+      "imageSrc": "../img/zapatilla_7.avif",
+      "linkDetails": "",
+      "info": "Zapatilla blanca, diseño bajo y cordones blancos."
+    },
+    {
+      "name": "Zapatillas Jordan 1 Retro",
+      "price": 200,
+      "color": "Rojo/Blanco/Negro",
+      "size": [42, 43, 44, 45],
+      "stock": 6,
+      "imageSrc": "../img/zapatilla_8.avif",
+      "linkDetails": "",
+      "info": "Zapatillas deportivas azules con logo que simboliza la marca."
+    },
+    {
+      "name": "Zapatillas Saucony Jazz Original",
+      "price": 85,
+      "color": "Azul/Gris",
+      "size": [38, 39, 40, 41, 42],
+      "stock": 20,
+      "imageSrc": "../img/zapatilla_9.avif",
+      "linkDetails": "",
+      "info": "Zapatillas urbanas blancas con tonos rojos y de caña baja."
+    },
+    {
+      "name": "Zapatillas Reebok Classic Leather",
+      "price": 90,
+      "color": "Blanco/Beige",
+      "size": [40, 41, 42, 43],
+      "stock": 10,
+      "imageSrc": "../img/zapatilla_10.avif",
+      "linkDetails": "",
+      "info": "Zapatillas urbanas negras con cordones blancos de caña media."
+    },
+    {
+      "name": "Zapatillas Under Armour HOVR Phantom",
+      "price": 150,
+      "color": "Negro/Gris",
+      "size": [41, 42, 43, 44],
+      "stock": 7,
+      "imageSrc": "../img/zapatilla_11.avif",
+      "linkDetails": "",
+      "info": "Zapatillas completamente negras de caña baja."
+    }
+  ]
+  

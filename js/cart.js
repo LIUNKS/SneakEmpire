@@ -5,27 +5,30 @@
     let cartUser = []; 
 
 // FUNCIONES GENERALES PARA EL CARRITO DE COMPRAS
-function addProduct(product) {
+function addProduct(product, render) {
     cartUser.push(product); 
+    render();
 }
 
-function deleteProduct(product) {  
+function deleteProduct(product, render) {  
     const index = cartUser.findIndex(
         item => item.name === product.name && item.color === product.color && item.size === product.size
     );
 
     if (index !== -1) {
         cartUser.splice(index, 1);
+        render();
         return true;
     }
     
     return false;
 }
 
-function deleteAllProduct(product) {
+function deleteAllProduct(product, render) {
     cartUser = cartUser.filter(
         cartProduct => !(cartProduct.name === product.name && cartProduct.color === product.color && cartProduct.size === product.size)
     );
+    render();
 }
 
 function calculateTotalPrice() {

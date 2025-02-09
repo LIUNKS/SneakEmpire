@@ -89,8 +89,9 @@ const carritoButton = document.querySelector('.carrito-button');
 carritoButton.addEventListener('click', () => {
     if (window.innerWidth > 768) {
         const slideCart = document.getElementById('slideCart');
-        slideCart.style.visibility = "visible";
-        renderizarSlideCart();
+        // Evita que el evento de cierre se active
+        //event.stopPropagation(); 
+        slideCart.style.visibility = "visible";        
     } else {
         window.location.href = "./cart.html";
     }

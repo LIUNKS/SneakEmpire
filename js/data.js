@@ -1,5 +1,7 @@
 let store = [];
 
+loadData();
+
 //CLASE
 class Calzado {
     constructor(name, price, color, size, stock, info, imageSrc, linkDetails) {
@@ -29,6 +31,8 @@ function loadData() {
                 data[i].linkDetails);   
             store.push(calzado);
           }
+          // ¡¡¡¡¡¡¡¡¡¡BORAR MAS TARDE!!!!!!!!!!!!!!
+          simulacionCompra()
     })
 }
   

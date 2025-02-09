@@ -56,11 +56,12 @@ function generateCard(name, price, color, size, stock, imageSrc, linkDetails) {
     return card;
 }
 
+simulacionCompra();
 // Esta funcion simula la compra del cliente
 function simulacionCompra() {
     // -3 porque no quiero que compre toda la tienda XD
     for (let i = 0; i < store.length -3; i++) {
-        
+        cartUser.push(store[i]);
     }
 }
 

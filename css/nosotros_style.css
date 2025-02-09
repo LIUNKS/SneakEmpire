@@ -213,7 +213,7 @@ body {
   transform: translateY(0);
 }
 
-/*Diseño responsivo*/
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero {
     height: 95vh;

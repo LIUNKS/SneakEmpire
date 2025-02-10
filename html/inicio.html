@@ -9,7 +9,7 @@
     />
     <link rel="icon" href="../img/icon.ico" />
     <title>Sneak Empire</title>
-    <link rel="stylesheet" href="../css/slide_cart_style.css">
+    <link rel="stylesheet" href="../css/slide_cart_style.css" />
     <link rel="stylesheet" href="../css/header_style.css" />
     <link rel="stylesheet" href="../css/footer_style.css" />
     <link rel="stylesheet" href="../css/banner_style.css" />
@@ -25,14 +25,28 @@
     <script src="../js/data.js"></script>
 
     <script src="../js/cart.js"></script>
-      <script>
-        loadSlideCart();
-      </script>
+    <script>
+      loadSlideCart();
+    </script>
+
+    <div id="sneakerContainer" class="sneaker-container"></div>
+
+    <script src="../js/sneakerCards.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        initSneakerDisplay({
+          containerId: "sneakerContainer",
+          jsonUrl: "../data/sneakers.json",
+          cssPath: "../css/cards_style.css",
+        });
+      });
+    </script>
+
     <script src="../js/footer.js"></script>
     <script>
       loadFooter();
     </script>
-    
+
     <script src="../js/header.js"></script>
   </body>
 </html>

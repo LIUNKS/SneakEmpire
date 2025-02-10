@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sneak Empire es una tienda en línea que vende todo tipo de zapatillas.">
+    <meta
+      name="description"
+      content="Sneak Empire es una tienda en línea que vende todo tipo de zapatillas."
+    />
     <link rel="icon" href="../img/icon.ico" />
     <title>Sneak Empire</title>
-    <link rel="stylesheet" href="../css/slide_cart_style.css">
+    <link rel="stylesheet" href="../css/slide_cart_style.css" />
     <link rel="stylesheet" href="../css/header_style.css" />
     <link rel="stylesheet" href="../css/footer_style.css" />
     <link rel="stylesheet" href="../css/banner_style.css" />
@@ -14,14 +17,29 @@
   <body>
     <main>
       <script src="../js/banner.js"></script>
-      <script>        
+      <script>
         loadBanner();
       </script>
     </main>
     <script src="../js/cart.js"></script>
-      <script>
-        loadSlideCart();
-      </script>
+    <script>
+      loadSlideCart();
+    </script>
+
+    <div id="sneakerContainer"></div>
+
+    <script src="../js/sneakerCards.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        initSneakerDisplay({
+          containerId: "sneakerContainer",
+          jsonUrl: "../data/sneakers.json",
+          cssPath: "../css/cards_style.css",
+        });
+      });
+    </script>
+
     <script src="../js/footer.js"></script>
     <script>
       loadFooter();

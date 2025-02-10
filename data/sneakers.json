@@ -1,0 +1,330 @@
+{
+  "sneakers": {
+    "adidas": [
+      {
+        "id": "ad001",
+        "name": "Yeezy Boost 350 V2 Onyx",
+        "price": 299.99,
+        "brand": "adidas",
+        "model": "Yeezy Boost 350 V2",
+        "colorway": "Onyx/Onyx/Onyx",
+        "sizes": [
+          4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5,
+          12, 13
+        ],
+        "description": "El icónico diseño Yeezy en un elegante colorway negro total",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Onyx-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-01-15"
+      },
+      {
+        "id": "ad002",
+        "name": "Samba OG Red Leopard",
+        "price": 129.99,
+        "brand": "adidas",
+        "model": "Samba OG",
+        "colorway": "Red/Leopard Print",
+        "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10],
+        "description": "Una versión única del clásico Samba con print de leopardo",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/adidas-Samba-OG-Preloved-Red-Leopard-Womens-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738344168",
+        "inStock": true,
+        "releaseDate": "2024-02-01"
+      },
+      {
+        "id": "ad003",
+        "name": "Campus 00s",
+        "price": 109.99,
+        "brand": "adidas",
+        "model": "Campus 00s",
+        "colorway": "Core Black/White",
+        "sizes": [
+          4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12
+        ],
+        "description": "Versión moderna del clásico Campus",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/adidas-Campus-00s-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-01-20"
+      },
+      {
+        "id": "ad004",
+        "name": "Yeezy Boost 350 V2 Pure Oat",
+        "price": 299.99,
+        "brand": "adidas",
+        "model": "Yeezy Boost 350 V2",
+        "colorway": "Pure Oat",
+        "sizes": [
+          4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12
+        ],
+        "description": "Versión clara y minimalista del Yeezy Boost 350 V2",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Pure-Oat-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-02-15"
+      },
+      {
+        "id": "ad005",
+        "name": "Yeezy Foam RNNR Onyx",
+        "price": 199.99,
+        "brand": "adidas",
+        "model": "Yeezy Foam RNNR",
+        "colorway": "Onyx",
+        "sizes": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        "description": "Innovador diseño monopieza en color negro",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/adidas-Yeezy-Foam-RNNR-Onyx-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-03-01"
+      }
+    ],
+    "puma": [
+      {
+        "id": "pm001",
+        "name": "Suede One Piece Whitebeard",
+        "price": 129.99,
+        "brand": "Puma",
+        "model": "Suede One Piece",
+        "colorway": "Whitebeard",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Colaboración especial con One Piece",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Puma-Suede-One-Piece-Whitebeard-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738789977",
+        "inStock": true,
+        "releaseDate": "2024-02-01"
+      },
+      {
+        "id": "pm002",
+        "name": "LaMelo Ball LaFrance Amour Untouchable",
+        "price": 179.99,
+        "brand": "Puma",
+        "model": "LaMelo Ball LaFrance",
+        "colorway": "Amour Untouchable",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Edición especial de la línea signature de LaMelo Ball",
+        "category": "Basketball",
+        "image": "https://images.stockx.com/images/Puma-LaMelo-Ball-LaFrance-Amour-Untouchable-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1722353628",
+        "inStock": true,
+        "releaseDate": "2024-01-15"
+      },
+      {
+        "id": "pm003",
+        "name": "LaMelo Ball MB04 Iridescent",
+        "price": 159.99,
+        "brand": "Puma",
+        "model": "MB04",
+        "colorway": "Iridescent",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Diseño iridiscente de la cuarta signature shoe de LaMelo",
+        "category": "Basketball",
+        "image": "https://images.stockx.com/images/Puma-LaMelo-Ball-MB04-Iridescent-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738250306",
+        "inStock": true,
+        "releaseDate": "2024-02-10"
+      }
+    ],
+    "converse": [
+      {
+        "id": "cv001",
+        "name": "Chuck 70 Hi CDG Play Black",
+        "price": 150.0,
+        "brand": "Converse",
+        "model": "Chuck 70 Hi",
+        "colorway": "Black/White",
+        "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11],
+        "description": "Colaboración clásica entre Converse y Comme des Garçons PLAY",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Comme-des-Garcons-PLAY-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1671022506",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      },
+      {
+        "id": "cv002",
+        "name": "Chuck 70 Ox CDG Play Black",
+        "price": 140.0,
+        "brand": "Converse",
+        "model": "Chuck 70 Ox",
+        "colorway": "Black/White",
+        "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11],
+        "description": "Versión baja de la colaboración con CDG Play",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-70s-Ox-Comme-des-Garcons-PLAY-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1734445902",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      }
+    ],
+    "vans": [
+      {
+        "id": "vn001",
+        "name": "Knu Skool Black White",
+        "price": 89.99,
+        "brand": "Vans",
+        "model": "Knu Skool",
+        "colorway": "Black/White",
+        "sizes": [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Versión moderna del clásico Old Skool",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Vans-Knu-Skool-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-02-01"
+      },
+      {
+        "id": "vn002",
+        "name": "Old Skool 36 Pearlized Black",
+        "price": 79.99,
+        "brand": "Vans",
+        "model": "Old Skool 36",
+        "colorway": "Pearlized Black",
+        "sizes": [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11],
+        "description": "Versión pearlizada del clásico Old Skool",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Vans-OTW-Old-Skool-36-Pearlized-Pack-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1729084195",
+        "inStock": true,
+        "releaseDate": "2024-02-15"
+      }
+    ],
+    "new_balance": [
+      {
+        "id": "nb001",
+        "name": "9060 Black Castlerock",
+        "price": 179.99,
+        "brand": "New Balance",
+        "model": "9060",
+        "colorway": "Black/Castlerock Grey",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Silueta moderna con tecnología de amortiguación avanzada",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/New-Balance-9060-Black-Castlerock-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-02-10"
+      },
+      {
+        "id": "nb002",
+        "name": "9060 Triple Black",
+        "price": 179.99,
+        "brand": "New Balance",
+        "model": "9060",
+        "colorway": "Triple Black",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Versión totalmente negra del popular modelo 9060",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/New-Balance-9060-Triple-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-02-20"
+      }
+    ],
+    "asics": [
+      {
+        "id": "as001",
+        "name": "Gel-1130 Black Pure Silver",
+        "price": 119.99,
+        "brand": "ASICS",
+        "model": "Gel-1130",
+        "colorway": "Black/Pure Silver",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Zapatilla de running con tecnología GEL para máxima comodidad",
+        "category": "Running",
+        "image": "https://images.stockx.com/images/ASICS-Gel-1130-Black-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-03-01"
+      },
+      {
+        "id": "as002",
+        "name": "Gel-1130 White Clay Canyon",
+        "price": 119.99,
+        "brand": "ASICS",
+        "model": "Gel-1130",
+        "colorway": "White/Clay Canyon",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Versión lifestyle del modelo de running Gel-1130",
+        "category": "Running",
+        "image": "https://images.stockx.com/images/ASICS-Gel-1130-White-Clay-Canyon-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-03-05"
+      }
+    ],
+    "reebok": [
+      {
+        "id": "rb001",
+        "name": "BB 4000 II Mid Alien Stomper",
+        "price": 149.99,
+        "brand": "Reebok",
+        "model": "BB 4000 II Mid",
+        "colorway": "Alien Stomper/Romulus",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Edición especial inspirada en Alien",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Reebok-BB-4000-II-Mid-Alien-Stomper-Alien-Romulus-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1725655690",
+        "inStock": true,
+        "releaseDate": "2024-02-28"
+      },
+      {
+        "id": "rb002",
+        "name": "Club C 85 TV Chalk",
+        "price": 89.99,
+        "brand": "Reebok",
+        "model": "Club C 85",
+        "colorway": "Chalk/Glen Green",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Versión retro del clásico Club C",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Reebok-Club-C-85-TV-Chalk-Glen-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "inStock": true,
+        "releaseDate": "2024-02-15"
+      }
+    ],
+    "saucony": [
+      {
+        "id": "sc001",
+        "name": "ProGrid Omni 9 Jae Tips To Do List Tan",
+        "price": 159.99,
+        "brand": "Saucony",
+        "model": "ProGrid Omni 9",
+        "colorway": "Tan/Multi",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Colaboración especial con Jae Tips",
+        "category": "Running",
+        "image": "https://images.stockx.com/images/Saucony-ProGrid-Omni-9-Jae-Tips-To-Do-List-Tan-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1726685405",
+        "inStock": true,
+        "releaseDate": "2024-03-10"
+      },
+      {
+        "id": "sc002",
+        "name": "ProGrid Omni 9 Jae Tips To Do List Pink",
+        "price": 159.99,
+        "brand": "Saucony",
+        "model": "ProGrid Omni 9",
+        "colorway": "Pink/Multi",
+        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "description": "Versión rosa de la colaboración con Jae Tips",
+        "category": "Running",
+        "image": "https://images.stockx.com/images/Saucony-ProGrid-Omni-9-Jae-Tips-To-Do-List-Pink-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1727359089",
+        "inStock": true,
+        "releaseDate": "2024-03-10"
+      }
+    ]
+  },
+  "metadata": {
+    "lastUpdated": "2024-02-08",
+    "totalProducts": 20,
+    "currencies": ["USD", "EUR", "GBP"],
+    "categories": ["Lifestyle", "Basketball", "Running", "Motorsport"],
+    "brands": [
+      "adidas",
+      "Puma",
+      "Converse",
+      "Vans",
+      "New Balance",
+      "ASICS",
+      "Reebok",
+      "Saucony"
+    ],
+    "availableSizes": {
+      "US": [
+        4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12,
+        13
+      ],
+      "EU": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+    }
+  }
+}

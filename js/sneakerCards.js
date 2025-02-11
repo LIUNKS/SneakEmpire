@@ -183,6 +183,7 @@ const initSneakerDisplay = (config) => {
 
     addToCart: (sneakerId) => {
       showToast("Producto añadido al carrito");
+      addProduct(sneakerId, 10, renderizar)
     },
 
     viewDetails: (sneakerId) => {

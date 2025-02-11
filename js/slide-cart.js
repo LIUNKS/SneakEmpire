@@ -74,7 +74,7 @@ function renderizar() {
         // !!!!!!!!!!CAMBIAR MAS TARDE !!!!!!!!!!!!!!           
         const stock = 100;          
         //-----------------------  
-        const imageSrc = store[index].imageSrc; 
+        const imageSrc = store[index].image; 
         const linkDetails = store[index].linkDetails; 
 
         const card = generateCard(productId, name, price, color, size, stock, amount, imageSrc, linkDetails);

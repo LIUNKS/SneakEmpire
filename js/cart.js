@@ -80,7 +80,7 @@ function generateCard(productId, name, price, color, size, stock, amount, imageS
         </button>          
         <div class="size">Talla: ${size}</div>
         <div></div> 
-        <input type="number" min="1" max="${stock}" step="1" class="amount"/>
+        <input type="number" min="1" max="${stock}" step="1" class="amount" value=${amount}/>
         </div>
         `;
     return card;

@@ -5,7 +5,7 @@ let store = [];
 
 loadJson();
 // FUNCIONES GENERALES PARA EL CARRITO DE COMPRAS
-function addProduct(productId, size, render) {    
+function addProduct(productId, size, containerId) {    
     const index = cartUser.findIndex(
         cartProduct => cartProduct.productId === productId && cartProduct.size === size
     );   
@@ -13,7 +13,7 @@ function addProduct(productId, size, render) {
     // !!!!!AGRGAR LA VALIDACION DE STOCK!!!!!!!!!!!!
     if (index !== -1) {
         cartUser[index].amount ++;
-        render();
+        render(containerId);
         return;
     };
 
@@ -24,7 +24,7 @@ function addProduct(productId, size, render) {
     };
 
     cartUser.push(cartProduct);
-    render();
+    render(containerId);
 }
 
 function deleteProduct(productId, size, render) {
@@ -101,6 +101,38 @@ function generateCard(productId, name, price, color, size, stock, amount, imageS
     return card;
 }
 
+function render(containerId) {
+    //const container = document.getElementById(`containerCard`)
+    const container = document.getElementById(containerId)
+
+    container.innerHTML = ``;
+    cartUser.forEach(cartProduct => {
+        const index = findIndexProduct(cartProduct.productId);
+
+        const productId = cartProduct.productId;       
+        const size = cartProduct.size; 
+        const amount = cartProduct.amount;
+        
+        const name = store[index].name; 
+        const price = store[index].price;      
+        const color = store[index].color;        
+        // !!!!!!!!!!CAMBIAR MAS TARDE !!!!!!!!!!!!!!           
+        const stock = 10;          
+        //-----------------------  
+        const imageSrc = store[index].image; 
+        const linkDetails = store[index].linkDetails; 
+
+        const card = generateCard(productId, name, price, color, size, stock, amount, imageSrc, linkDetails);
+        insertCard(card, containerId);
+    });
+    updatePrice();
+}
+
+function insertCard(card, containerId) {
+    const container = document.getElementById(containerId)
+    container.appendChild(card);
+}
+
 // INTERACCION CON LOS DATOS
 function saveCartUser() {
     localStorage.setItem('cartUser', JSON.stringify(cartUser));
@@ -109,6 +141,9 @@ function saveCartUser() {
 function loadData() {
     if (localStorage.getItem('cartUser') !== null) {
         cartUser = JSON.parse(localStorage.getItem('cartUser'));
+        cartUser.forEach(element => {
+            addProduct(cartUser.prodcutId, cartUser.size, `containerCard`)
+        });
     }
 }
 

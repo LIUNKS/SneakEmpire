@@ -52,36 +52,6 @@ function loadSlideCart() {
     })
 }
 
-function insertCard(card) {
-    const container = document.getElementById(`containerCard`)
-    container.appendChild(card);
-}
-
-function renderizar() {
-    const container = document.getElementById(`containerCard`)
-    container.innerHTML = ``;
-    cartUser.forEach(cartProduct => {
-        const index = findIndexProduct(cartProduct.productId);
-
-        const productId = cartProduct.productId;       
-        const size = cartProduct.size; 
-        const amount = cartProduct.amount;
-        
-        const name = store[index].name; 
-        const price = store[index].price;      
-        const color = store[index].color;        
-        // !!!!!!!!!!CAMBIAR MAS TARDE !!!!!!!!!!!!!!           
-        const stock = 10;          
-        //-----------------------  
-        const imageSrc = store[index].image; 
-        const linkDetails = store[index].linkDetails; 
-
-        const card = generateCard(productId, name, price, color, size, stock, amount, imageSrc, linkDetails);
-        insertCard(card);
-    });
-    updatePrice()
-}
-
 function updatePrice() {
     const precioTotal = document.getElementById('estimatedTotal');
     precioTotal.innerHTML = "S/ " + calculateTotalPrice();

@@ -185,7 +185,7 @@ const initSneakerDisplay = (config) => {
       showToast("Producto añadido al carrito");
       // AGREGAR UN CUADRO DONDE SE PREGUNTA LA TALLA
       // EL VALOR 10 ES DE PRUEBA 
-      addProduct(sneakerId, 10, renderizar)
+      addProduct(sneakerId, 10, `containerCard`)
     },
 
     viewDetails: (sneakerId) => {

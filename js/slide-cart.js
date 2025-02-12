@@ -60,19 +60,18 @@ function insertCard(card) {
 function renderizar() {
     const container = document.getElementById(`containerCard`)
     container.innerHTML = ``;
-    console.log("renderizar")
     cartUser.forEach(cartProduct => {
         const index = findIndexProduct(cartProduct.productId);
 
         const productId = cartProduct.productId;       
         const size = cartProduct.size; 
         const amount = cartProduct.amount;
-
+        
         const name = store[index].name; 
         const price = store[index].price;      
         const color = store[index].color;        
         // !!!!!!!!!!CAMBIAR MAS TARDE !!!!!!!!!!!!!!           
-        const stock = 100;          
+        const stock = 10;          
         //-----------------------  
         const imageSrc = store[index].image; 
         const linkDetails = store[index].linkDetails; 

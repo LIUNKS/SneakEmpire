@@ -5,15 +5,15 @@ let store = [];
 
 loadJson();
 // FUNCIONES GENERALES PARA EL CARRITO DE COMPRAS
-function addProduct(productId, size, render) {
-    
+function addProduct(productId, size, render) {    
     const index = cartUser.findIndex(
         cartProduct => cartProduct.productId === productId && cartProduct.size === size
-    );
-
+    );   
+    // oJo       NO OLVIDAR!!!!!!
+    // !!!!!AGRGAR LA VALIDACION DE STOCK!!!!!!!!!!!!
     if (index !== -1) {
         cartUser[index].amount ++;
-        render()
+        render();
         return;
     };
 
@@ -24,7 +24,6 @@ function addProduct(productId, size, render) {
     };
 
     cartUser.push(cartProduct);
-    console.log("antes del render ")
     render();
 }
 
@@ -42,7 +41,7 @@ function deleteProduct(productId, size, render) {
     return false;
 }
 
-function modifyAmount(productId, size, amount, render) {
+function modifyAmount(productId, size, amount) {
     if (amount < 1) {
         return;
     }
@@ -53,15 +52,15 @@ function modifyAmount(productId, size, amount, render) {
     if (index !== -1) {
         cartUser[index].amount = amount;
     }
-
-    render();
 }
 
 function calculateTotalPrice() {
-    return cartUser.reduce((total, productId) => total + productId.price, 0);
+    let totalPrice = cartUser.reduce((total, cartProduct) => 
+        total + (store[findIndexProduct(cartProduct.productId)].price * cartProduct.amount), 0 );
+    return parseFloat(totalPrice).toFixed(2);
 }
 
-function generateCard(productId, name, price, color, size, stock, amount, imageSrc, linkDetails) {
+function generateCard(productId, name, price, color, size, stock, amount, imageSrc, linkDetails) {  
     const card = document.createElement(`div`);
     card.id = productId;
     card.classList.add(`card`);
@@ -80,20 +79,29 @@ function generateCard(productId, name, price, color, size, stock, amount, imageS
         </button>          
         <div class="size">Talla: ${size}</div>
         <div></div> 
-        <input type="number" min="1" max="${stock}" step="1" class="amount" value=${amount}/>
+        <input type="number" min="1" max="${stock}" step="1" class="amount" value="${amount}"/>
         </div>
         `;
+
+    // Agregar el eventListener para detectar el click al botón de eliminar
+    const deleteButton = card.querySelector('.deleteButton');
+
+    deleteButton.addEventListener('click', function() {
+        deleteProduct(productId, size, updatePrice);
+        card.remove(); 
+    });
+
+    // Agregar el eventListener para detectar cambios en el input
+    const amountInput = card.querySelector('.amount');
+
+    amountInput.addEventListener('input', function() {
+        modifyAmount(productId, size, amountInput.value);
+        updatePrice();
+    });
     return card;
 }
 
-function findIndexProduct(prodcutId) {
-    let index = store.findIndex(
-        product => product.id === prodcutId
-    );
-    return index
-}
-
-// LOCAL STORAGE
+// INTERACCION CON LOS DATOS
 function saveCartUser() {
     localStorage.setItem('cartUser', JSON.stringify(cartUser));
 }
@@ -102,6 +110,12 @@ function loadData() {
     if (localStorage.getItem('cartUser') !== null) {
         cartUser = JSON.parse(localStorage.getItem('cartUser'));
     }
+}
+
+function findIndexProduct(prodcutId) {
+    return store.findIndex(
+        product => product.id === prodcutId
+    );
 }
 
 // JSON

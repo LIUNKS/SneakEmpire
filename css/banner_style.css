@@ -63,6 +63,19 @@
   width: 30%;
   max-width: 500px;
   z-index: 1;
+  opacity: 0;
+  animation: shoeEntrance 1s ease-out forwards;
+}
+
+@keyframes shoeEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .content {
@@ -110,9 +123,20 @@
   .shoe-image {
     width: 60%;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: auto;
+    transform-origin: center;
+    animation: shoeEntranceMobile 1s ease-out forwards;
     top: 20%;
+  }
+
+  @keyframes shoeEntranceMobile {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.8) translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) scale(1) translateY(0);
+    }
   }
 
   .content {

@@ -75,8 +75,8 @@ const initSneakerDisplay = (config) => {
                     </div>
 
                     <div class="sd-filters-group">
-                        <label class="sd-filters-label">Ordenar por</label>
-                        <select class="sd-sort-select" data-filter="sort">
+                        <label for="sort-select" class="sd-filters-label">Ordenar por</label>
+                        <select id="sort-select" class="sd-sort-select" data-filter="sort">
                             ${filterConfig.sortOptions
                               .map(
                                 (option) => `

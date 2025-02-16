@@ -8,13 +8,10 @@
         "brand": "adidas",
         "model": "Yeezy Boost 350 V2",
         "colorway": "Onyx/Onyx/Onyx",
-        "sizes": [
-          4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5,
-          12, 13
-        ],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
         "description": "El icónico diseño Yeezy en un elegante colorway negro total",
         "category": "Lifestyle",
-        "image": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Onyx-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "image": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Onyx-Product.jpg",
         "inStock": true,
         "releaseDate": "2024-01-15"
       },
@@ -25,10 +22,10 @@
         "brand": "adidas",
         "model": "Samba OG",
         "colorway": "Red/Leopard Print",
-        "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10],
+        "sizes": [36, 37, 38, 39, 40, 41],
         "description": "Una versión única del clásico Samba con print de leopardo",
         "category": "Lifestyle",
-        "image": "https://images.stockx.com/images/adidas-Samba-OG-Preloved-Red-Leopard-Womens-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738344168",
+        "image": "https://images.stockx.com/images/adidas-Samba-OG-Preloved-Red-Leopard-Womens-Product.jpg",
         "inStock": true,
         "releaseDate": "2024-02-01"
       },
@@ -39,12 +36,10 @@
         "brand": "adidas",
         "model": "Campus 00s",
         "colorway": "Core Black/White",
-        "sizes": [
-          4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12
-        ],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
         "description": "Versión moderna del clásico Campus",
         "category": "Lifestyle",
-        "image": "https://images.stockx.com/images/adidas-Campus-00s-Core-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
+        "image": "https://images.stockx.com/images/adidas-Campus-00s-Core-Black-Product.jpg",
         "inStock": true,
         "releaseDate": "2024-01-20"
       },
@@ -79,6 +74,244 @@
         "releaseDate": "2024-03-01"
       }
     ],
+    "off_white": [
+      {
+        "id": "ow001",
+        "name": "Nike Air Force 1 Mid SP Varsity Maize",
+        "price": 285.0,
+        "brand": "Off-White x Nike",
+        "model": "Air Force 1 Mid SP",
+        "colorway": "Varsity Maize",
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "description": "Colaboración entre Off-White y Nike en color amarillo mostaza",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Nike-Air-Force-1-Mid-SP-Off-White-Varsity-Maize-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-15"
+      },
+      {
+        "id": "ow002",
+        "name": "Nike Air Force 1 Mid White",
+        "price": 275.0,
+        "brand": "Off-White x Nike",
+        "model": "Air Force 1 Mid",
+        "colorway": "White",
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "description": "Versión blanca de la colaboración Off-White",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Nike-Air-Force-1-Mid-Off-White-White-Product-2.jpg",
+        "inStock": true,
+        "releaseDate": "2024-02-01"
+      }
+    ],
+    "alexander_mcqueen": [
+      {
+        "id": "am001",
+        "name": "Oversized White",
+        "price": 590.0,
+        "brand": "Alexander McQueen",
+        "model": "Oversized Sneaker",
+        "colorway": "White",
+        "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "description": "El icónico sneaker en blanco con suela oversized",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Alexander-McQueen-Oversized-White-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      },
+      {
+        "id": "am002",
+        "name": "Oversized Black White",
+        "price": 590.0,
+        "brand": "Alexander McQueen",
+        "model": "Oversized Sneaker",
+        "colorway": "Black/White",
+        "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
+        "description": "Versión en negro con suela blanca",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Alexander-McQueen-Oversized-Black-White-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      }
+    ],
+    "valentino": [
+      {
+        "id": "val001",
+        "name": "Garavani Open White Black Band",
+        "price": 650.0,
+        "brand": "Valentino",
+        "model": "Garavani Open",
+        "colorway": "White/Black",
+        "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
+        "description": "Sneaker minimalista con banda distintiva",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Valentino-Garavani-Open-White-Black-Band-White-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      }
+    ],
+    "christian_louboutin": [
+      {
+        "id": "cl001",
+        "name": "Louis Junior Spikes White",
+        "price": 795.0,
+        "brand": "Christian Louboutin",
+        "model": "Louis Junior Spikes",
+        "colorway": "White",
+        "sizes": [39, 40, 41, 42, 43, 44],
+        "description": "Sneaker blanco con spikes y suela roja característica",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Christian-Louboutin-Louis-Junior-Spikes-White-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      },
+      {
+        "id": "cl002",
+        "name": "Louis Junior Spikes Black",
+        "price": 795.0,
+        "brand": "Christian Louboutin",
+        "model": "Louis Junior Spikes",
+        "colorway": "Black",
+        "sizes": [39, 40, 41, 42, 43, 44],
+        "description": "Versión negra del icónico modelo con spikes",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Christian-Louboutin-Louis-Junior-Spikes-Flat-Black-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      },
+      {
+        "id": "cl003",
+        "name": "Louis Orlato Mid Red Patent",
+        "price": 895.0,
+        "brand": "Christian Louboutin",
+        "model": "Louis Orlato Mid",
+        "colorway": "Red Patent",
+        "sizes": [39, 40, 41, 42, 43, 44],
+        "description": "Versión mid-top en charol rojo",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Christian-Louboutin-Louis-Orlato-Mid-Red-Patent-Psychic-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-02-01"
+      }
+    ],
+    "maison_margiela": [
+      {
+        "id": "mm001",
+        "name": "Replica Dark Wash",
+        "price": 495.0,
+        "brand": "Maison Margiela",
+        "model": "Replica",
+        "colorway": "Dark Wash",
+        "sizes": [39, 40, 41, 42, 43, 44],
+        "description": "Versión Dark Wash del clásico Replica",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Maison-Margiela-Replica-Dark-Wash-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-15"
+      },
+      {
+        "id": "mm002",
+        "name": "Replica Black Gum",
+        "price": 495.0,
+        "brand": "Maison Margiela",
+        "model": "Replica",
+        "colorway": "Black/Gum",
+        "sizes": [39, 40, 41, 42, 43, 44],
+        "description": "Replica en negro con suela gum",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Maison-Margiela-Replica-Black-Gum-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-02-01"
+      }
+    ],
+    "jimmy_choo": [
+      {
+        "id": "jc001",
+        "name": "Timberland 6 Premium Boot NYC",
+        "price": 595.0,
+        "brand": "Jimmy Choo",
+        "model": "Timberland 6 Premium Boot",
+        "colorway": "NYC Edition",
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44],
+        "description": "Colaboración con Timberland edición NYC",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Timberland-6-Premium-Boot-Jimmy-Choo-New-York-City.jpg",
+        "inStock": true,
+        "releaseDate": "2024-01-01"
+      },
+      {
+        "id": "jc002",
+        "name": "Florent Eric Haze Poggy Blue",
+        "price": 750.0,
+        "brand": "Jimmy Choo",
+        "model": "Florent",
+        "colorway": "Blue",
+        "sizes": [39, 40, 41, 42, 43, 44],
+        "description": "Colaboración triple entre Choo, Haze y Poggy",
+        "category": "Luxury",
+        "image": "https://images.stockx.com/images/Jimmy-Choo-Florent-Eric-Haze-Poggy-Blue.jpg",
+        "inStock": true,
+        "releaseDate": "2024-02-01"
+      }
+    ],
+    "saucony": [
+      {
+        "id": "sc001",
+        "name": "Matrix Jae Tips No Shoes In The House Burgundy",
+        "price": 160.0,
+        "brand": "Saucony",
+        "model": "Matrix",
+        "colorway": "Burgundy",
+        "sizes": [40, 41, 42, 43, 44, 45],
+        "description": "Colaboración especial con Jae Tips en tonos burgundy",
+        "category": "Lifestyle",
+        "image": "https://images.stockx.com/images/Saucony-Matrix-Jae-Tips-No-Shoes-In-The-House-Burgundy-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-02-15"
+      },
+      {
+        "id": "sc002",
+        "name": "ProGrid Omni 9 Starcow",
+        "price": 140.0,
+        "brand": "Saucony",
+        "model": "ProGrid Omni 9",
+        "colorway": "Starcow",
+        "sizes": [40, 41, 42, 43, 44, 45],
+        "description": "Colaboración con Starcow Paris",
+        "category": "Running",
+        "image": "https://images.stockx.com/images/Saucony-ProGrid-Omni-9-Starcow-Product.jpg",
+        "inStock": true,
+        "releaseDate": "2024-03-01"
+      },
+      {
+        "id": "sc003",
+        "name": "ProGrid Omni 9 Jae Tips To Do List Tan",
+        "price": 159.99,
+        "brand": "Saucony",
+        "model": "ProGrid Omni 9",
+        "colorway": "Tan/Multi",
+        "sizes": [40, 41, 42, 43, 44, 45],
+        "description": "Colaboración especial con Jae Tips",
+        "category": "Running",
+        "image": "https://images.stockx.com/images/Saucony-ProGrid-Omni-9-Jae-Tips-To-Do-List-Tan-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1726685405",
+        "inStock": true,
+        "releaseDate": "2024-03-10"
+      },
+      {
+        "id": "sc004",
+        "name": "ProGrid Omni 9 Jae Tips To Do List Pink",
+        "price": 159.99,
+        "brand": "Saucony",
+        "model": "ProGrid Omni 9",
+        "colorway": "Pink/Multi",
+        "sizes": [40, 41, 42, 43, 44, 45],
+        "description": "Versión rosa de la colaboración con Jae Tips",
+        "category": "Running",
+        "image": "https://images.stockx.com/images/Saucony-ProGrid-Omni-9-Jae-Tips-To-Do-List-Pink-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1727359089",
+        "inStock": true,
+        "releaseDate": "2024-03-10"
+      }
+    ],
     "puma": [
       {
         "id": "pm001",
@@ -87,7 +320,7 @@
         "brand": "Puma",
         "model": "Suede One Piece",
         "colorway": "Whitebeard",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [39, 40, 41, 42, 43, 44],
         "description": "Colaboración especial con One Piece",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/Puma-Suede-One-Piece-Whitebeard-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738789977",
@@ -101,7 +334,7 @@
         "brand": "Puma",
         "model": "LaMelo Ball LaFrance",
         "colorway": "Amour Untouchable",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [39, 40, 41, 42, 43, 44],
         "description": "Edición especial de la línea signature de LaMelo Ball",
         "category": "Basketball",
         "image": "https://images.stockx.com/images/Puma-LaMelo-Ball-LaFrance-Amour-Untouchable-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1722353628",
@@ -115,7 +348,7 @@
         "brand": "Puma",
         "model": "MB04",
         "colorway": "Iridescent",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [39, 40, 41, 42, 43, 44],
         "description": "Diseño iridiscente de la cuarta signature shoe de LaMelo",
         "category": "Basketball",
         "image": "https://images.stockx.com/images/Puma-LaMelo-Ball-MB04-Iridescent-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738250306",
@@ -131,10 +364,10 @@
         "brand": "Converse",
         "model": "Chuck 70 Hi",
         "colorway": "Black/White",
-        "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44],
         "description": "Colaboración clásica entre Converse y Comme des Garçons PLAY",
         "category": "Lifestyle",
-        "image": "https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Comme-des-Garcons-PLAY-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1671022506",
+        "image": "https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Comme-des-Garcons-PLAY-Black-Product.jpg",
         "inStock": true,
         "releaseDate": "2024-01-01"
       },
@@ -145,7 +378,7 @@
         "brand": "Converse",
         "model": "Chuck 70 Ox",
         "colorway": "Black/White",
-        "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44],
         "description": "Versión baja de la colaboración con CDG Play",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-70s-Ox-Comme-des-Garcons-PLAY-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1734445902",
@@ -161,7 +394,7 @@
         "brand": "Vans",
         "model": "Knu Skool",
         "colorway": "Black/White",
-        "sizes": [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44],
         "description": "Versión moderna del clásico Old Skool",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/Vans-Knu-Skool-Black-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
@@ -175,7 +408,7 @@
         "brand": "Vans",
         "model": "Old Skool 36",
         "colorway": "Pearlized Black",
-        "sizes": [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44],
         "description": "Versión pearlizada del clásico Old Skool",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/Vans-OTW-Old-Skool-36-Pearlized-Pack-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1729084195",
@@ -191,7 +424,7 @@
         "brand": "New Balance",
         "model": "9060",
         "colorway": "Black/Castlerock Grey",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [39, 40, 41, 42, 43, 44],
         "description": "Silueta moderna con tecnología de amortiguación avanzada",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/New-Balance-9060-Black-Castlerock-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
@@ -205,7 +438,7 @@
         "brand": "New Balance",
         "model": "9060",
         "colorway": "Triple Black",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [39, 40, 41, 42, 43, 44],
         "description": "Versión totalmente negra del popular modelo 9060",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/New-Balance-9060-Triple-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
@@ -221,7 +454,7 @@
         "brand": "ASICS",
         "model": "Gel-1130",
         "colorway": "Black/Pure Silver",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [40, 41, 42, 43, 44, 45],
         "description": "Zapatilla de running con tecnología GEL para máxima comodidad",
         "category": "Running",
         "image": "https://images.stockx.com/images/ASICS-Gel-1130-Black-Pure-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
@@ -235,7 +468,7 @@
         "brand": "ASICS",
         "model": "Gel-1130",
         "colorway": "White/Clay Canyon",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [40, 41, 42, 43, 44, 45],
         "description": "Versión lifestyle del modelo de running Gel-1130",
         "category": "Running",
         "image": "https://images.stockx.com/images/ASICS-Gel-1130-White-Clay-Canyon-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
@@ -251,7 +484,7 @@
         "brand": "Reebok",
         "model": "BB 4000 II Mid",
         "colorway": "Alien Stomper/Romulus",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44],
         "description": "Edición especial inspirada en Alien",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/Reebok-BB-4000-II-Mid-Alien-Stomper-Alien-Romulus-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1725655690",
@@ -265,66 +498,34 @@
         "brand": "Reebok",
         "model": "Club C 85",
         "colorway": "Chalk/Glen Green",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+        "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44],
         "description": "Versión retro del clásico Club C",
         "category": "Lifestyle",
         "image": "https://images.stockx.com/images/Reebok-Club-C-85-TV-Chalk-Glen-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1738193358",
         "inStock": true,
         "releaseDate": "2024-02-15"
       }
-    ],
-    "saucony": [
-      {
-        "id": "sc001",
-        "name": "ProGrid Omni 9 Jae Tips To Do List Tan",
-        "price": 159.99,
-        "brand": "Saucony",
-        "model": "ProGrid Omni 9",
-        "colorway": "Tan/Multi",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
-        "description": "Colaboración especial con Jae Tips",
-        "category": "Running",
-        "image": "https://images.stockx.com/images/Saucony-ProGrid-Omni-9-Jae-Tips-To-Do-List-Tan-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1726685405",
-        "inStock": true,
-        "releaseDate": "2024-03-10"
-      },
-      {
-        "id": "sc002",
-        "name": "ProGrid Omni 9 Jae Tips To Do List Pink",
-        "price": 159.99,
-        "brand": "Saucony",
-        "model": "ProGrid Omni 9",
-        "colorway": "Pink/Multi",
-        "sizes": [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
-        "description": "Versión rosa de la colaboración con Jae Tips",
-        "category": "Running",
-        "image": "https://images.stockx.com/images/Saucony-ProGrid-Omni-9-Jae-Tips-To-Do-List-Pink-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1727359089",
-        "inStock": true,
-        "releaseDate": "2024-03-10"
-      }
     ]
   },
   "metadata": {
-    "lastUpdated": "2024-02-08",
-    "totalProducts": 20,
+    "lastUpdated": "2024-02-15",
+    "totalProducts": 100,
     "currencies": ["USD", "EUR", "GBP"],
-    "categories": ["Lifestyle", "Basketball", "Running", "Motorsport"],
+    "categories": ["Lifestyle", "Luxury", "Running", "Basketball"],
     "brands": [
       "adidas",
+      "Off-White",
+      "Alexander McQueen",
+      "Valentino",
+      "Christian Louboutin",
+      "Maison Margiela",
+      "Jimmy Choo",
+      "Saucony",
       "Puma",
-      "Converse",
-      "Vans",
-      "New Balance",
-      "ASICS",
-      "Reebok",
-      "Saucony"
+      "Converse"
     ],
     "availableSizes": {
-      "US": [
-        4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12,
-        13
-      ],
-      "EU": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+      "EU": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
     }
   }
 }

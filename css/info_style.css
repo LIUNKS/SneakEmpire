@@ -6,154 +6,101 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/*Barra blanca que tiene la cosita de busqueda*/
-ul.barra{
-    background-color: white;
-    width: 100%;
-    height: 75px;
-    list-style-type: none;
-    text-align: center;
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    margin: 0;
+}
+
+.cont {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/*Esto hace que las palabras esten centradas*/
-li.medio{
-    display: inline-flex;
-}
-
-/*Letras*/
-a.letras{
-    text-decoration: none;
-    color: black;
-    padding: 7px;
-    width: 100px;
-}
-
-/*Cuando pasas el cursor por las opciones*/
-/*Efecto hover, efecto visual al pasar el cursor*/
-nav li.medio:hover{
-    background-color: gainsboro;
-}
-
-/*Permite evitar un error con el orden de la pagina*/
-.container{
-    position: relative;
-}
-
-/*Posicionamiento de la pestaña de busqueda*/
-div.busqueda{
-    position: absolute;
-    padding: 5px;
-    left: 80%;
-}
-
-/*Efectos de la pestaña busqueda*/
-/*Input permite la personalizacion de campos de texto*/
-.busqueda input{
-    width: 0px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6s ease;
-}
-
-/*Pestaña o boton de busqueda*/
-.btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: gainsboro;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
-    color: black;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/*Edicion del boton de busqueda*/
-.busqueda:hover input{
-    width: 240px;
-}
-.busqueda input:focus{
-    width: 240px;
-}
-
-/*Edita todo el contenido del contenedor "detalles"*/
-.detalles{
-    flex: 1;
-    padding: 10px;
-}
-.detalles h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-.detalles p {
-    font-size: 14px;
-    line-height: 1.6;
+    gap: 20px;
     margin-bottom: 20px;
 }
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Borde gris claro */
+}
+
+.detalles {
+    flex: 1;
+}
+
+.detalles h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 .detalles .price {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
-}
-.detalles label {
-    font-size: 14px;
+    color: #000000; /* Precio en negro */
 }
 
-/*Selecciona el button (Añadir carrito) y las opciones de talla para darle un diseño*/
-.detalles select,
-        .detalles button {
-            padding: 10px;
-            font-size: 14px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
+.detalles .gray-text {
+    color: #808080; /* Texto gris */
+    margin: 5px 0;
 }
 
-/*Efecto de cambio de color al pasar el cursor por el boton Añadir al carrito*/
-.detalles button {
-    background-color: black;
-    color: #fff;
+.detalles .info-link {
+    color: #000000; /* Enlace en negro */
+    text-decoration: none;
     font-weight: bold;
+}
+
+.detalles .info-link:hover {
+    text-decoration: underline;
+}
+
+.detalles .divider {
+    border: 0;
+    height: 1px;
+    background-color: #ddd; /* Línea divisoria gris */
+    margin: 10px 0;
+}
+
+.detalles .bold-text {
+    font-weight: bold;
+}
+
+.detalles select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.detalles .add-to-cart {
+    background-color: #000000; /* Botón negro */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-.detalles button:hover {
-    background-color: gray;
+    margin-top: 10px;
 }
 
-
-/*El contenido, donde esta la imagen, su descripcion y demas.*/
-.cont {
-    display: flex;
-    max-width: 1200px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
+.detalles .add-to-cart:hover {
+    background-color: #333333; /* Botón gris oscuro al pasar el mouse */
 }
 
-/*Añade estilos al contenedor de la descripcion del producto*/
-.descripcion{
-    width: 125vh;
-    height: 60vh;
-    background-color: white;
-    margin: 5%
+.descripcion {
+    margin-top: 20px;
 }
 
-/*Alinea la posicion de la lista de caracteristicas*/
-ul {
-    list-style-position: inside;
-    margin-left: 1px;
+.descripcion b {
+    font-size: 18px;
+}
+
+.descripcion ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.descripcion ul li {
+    margin-bottom: 5px;
 }

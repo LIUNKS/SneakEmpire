@@ -10,68 +10,70 @@
         <title>Sneak Empire</title>
 
         <!--Añade los estilos o CSS al header, footer e info-->
-
+        <link rel="stylesheet" href="../css/cart_style.css">
+        <link rel="stylesheet" href="../css/slide_cart_style.css"/>
         <link rel="stylesheet" href="../css/header_style.css" />
         <link rel="stylesheet" href="../css/footer_style.css" />
         <link rel="stylesheet" href="../css/info_style.css"/> 
     </head>
 
     <body>
-        <!-- Botones de navegación -->
-    <div>
-        <button onclick="loadSneakerData(sneakers.adidas[0])">Yeezy Boost 350 V2 Onyx</button>
-        <button onclick="loadSneakerData(sneakers.adidas[1])">Samba OG Red Leopard</button>
-        <button onclick="loadSneakerData(sneakers.adidas[2])">Campus 00s</button>
-        <button onclick="loadSneakerData(sneakers.off_white[3])">Nike Air Force 1 Mid SP Varsity Maize</button>
-    </div>
+        <div class="cont">
+            <div class="image-section">
+                <img id="sneaker-image" src="" alt="Zapatillas">
+            </div>
+        
+            <div class="detalles">
+                <h1 id="sneaker-name"></h1>
+                <p class="price" id="sneaker-price"></p>
+                <h5 class="gray-text" id="sneaker-brand"></h5>
+                <h5 class="gray-text" id="sneaker-colorway"></h5>
+                <h4 class="gray-text">¡Compralo ahora!</h4>
+                <br>
 
-    <div class="cont">
-        <div class="image-section">
-            <img id="sneaker-image" src="" alt="Zapatillas">
+                <h5>Color</h5>
+                <img id="sneaker-color-image" src="" alt="zapatilla" height="75px" width="75px">
+                <hr class="divider">
+                <br>
+                <label for="size" class="bold-text">Elige una talla:</label>
+                <select id="size">
+                    <!-- Las opciones de tallas se llenarán dinámicamente -->
+                </select>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
         </div>
-    
-        <div class="detalles">
-            <h1 id="sneaker-name"></h1>
-            <p class="price" id="sneaker-price"></p>
-            <h6 class="gray-text" id="sneaker-brand"></h6>
-            <h6 class="gray-text" id="sneaker-colorway"></h6>
-            <h5 class="gray-text">Sé el primero en valorar este producto</h5>
-            <br>
-            <a href="#" class="info-link">Más información</a>
-            <br>
-            <h5>Color</h5>
-            <img id="sneaker-color-image" src="" alt="zapatilla" height="75px" width="75px">
+        
+        <div class="descripcion">
             <hr class="divider">
             <br>
-            <label for="size" class="bold-text">Elige una talla:</label>
-            <select id="size">
-                <!-- Las opciones de tallas se llenarán dinámicamente -->
-            </select>
-            <button class="add-to-cart">Añadir al carrito</button>
+            <b>Descripción del producto</b>
+            <p>
+                <br>Detalles:
+                <ul id="sneaker-description">
+                    <!-- Los detalles se llenarán dinámicamente -->
+                </ul>
+                <hr class="divider">
+            </p>
         </div>
-    </div>
-    
-    <div class="descripcion">
-        <hr class="divider">
-        <br>
-        <b>Descripción del producto</b>
-        <p>
-            <br>Detalles:
-            <ul id="sneaker-description">
-                <!-- Los detalles se llenarán dinámicamente -->
-            </ul>
-            <hr class="divider">
-        </p>
-    </div>
 
-    <!--Scripts que permiten cargar los footer y header-->
-    <script src="../js/footer.js"></script>
-    <script>
-    loadFooter();
-    </script>
-    <script src="../js/header.js"></script>
-    
+        <!--Scripts que permiten cargar los footer y header-->
+        <script src="../js/footer.js"></script>
+        <script>
+        loadFooter();
+        </script>
+        <script src="../js/header.js"></script>
+        
 
-    <script src="../js/info.js"></script> <!-- Enlaza el archivo JavaScript -->
+        <script src="../js/info.js"></script> <!-- Enlaza el archivo JavaScript -->
+
+        <script src="../js/cart.js"></script>
+
+        <script src="../js/slide-cart.js"></script>
+
+        
+
+        <script>
+        loadSlideCart();
+        </script>
     </body>
 </html>

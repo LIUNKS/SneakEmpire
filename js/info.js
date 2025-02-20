@@ -1,54 +1,27 @@
-const sneakers = {
-    "adidas": [
-        {
-            "id": "ad001",
-            "name": "Yeezy Boost 350 V2 Onyx",
-            "price": 299.99,
-            "brand": "adidas",
-            "model": "Yeezy Boost 350 V2",
-            "colorway": "Onyx/Onyx/Onyx",
-            "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-            "description": "El icónico diseño Yeezy en un elegante colorway negro total",
-            "category": "Lifestyle",
-            "image": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Onyx-Product.jpg",
-            "inStock": true,
-            "releaseDate": "2024-01-15"
-        },
-        {
-            "id": "ad002",
-            "name": "Samba OG Red Leopard",
-            "price": 129.99,
-            "brand": "adidas",
-            "model": "Samba OG",
-            "colorway": "Red/Leopard Print",
-            "sizes": [36, 37, 38, 39, 40, 41],
-            "description": "Una versión única del clásico Samba con print de leopardo",
-            "category": "Lifestyle",
-            "image": "https://images.stockx.com/images/adidas-Samba-OG-Preloved-Red-Leopard-Womens-Product.jpg",
-            "inStock": true,
-            "releaseDate": "2024-02-01"
-        },
-        {
-            "id": "ad003",
-            "name": "Campus 00s",
-            "price": 109.99,
-            "brand": "adidas",
-            "model": "Campus 00s",
-            "colorway": "Core Black/White",
-            "sizes": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-            "description": "Versión moderna del clásico Campus",
-            "category": "Lifestyle",
-            "image": "https://images.stockx.com/images/adidas-Campus-00s-Core-Black-Product.jpg",
-            "inStock": true,
-            "releaseDate": "2024-01-20"
-        },
-    ]
-}
+let store = [];
 
+// JSON
+async function loadJson() {
+    try {
+        const response = await fetch('../data/sneakers.json');
+
+        if (!response.ok) {
+            throw new Error(`Error al cargar el JSON: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        store = Array.isArray(data.sneakers)? data.sneakers: Object.values(data.sneakers).flat();    
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
 
 // Función para cargar los datos de una zapatilla
 function loadSneakerData(sneaker) {
-    // Actualizar la imagen principal
+    loadJson()
+    console.log(sneaker)
+       // Actualizar la imagen principal
     document.getElementById('sneaker-image').src = sneaker.image;
     document.getElementById('sneaker-image').alt = sneaker.name;
 
@@ -85,5 +58,18 @@ function loadSneakerData(sneaker) {
     `;
 }
 
-// Cargar la primera zapatilla por defecto
-loadSneakerData(sneakers.adidas[0]);
+function iniciar(){
+    // Cargar la primera zapatilla por defecto
+    loadJson().then(()=>{
+        //15 ES UN VALOR DE PRUEBA, PUEDE SER 0 HASTA 30 CREO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        loadSneakerData(store[15]);
+    })
+}
+
+function findIndexProduct(productId) {
+    return store.findIndex(
+        product => product.id === productId
+    );
+}
+
+iniciar()

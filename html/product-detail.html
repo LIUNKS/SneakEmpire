@@ -1,0 +1,85 @@
+<!-- product-detail.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon.ico" />
+    <title>Sneak Empire</title>
+    <link rel="stylesheet" href="../css/informacion_style.css">
+</head>
+<body>
+    <div class="product-detail-container">
+        <div class="back-button">
+            <button onclick="goBack()">← Volver</button>
+        </div>
+        
+        <div class="product-detail">
+            <div class="product-images">
+                <div class="main-image">
+                    <img id="mainImage" src="/placeholder.svg" alt="Product Image">
+                </div>
+                <div class="image-thumbnails" id="imageThumbnails">
+                    <!-- Thumbnails se generarán dinámicamente -->
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="product-header">
+                    <div class="brand-tag" id="brandTag"></div>
+                    <div class="stock-badge" id="stockBadge"></div>
+                </div>
+
+                <h1 id="productName"></h1>
+                
+                <div class="price-container">
+                    <div class="price" id="productPrice"></div>
+                </div>
+                
+                <div class="product-description">
+                    <p id="productDescription"></p>
+                </div>
+
+                <div class="size-selector">
+                    <h3>Selecciona tu talla</h3>
+                    <div class="size-grid" id="sizeGrid">
+                        <!-- Tallas se generarán dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button class="add-to-cart" id="addToCartBtn">
+                        Añadir al Carrito
+                    </button>
+                    <button class="add-to-wishlist" id="wishlistBtn">
+                        ♡ Añadir a Favoritos
+                    </button>
+                </div>
+
+                <div class="product-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Modelo:</span>
+                        <span id="productModel"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Colorway:</span>
+                        <span id="productColorway"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Fecha de lanzamiento:</span>
+                        <span id="productRelease"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Categoría:</span>
+                        <span id="productCategory"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="../js/informacion.js"></script>
+</body>
+</html>

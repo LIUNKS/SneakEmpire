@@ -107,13 +107,15 @@ const initSneakerDisplay = (config) => {
       ? (sneaker.price / (1 - sneaker.discount / 100)).toFixed(2)
       : sneaker.price;
     const isPopular = Math.random() > 0.7; // Simulación de producto en tendencia
-    const stockLevel = Math.random() > 0.8 ? "low" : "in"; // Simulación de nivel de stock
+    const stockLevel = sneaker.inStock ? "in" : "low"; // Usando el inStock del JSON
 
     return `
-        <div class="sd-card" data-brand="${sneaker.brand.toLowerCase()}">
+        <div class="sd-card" data-brand="${sneaker.brand.toLowerCase()}" data-id="${
+      sneaker.id
+    }">
             <div class="sd-image-container">
                 <div class="sd-image-overlay"></div>
-                <div class="sd-size-badge">Tallas: ${Math.min(
+                <div class="sd-size-badge">EU ${Math.min(
                   ...sneaker.sizes
                 )} - ${Math.max(...sneaker.sizes)}</div>
                 ${
@@ -122,7 +124,9 @@ const initSneakerDisplay = (config) => {
                     : ""
                 }
                 <button class="sd-wishlist-btn" 
-                        onclick="SneakerDisplay.toggleWishlist(this)" 
+                        onclick="SneakerDisplay.toggleWishlist('${
+                          sneaker.id
+                        }')" 
                         aria-label="Añadir a la lista de deseos" 
                         aria-pressed="false" 
                         title="Añadir a la lista de deseos">
@@ -143,7 +147,7 @@ const initSneakerDisplay = (config) => {
                 <h3 class="sd-name">${sneaker.name}</h3>
                 <div class="sd-price-container">
                     <div class="sd-price">
-                        $${sneaker.price}
+                        $${sneaker.price.toFixed(2)}
                         ${
                           hasDiscount
                             ? `
@@ -176,25 +180,116 @@ const initSneakerDisplay = (config) => {
 
   // Namespace para funciones públicas
   window.SneakerDisplay = {
-    toggleWishlist: (button) => {
-      button.classList.toggle("active");
-      showToast(
-        button.classList.contains("active")
-          ? "Añadido a favoritos"
-          : "Eliminado de favoritos"
-      );
+    toggleWishlist: (sneakerId) => {
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const index = wishlist.findIndex((item) => item.id === sneakerId);
+
+      if (index === -1) {
+        // Añadir a wishlist
+        const sneaker = findSneakerById(sneakerId);
+        if (sneaker) {
+          wishlist.push({
+            id: sneaker.id,
+            name: sneaker.name,
+            price: sneaker.price,
+            image: sneaker.image,
+          });
+          showToast("Añadido a favoritos");
+        }
+      } else {
+        // Eliminar de wishlist
+        wishlist.splice(index, 1);
+        showToast("Eliminado de favoritos");
+      }
+
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      updateWishlistUI(sneakerId);
     },
 
     addToCart: (sneakerId) => {
-      showToast("Producto añadido al carrito");
-      // AGREGAR UN CUADRO DONDE SE PREGUNTA LA TALLA
-      // EL VALOR 10 ES DE PRUEBA 
-      addProduct(sneakerId, 10, `containerCard`)
+      const sneaker = findSneakerById(sneakerId);
+      if (!sneaker) return;
+
+      // Mostrar modal de selección de talla
+      showSizeSelector(sneaker, (selectedSize) => {
+        if (selectedSize) {
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          cart.push({
+            id: sneaker.id,
+            name: sneaker.name,
+            price: sneaker.price,
+            size: selectedSize,
+            image: sneaker.image,
+            quantity: 1,
+          });
+          localStorage.setItem("cart", JSON.stringify(cart));
+          showToast("Producto añadido al carrito");
+        }
+      });
     },
 
     viewDetails: (sneakerId) => {
-      showToast("Cargando detalles...");
+      // Guardar estado actual
+      sessionStorage.setItem("lastViewPosition", window.scrollY);
+      sessionStorage.setItem("filterState", JSON.stringify(filterState));
+
+      // Navegar a la página de detalles con el ID correcto
+      window.location.href = `product-detail.html?id=${sneakerId}`;
     },
+  };
+
+  // Función para encontrar un sneaker por ID
+  const findSneakerById = (sneakerId) => {
+    const allSneakers = Object.values(window.sneakersData || {}).flat();
+    return allSneakers.find((sneaker) => sneaker.id === sneakerId);
+  };
+
+  // Modal de selección de talla
+  const showSizeSelector = (sneaker, callback) => {
+    const modal = document.createElement("div");
+    modal.className = "sd-modal";
+    modal.innerHTML = `
+      <div class="sd-modal-content">
+        <h3>Selecciona tu talla</h3>
+        <div class="sd-size-grid">
+          ${sneaker.sizes
+            .map(
+              (size) => `
+            <button class="sd-size-btn" data-size="${size}">EU ${size}</button>
+          `
+            )
+            .join("")}
+        </div>
+        <button class="sd-modal-close">×</button>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Event listeners
+    modal.querySelector(".sd-modal-close").onclick = () => {
+      document.body.removeChild(modal);
+      callback(null);
+    };
+
+    modal.querySelectorAll(".sd-size-btn").forEach((btn) => {
+      btn.onclick = () => {
+        document.body.removeChild(modal);
+        callback(btn.dataset.size);
+      };
+    });
+  };
+
+  // Actualizar UI de wishlist
+  const updateWishlistUI = (sneakerId) => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const isInWishlist = wishlist.some((item) => item.id === sneakerId);
+
+    document
+      .querySelectorAll(`.sd-card[data-id="${sneakerId}"] .sd-wishlist-btn`)
+      .forEach((btn) => {
+        btn.classList.toggle("active", isInWishlist);
+      });
   };
 
   // Funciones auxiliares
@@ -258,7 +353,9 @@ const initSneakerDisplay = (config) => {
   };
 
   const generateBrandFilters = (sneakers) => {
-    const brands = [...new Set(sneakers.map((sneaker) => sneaker.brand))];
+    const brands = [
+      ...new Set(sneakers.map((sneaker) => sneaker.brand)),
+    ].sort();
     const filtersHTML = brands
       .map(
         (brand) =>
@@ -272,16 +369,24 @@ const initSneakerDisplay = (config) => {
   };
 
   const displaySneakers = (sneakersData) => {
-    let filteredSneakers = [...sneakersData];
+    let filteredSneakers = [];
 
-    // Filtro por marca
+    // Convertir el objeto de marcas en un array plano
+    if (typeof sneakersData === "object" && !Array.isArray(sneakersData)) {
+      Object.values(sneakersData).forEach((brandSneakers) => {
+        filteredSneakers = [...filteredSneakers, ...brandSneakers];
+      });
+    } else {
+      filteredSneakers = [...sneakersData];
+    }
+
+    // Aplicar filtros
     if (filterState.brand !== "all") {
       filteredSneakers = filteredSneakers.filter(
         (sneaker) => sneaker.brand.toLowerCase() === filterState.brand
       );
     }
 
-    // Filtro por rango de precios
     if (filterState.priceRange !== "all") {
       const [min, max] = filterState.priceRange.split("-").map(Number);
       filteredSneakers = filteredSneakers.filter((sneaker) => {
@@ -311,15 +416,19 @@ const initSneakerDisplay = (config) => {
     const grid = document.getElementById("sd-sneakersGrid");
     if (filteredSneakers.length === 0) {
       grid.innerHTML = `
-                <div class="sd-no-results">
-                    <p>No se encontraron productos que coincidan con los filtros seleccionados.</p>
-                    <button class="sd-btn sd-btn-secondary" onclick="location.reload()">Reiniciar filtros</button>
-                </div>
-            `;
+        <div class="sd-no-results">
+          <p>No se encontraron productos que coincidan con los filtros seleccionados.</p>
+          <button class="sd-btn sd-btn-secondary" onclick="location.reload()">Reiniciar filtros</button>
+        </div>
+      `;
     } else {
       grid.innerHTML = filteredSneakers
         .map((sneaker) => createSneakerCard(sneaker))
         .join("");
+
+      // Actualizar UI de wishlist para todas las cards
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      wishlist.forEach((item) => updateWishlistUI(item.id));
     }
 
     updateActiveFilters();
@@ -358,7 +467,7 @@ const initSneakerDisplay = (config) => {
         displaySneakers(sneakersData);
       });
 
-    // Event listeners para remover filtros individuales
+    // Event listeners para remover filtros
     document
       .getElementById("sd-activeFilters")
       .addEventListener("click", (e) => {
@@ -366,7 +475,7 @@ const initSneakerDisplay = (config) => {
           const filterType = e.target.dataset.filter;
           filterState[filterType] = "all";
 
-          // Actualizar UI de los botones
+          // Actualizar UI
           document
             .querySelectorAll(`[data-filter="${filterType}"]`)
             .forEach((btn) => {
@@ -378,7 +487,7 @@ const initSneakerDisplay = (config) => {
 
           displaySneakers(sneakersData);
         } else if (e.target.classList.contains("sd-clear-filters")) {
-          // Resetear todos los filtros
+          // Resetear filtros
           Object.keys(filterState).forEach((key) => {
             filterState[key] = "all";
           });
@@ -409,21 +518,29 @@ const initSneakerDisplay = (config) => {
       const data = await response.json();
       document.getElementById("sd-loadingState").style.display = "none";
 
-      const sneakersArray = Array.isArray(data.sneakers)
-        ? data.sneakers
-        : Object.values(data.sneakers).flat();
+      // Guardar datos para uso global
+      window.sneakersData = data.sneakers;
 
-      generateBrandFilters(sneakersArray);
-      setupFilterListeners(sneakersArray);
-      displaySneakers(sneakersArray);
+      // Generar filtros y mostrar sneakers
+      const allSneakers = Object.values(data.sneakers).flat();
+      generateBrandFilters(allSneakers);
+      setupFilterListeners(data.sneakers);
+      displaySneakers(data.sneakers);
+
+      // Restaurar posición del scroll si volvemos de detalles
+      const lastPosition = sessionStorage.getItem("lastViewPosition");
+      if (lastPosition) {
+        window.scrollTo(0, parseInt(lastPosition));
+        sessionStorage.removeItem("lastViewPosition");
+      }
     } catch (error) {
       console.error("Error inicializando SneakerDisplay:", error);
       document.getElementById("sd-loadingState").innerHTML = `
-                <div class="sd-error-state">
-                    <p>Error: ${error.message}</p>
-                    <button class="sd-btn sd-btn-secondary" onclick="location.reload()">Reintentar</button>
-                </div>
-            `;
+        <div class="sd-error-state">
+          <p>Error: ${error.message}</p>
+          <button class="sd-btn sd-btn-secondary" onclick="location.reload()">Reintentar</button>
+        </div>
+      `;
     }
   };
 

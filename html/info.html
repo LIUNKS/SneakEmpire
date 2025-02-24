@@ -10,82 +10,51 @@
         <title>Sneak Empire</title>
 
         <!--Añade los estilos o CSS al header, footer e info-->
-
+        <link rel="stylesheet" href="../css/cart_style.css">
+        <link rel="stylesheet" href="../css/slide_cart_style.css"/>
         <link rel="stylesheet" href="../css/header_style.css" />
         <link rel="stylesheet" href="../css/footer_style.css" />
         <link rel="stylesheet" href="../css/info_style.css"/> 
     </head>
 
     <body>
-        <nav>
-            <!--La 2da Barra-->
-            <ul class="barra">
-                <b><li class="medio"><a class="letras"  href="../html/lo-nuevo-PRUEBA.html">Lo nuevo</a></li></b>
-                <b><li class="medio"><a class="letras"  href="">Hombre</a></li></b>
-                <b><li class="medio"><a class="letras"  href="">Mujer</a></li></b>
-                <b><li class="medio"><a class="letras"  href="">Niños</a></li></b>
-                <b><li class="medio"><a class="letras"  href="">Accesorios</a></li></b>
-                <b><li class="medio"><a class="letras"  href="">Deportes</a></li></b>
-
-                <!--Boton de busqueda-->
-                <div class="busqueda">
-                    <input class="tamaño" type="text" placeholder="Buscar" required>
-                    <div class="btn">
-                        <i style='font-size:24px' class='fas'>&#xf002;</i>
-    
-                    </div>
-                </div>
-            </ul>
-        </nav>
-
-        <!--Pestaña para cambiar de productos. Tiene relacion con el script inferior-->
-        <select id="selectorProductos">
-            <option value="">Selecciona un producto</option>
-            <option value="0">Sport Casual Easy-on</option>
-            <option value="1">Zapatillas Running Pro</option>
-            <!--Agregar mas opciones es opcional-->
-        </select>
-
-
-        <!--Contenido principal del html info-->
-        <div class="cont">                            
+        <div class="cont">
             <div class="image-section">
-                <img src="" alt="Zapatillas">
+                <img id="sneaker-image" src="" alt="Zapatillas">
             </div>
-
+        
             <div class="detalles">
-                <h1></h1>
-                <p class="price"></p>
-                <h6><font color="gray"></font></h6>
-                <h6><font color="gray"></font></h6> 
-                <font color="gray"><h5>Se el primero en valorar este producto</h5></font>
+                <h1 id="sneaker-name"></h1>
+                <p class="price" id="sneaker-price"></p>
+                <h5 class="gray-text" id="sneaker-brand"></h5>
+                <h5 class="gray-text" id="sneaker-colorway"></h5>
+                <h4 class="gray-text">¡Compralo ahora!</h4>
                 <br>
-                <font><a href="#">Más informacion</a><br></font>
-                <br><h5>Color</h5>
-                <img src="" alt="zapatilla" height="75px" width="75px">     
-                <hr size="1px" color="silver" />
-                <br><b><label for="size">Elige una talla:</label></b>
+
+                <h5>Color</h5>
+                <img id="sneaker-color-image" src="" alt="zapatilla" height="75px" width="75px">
+                <hr class="divider">
+                <br>
+                <label for="size" class="bold-text">Elige una talla:</label>
                 <select id="size">
-                    <option value="36">36</option>
-                    <option value="37">37</option>
-                    <option value="38">38</option>
-                    <option value="39">39</option>
-                    <option value="40">40</option>
+                    <!-- Las opciones de tallas se llenarán dinámicamente -->
                 </select>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart">Añadir al carrito</button>
             </div>
         </div>
-
+        
         <div class="descripcion">
-            <hr size="1px" color="silver" />
-            <br><b></b>
+            <hr class="divider">
+            <br>
+            <b>Descripción del producto</b>
             <p>
                 <br>Detalles:
-                <ul></ul>
-                <hr size="1px" color="silver" />
+                <ul id="sneaker-description">
+                    <!-- Los detalles se llenarán dinámicamente -->
+                </ul>
+                <hr class="divider">
             </p>
         </div>
-
 
         <!--Scripts que permiten cargar los footer y header-->
         <script src="../js/footer.js"></script>
@@ -93,22 +62,18 @@
         loadFooter();
         </script>
         <script src="../js/header.js"></script>
+        
 
+        <script src="../js/info.js"></script> <!-- Enlaza el archivo JavaScript -->
 
-        <!--Script que añade la funcion para mostrar distintos productos-->
+        <script src="../js/cart.js"></script>
+
+        <script src="../js/slide-cart.js"></script>
+
+        
+
         <script>
-            const selectorProductos = document.getElementById("selectorProductos"); //Metodo de JS que permite obtener un elemento HTML a partir de su ID
-            //registra eventos 
-            selectorProductos.addEventListener("change", function () {
-                const indice = parseInt(selectorProductos.value); //Obtener el índice seleccionado
-                if (!isNaN(indice)) { //Numero valido?
-                    mostrarProducto(productos[indice]); //Mostrar el producto seleccionado
-                }
-            });
+        loadSlideCart();
         </script>
-
-        <script src="../js/productos-info.js"></script>
-        <script src="../js/function-info.js"></script>
-
     </body>
 </html>

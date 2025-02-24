@@ -1,159 +1,93 @@
-/*Selector universal que coincide con todos los elementos para la pagina info.html*/
-*{
-    /*margin y padding a 0 para poder editar el resto del css*/
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
+/* Estilos para la página de información del producto */
 
-/*Barra blanca que tiene la cosita de busqueda*/
-ul.barra{
-    background-color: white;
-    width: 100%;
-    height: 75px;
-    list-style-type: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/*Esto hace que las palabras esten centradas*/
-li.medio{
-    display: inline-flex;
-}
-
-/*Letras*/
-a.letras{
-    text-decoration: none;
-    color: black;
-    padding: 7px;
-    width: 100px;
-}
-
-/*Cuando pasas el cursor por las opciones*/
-/*Efecto hover, efecto visual al pasar el cursor*/
-nav li.medio:hover{
-    background-color: gainsboro;
-}
-
-/*Permite evitar un error con el orden de la pagina*/
-.container{
-    position: relative;
-}
-
-/*Posicionamiento de la pestaña de busqueda*/
-div.busqueda{
-    position: absolute;
-    padding: 5px;
-    left: 80%;
-}
-
-/*Efectos de la pestaña busqueda*/
-/*Input permite la personalizacion de campos de texto*/
-.busqueda input{
-    width: 0px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6s ease;
-}
-
-/*Pestaña o boton de busqueda*/
-.btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: gainsboro;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
-    color: black;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/*Edicion del boton de busqueda*/
-.busqueda:hover input{
-    width: 240px;
-}
-.busqueda input:focus{
-    width: 240px;
-}
-
-/*Edita todo el contenido del contenedor "detalles"*/
-.detalles{
-    flex: 1;
-    padding: 10px;
-}
-.detalles h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-.detalles p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-.detalles .price {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.detalles label {
-    font-size: 14px;
-}
-
-/*Selecciona el button (Añadir carrito) y las opciones de talla para darle un diseño*/
-.detalles select,
-        .detalles button {
-            padding: 10px;
-            font-size: 14px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-}
-
-/*Efecto de cambio de color al pasar el cursor por el boton Añadir al carrito*/
-.detalles button {
-    background-color: black;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.detalles button:hover {
-    background-color: gray;
-}
-
-
-/*El contenido, donde esta la imagen, su descripcion y demas.*/
+/* Contenedor principal */
 .cont {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
     max-width: 1200px;
-    margin: 40px auto;
-    background: white;
+    margin: 0 auto;
+}
+
+/* Sección de imagen */
+.image-section img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*Añade estilos al contenedor de la descripcion del producto*/
-.descripcion{
-    width: 125vh;
-    height: 60vh;
-    background-color: white;
-    margin: 5%
+/* Sección de detalles */
+.detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
 }
 
-/*Alinea la posicion de la lista de caracteristicas*/
-ul {
-    list-style-position: inside;
-    margin-left: 1px;
+.detalles h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.price {
+    font-size: 20px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+.gray-text {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+/* Botón de añadir al carrito */
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Descripción del producto */
+.descripcion {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.descripcion b {
+    font-size: 18px;
+}
+
+.descripcion ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.descripcion ul li {
+    padding: 5px 0;
 }

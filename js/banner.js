@@ -1,5 +1,5 @@
 function loadBanner() {
-    const bannerHTML = `
+  const bannerHTML = `
      <div class="banner">
         <div class="new-product">
             <svg viewBox="0 0 100 100">
@@ -29,11 +29,67 @@ function loadBanner() {
     </div>
     `;
 
-    // Crear Contenedor
-    const bannerContainer = document.createElement('div');
-    bannerContainer.className = "banner-container";
-    bannerContainer.innerHTML = bannerHTML;
+  // Crear Contenedor
+  const bannerContainer = document.createElement("div");
+  bannerContainer.className = "banner-container";
+  bannerContainer.innerHTML = bannerHTML;
 
-    // Insertar el contenedor en el body
-    document.body.appendChild(bannerContainer);
+  // Insertar el contenedor en el body
+  document.body.appendChild(bannerContainer);
+
+  // Añadir interactividad a la imagen
+  const shoeImage = document.querySelector(".shoe-image");
+  shoeImage.addEventListener("mouseover", function () {
+    this.style.filter = "brightness(1.1)";
+  });
+
+  shoeImage.addEventListener("mouseout", function () {
+    this.style.filter = "brightness(1)";
+  });
+
+  // Añadir interactividad al badge de descuento
+  const discountBadge = document.querySelector(".discount-badge");
+  discountBadge.addEventListener("mouseover", function () {
+    this.style.backgroundColor = "#ff0000";
+    this.querySelector(".discount-text").style.color = "white";
+  });
+
+  discountBadge.addEventListener("mouseout", function () {
+    this.style.backgroundColor = "white";
+    this.querySelector(".discount-text").style.color = "black";
+  });
+}
+
+function createParticles() {
+  const particlesContainer = document.querySelector(".particles");
+  const particleCount = 20;
+
+  for (let i = 0; i < particleCount; i++) {
+    createParticle(particlesContainer);
+  }
+}
+
+function createParticle(container) {
+  const particle = document.createElement("div");
+  particle.className = "particle";
+
+  // Tamaño aleatorio
+  const size = Math.random() * 5 + 2;
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+
+  // Posición inicial aleatoria
+  const posX = Math.random() * 100;
+  const posY = Math.random() * 100;
+  particle.style.left = `${posX}%`;
+  particle.style.top = `${posY}%`;
+
+  // Opacidad aleatoria
+  particle.style.opacity = Math.random() * 0.5 + 0.3;
+
+  // Añadir al contenedor
+  container.appendChild(particle);
+
+  // Animar la partícula
+  animateParticle(particle);
 }

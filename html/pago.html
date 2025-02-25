@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../img/icon.ico">
+    <title>Continuar con el pago</title>
+    <link rel="stylesheet" href="../css/pago_style.css">
+    <link rel="stylesheet" href="../css/header_style.css" />
+    <link rel="stylesheet" href="../css/footer_style.css" />
+</head>
+
+<body>
+    <main>
+        <div class="payment-container">
+            <h1>Continuar con el pago</h1>
+            <span>Seleccione el método de pago:</span>
+
+            <form>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="visa">
+                    <img src="../img/visa-logo.png" alt="">
+                    <span>VISA</span>
+                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="mastercard">
+                    <img src="../img/mastercard-logo.png" alt="">
+                    <span>MasterCard</span>
+                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="pagoefectivo">
+                    <img src="../img/pagoefectivo-logo.png" alt="">
+                    <span>PagoEfectivo</span>
+                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="paypal">
+                    <img src="../img/paypal-logo.png" alt="">
+                    <span>PayPal</span>
+                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
+                </label>
+            </form>
+        </div>
+
+        <div class="payment-info">
+            <h2>Información de pago</h2>
+
+            <form>
+
+                <div class="card-info">
+                    <label>Número de tarjeta</label>
+                    <input type="text" placeholder="" maxlength="16">
+
+                    <label>Fecha de caducidad</label>
+                    <input type="text" placeholder="" maxlength="2">
+                    <input type="text" placeholder="" maxlength="2">
+
+                    <label>Código de seguridad</label>
+                    <input type="text" placeholder="" maxlength="4">
+                </div>
+
+                <h3>Información de Facturación</h3>
+
+                <div class="billing-info">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="">
+
+                    <label>Apellidos</label>
+                    <input type="text" placeholder="">
+
+                    <label>Localidad</label>
+                    <input type="text" placeholder="">
+
+                    <label>Dirección</label>
+                    <input type="text" placeholder="">
+
+                    <label>Código postal o zip</label>
+                    <input type="text" placeholder="">
+
+                    <label>País</label>
+                    <input type="text" placeholder="">
+
+                    <label>Teléfono</label>
+                    <input type="text" placeholder="">
+
+                    <label>Teléfono (en caso de no disponer del anterior)</label>
+                    <input type="text" placeholder="">
+                </div>
+
+                <div class="save-info">
+                    <p>¿Desea guardar su información de pago?</p>
+                    <label><input type="radio" name="info" value="si"> Sí</label>
+                    <label><input type="radio" name="info" value="no"> No</label>
+                </div>
+
+                <button type="submit">Finalizar compra</button>
+            </form>
+        </div>
+
+        <!-- Compra segura -->>
+        <section class="security">
+            <h2>SIÉNTETE SEGURO CON TU COMPRA EN SNEAK EMPIRE</h2>
+            <div class="security-items">
+                <div class="item">
+                    <span class="icon"><strong>V</strong></span>
+                    <sTRong><p>Envío gratis por compras mayores a S/. 250</p></sTRong>
+                </div>
+                <div class="item">
+                    <span class="icon"><strong>V</strong></span>
+                    <strong><p>Hasta 6 cuotas sin intereses</p></strong>
+                </div>
+                <div class="item">
+                    <span class="icon"><strong>V</strong></span>
+                    <strong><p>Devolución gratuita y fácil hasta en 30 días</p></strong>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/footer.js"></script>
+    <script>
+        loadFooter();
+    </script>
+    <script src="../js/header.js"></script>
+</body>
+
+</html>

@@ -144,7 +144,7 @@ const initSneakerDisplay = (config) => {
             </div>
             <div class="sd-details">
                 <span class="sd-brand">${sneaker.brand}</span>
-                <h3 class="sd-name">${sneaker.name}</h3>
+                <p class="sd-name">${sneaker.name}</p>
                 <div class="sd-price-container">
                     <div class="sd-price">
                         $${sneaker.price.toFixed(2)}

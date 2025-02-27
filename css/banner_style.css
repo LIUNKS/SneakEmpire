@@ -21,6 +21,7 @@
   left: 80px;
   animation: rotate 20s linear infinite;
   z-index: 3;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
 @keyframes rotate {
@@ -46,6 +47,20 @@
   padding: 2rem;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   z-index: 2;
+  animation: pulsate 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulsate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .discount-text {
@@ -65,6 +80,11 @@
   z-index: 1;
   opacity: 0;
   animation: shoeEntrance 1s ease-out forwards;
+  transition: transform 0.3s ease;
+}
+
+.shoe-image:hover {
+  transform: translateY(-10px) rotate(-5deg);
 }
 
 @keyframes shoeEntrance {
@@ -94,19 +114,61 @@
   font-weight: 900;
   margin-bottom: 1rem;
   line-height: 1.1;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInTitle 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes slideInTitle {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .subtitle {
   font-size: clamp(1rem, 2vw, 1.5rem);
   line-height: 1.5;
   margin-top: 2rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .divider {
-  width: 100px;
+  width: 0;
   height: 6px;
   background: black;
   margin: 2rem 0 2rem auto;
+  animation: expandDivider 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes expandDivider {
+  to {
+    width: 100px;
+  }
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -126,6 +188,10 @@
     transform-origin: center;
     animation: shoeEntranceMobile 1s ease-out forwards;
     top: 20%;
+  }
+
+  .shoe-image:hover {
+    transform: translateX(-50%) translateY(-10px);
   }
 
   @keyframes shoeEntranceMobile {
@@ -156,4 +222,3 @@
     top: 15%;
   }
 }
-

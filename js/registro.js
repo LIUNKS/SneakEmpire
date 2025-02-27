@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   
     // Maneja el envío del formulario
-    signupForm.addEventListener("submit", function (e) {
+    signupForm.addEventListener("submit", async function (e) {
       e.preventDefault(); // Evita que el formulario se envíe por defecto
   
       // Obtiene los valores de los campos del formulario
@@ -56,7 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
         showError("Las contraseñas no coinciden"); // Error si las contraseñas no coinciden
         return;
       }
-  
+
+      const result = await register(fullName, email, password);
+      if (!result) {
+        showError("El usuario ya existe");
+        return;
+      }
+
       // Almacena los datos del usuario en el almacenamiento local (solo para demostración)
       const userData = {
         fullName,

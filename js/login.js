@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const remember = document.getElementById("remember").checked;
 
     try {
+      const result = await login(email, password);
+      if (!result) {
+        throw new Error("Credenciales inválidas");
+      }
       // Simular una llamada a la API con un tiempo de espera
       await new Promise((resolve) => setTimeout(resolve, 1000));
 

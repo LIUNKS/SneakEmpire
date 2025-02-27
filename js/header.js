@@ -90,7 +90,7 @@ carritoButton.addEventListener('click', () => {
     if (window.innerWidth > 768) {
         const slideCart = document.getElementById('slideCart');
         // Evita que el evento de cierre se active
-        //event.stopPropagation(); 
+        event.stopPropagation(); 
         slideCart.style.visibility = "visible";        
     } else {
         window.location.href = "./cart.html";

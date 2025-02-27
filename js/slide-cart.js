@@ -39,16 +39,21 @@ function loadSlideCart() {
 
     // ADDEVENTLISTENER
 
-    // Detectar clics fuera del carrito
-    /*document.addEventListener('click', (event) => {
+    //Detectar clics fuera del carrito
+    document.addEventListener('click', (event) => {
         if (!slideCart.contains(event.target) && slideCart.style.visibility === 'visible') {
             slideCart.style.visibility = 'hidden';
         }            
-    });*/
+    });
 
     const buttonClose = document.getElementById(`buttonCloseSlide`);
     buttonClose.addEventListener(`click`, () => {
         nav.style.visibility = `hidden`;
+    })
+
+    const buttonContinuarCompra = document.getElementById(`buttonContinuarCompra`);
+    buttonContinuarCompra.addEventListener(`click`, () => {
+        window.location.href = `../html/pago.html`;
     })
 }
 

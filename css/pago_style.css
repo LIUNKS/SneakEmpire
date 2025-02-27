@@ -29,6 +29,7 @@ body {
     border: 2px solid #ddd;
     cursor: pointer;
     transition: 0.3s;
+    justify-content: space-between;
 }
 
 .payment-option:hover {
@@ -54,23 +55,35 @@ body {
 }
 
 .circle-check {
-    display: flex;
+
     position: center;
+}
+
+.qrContainer {
+    display: none;
+    width: 300px;
+    margin: 20px 10px;
 }
 
 /* Información de pago */
 
 .payment-info {
+    display: block;
+    text-align: start;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 500px;
+    margin: 20px 10px;
 }
 
 h2, h3 {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 form {
@@ -84,7 +97,7 @@ label {
     display: block;
 }
 
-input {
+.card-info input {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -93,12 +106,11 @@ input {
 }
 
 .card-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    display: flex;
+    gap: 5px;
 }
 
-.billing-info {
+.fact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
@@ -133,7 +145,7 @@ button:hover {
 .security {
     background-color: #f3f3f3;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .security h2 {
@@ -145,7 +157,8 @@ button:hover {
 .security-items {
     display: flex;
     justify-content: center;
-    gap: 130px;
+    gap: 55px;
+    padding: 10px;
 }
 
 .item {
@@ -157,9 +170,10 @@ button:hover {
 }
 
 .icon {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
+
 
 /* Responsive */
 
@@ -174,4 +188,9 @@ button:hover {
     .payment-info {
         width: 100%;
     }
+
+    .security-items {
+        flex-direction: column;
+        gap: 20px;
+      }
 }

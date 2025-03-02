@@ -1,145 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="../img/icon.ico">
-    <title>Continuar con el pago</title>
-    <link rel="stylesheet" href="../css/pago_style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="../img/icon.ico" />
+    <title>Continuar con el pago | Sneak Empire</title>
     <link rel="stylesheet" href="../css/header_style.css" />
     <link rel="stylesheet" href="../css/footer_style.css" />
-</head>
+    <link rel="stylesheet" href="../css/pago_style.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <main class="checkout">
+      <section class="checkout__section">
+        <div class="payment-methods">
+          <h1 class="payment-methods__title">Continuar con el pago</h1>
+          <p class="payment-methods__subtitle">Seleccione el método de pago:</p>
 
-<body>
-    <main>
-        <div class="payment-container">
-            <h1>Continuar con el pago</h1>
-            <span>Seleccione el método de pago:</span>
+          <div class="payment-methods__list">
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="visa"
+                class="payment-option__input"
+              />
+              <div
+                class="payment-option__logo payment-option__logo--visa"
+              ></div>
+              <span class="payment-option__name">VISA</span>
+              <span class="payment-option__check"></span>
+            </label>
 
-            <form>
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="visa">
-                    <img src="../img/visa-logo.png" alt="">
-                    <span>VISA</span>
-                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
-                </label>
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="mastercard"
+                class="payment-option__input"
+              />
+              <div
+                class="payment-option__logo payment-option__logo--mastercard"
+              ></div>
+              <span class="payment-option__name">MasterCard</span>
+              <span class="payment-option__check"></span>
+            </label>
 
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="mastercard">
-                    <img src="../img/mastercard-logo.png" alt="">
-                    <span>MasterCard</span>
-                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
-                </label>
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="pagoefectivo"
+                class="payment-option__input"
+              />
+              <div
+                class="payment-option__logo payment-option__logo--pagoefectivo"
+              ></div>
+              <span class="payment-option__name">PagoEfectivo</span>
+              <span class="payment-option__check"></span>
+            </label>
 
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="pagoefectivo">
-                    <img src="../img/pagoefectivo-logo.png" alt="">
-                    <span>PagoEfectivo</span>
-                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
-                </label>
-
-                <label class="payment-option">
-                    <input type="radio" name="payment" value="paypal">
-                    <img src="../img/paypal-logo.png" alt="">
-                    <span>PayPal</span>
-                    <span class="circle-check"><i class="fa-solid fa-circle-check" style="color: #5daae5;"></i></span>
-                </label>
-            </form>
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="payment"
+                value="paypal"
+                class="payment-option__input"
+              />
+              <div
+                class="payment-option__logo payment-option__logo--paypal"
+              ></div>
+              <span class="payment-option__name">PayPal</span>
+              <span class="payment-option__check"></span>
+            </label>
+          </div>
         </div>
 
-        <div class="payment-info">
-            <h2>Información de pago</h2>
+        <div class="payment-form" id="paymentInfo">
+          <h2 class="payment-form__title">Información de pago</h2>
+          <form id="paymentForm" class="payment-form__form">
+            <div class="payment-form__section">
+              <h3 class="payment-form__subtitle">Detalles de la tarjeta</h3>
 
-            <form>
-
-                <div class="card-info">
-                    <label>Número de tarjeta</label>
-                    <input type="text" placeholder="" maxlength="16">
-
-                    <label>Fecha de caducidad</label>
-                    <input type="text" placeholder="" maxlength="2">
-                    <input type="text" placeholder="" maxlength="2">
-
-                    <label>Código de seguridad</label>
-                    <input type="text" placeholder="" maxlength="4">
+              <div class="form-group">
+                <label class="form-group__label" for="cardNumber"
+                  >Número de tarjeta</label
+                >
+                <div class="form-group__input-wrapper">
+                  <input
+                    type="text"
+                    id="cardNumber"
+                    class="form-group__input"
+                    placeholder="1234 5678 9012 3456"
+                    maxlength="19"
+                    autocomplete="cc-number"
+                  />
+                  <span class="form-group__secure-icon" title="Conexión segura"
+                    >🔒</span
+                  >
                 </div>
+              </div>
 
-                <h3>Información de Facturación</h3>
-
-                <div class="fact-info">
-                    <label>Nombre</label>
-                    <input type="text" placeholder="">
-
-                    <label>Apellidos</label>
-                    <input type="text" placeholder="">
-
-                    <label>Localidad</label>
-                    <input type="text" placeholder="">
-
-                    <label>Dirección</label>
-                    <input type="text" placeholder="">
-
-                    <label>Código postal o zip</label>
-                    <input type="text" placeholder="">
-
-                    <label>País</label>
-                    <input type="text" placeholder="">
-
-                    <label>Teléfono</label>
-                    <input type="text" placeholder="">
-
-                    <label>Teléfono (en caso de no disponer del anterior)</label>
-                    <input type="text" placeholder="">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-group__label" for="expiryMonth"
+                    >Mes de caducidad</label
+                  >
+                  <select
+                    id="expiryMonth"
+                    class="form-group__select"
+                    autocomplete="cc-exp-month"
+                  >
+                    <option value="" disabled selected>MM</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
                 </div>
-
-                <div class="save-info">
-                    <p>¿Desea guardar su información de pago?</p>
-                    <label><input type="radio" name="info" value="si"> Sí</label>
-                    <label><input type="radio" name="info" value="no"> No</label>
+                <div class="form-group">
+                  <label class="form-group__label" for="expiryYear"
+                    >Año de caducidad</label
+                  >
+                  <select
+                    id="expiryYear"
+                    class="form-group__select"
+                    autocomplete="cc-exp-year"
+                  >
+                    <option value="" disabled selected>AA</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                  </select>
                 </div>
+                <div class="form-group">
+                  <label class="form-group__label" for="cvv">CVV</label>
+                  <div class="form-group__input-wrapper">
+                    <input
+                      type="text"
+                      id="cvv"
+                      class="form-group__input"
+                      placeholder="123"
+                      maxlength="4"
+                      autocomplete="cc-csc"
+                    />
+                    <div class="form-group__tooltip">
+                      El código de seguridad se encuentra en el reverso de su
+                      tarjeta
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                <button type="submit">Finalizar compra</button>
-            </form>
+            <div class="payment-form__section">
+              <h3 class="payment-form__subtitle">Información de Facturación</h3>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-group__label" for="firstName"
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    class="form-group__input"
+                    autocomplete="given-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-group__label" for="lastName"
+                    >Apellidos</label
+                  >
+                  <input
+                    type="text"
+                    id="lastName"
+                    class="form-group__input"
+                    autocomplete="family-name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-group__label" for="city">Localidad</label>
+                  <input
+                    type="text"
+                    id="city"
+                    class="form-group__input"
+                    autocomplete="address-level2"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-group__label" for="address"
+                    >Dirección</label
+                  >
+                  <input
+                    type="text"
+                    id="address"
+                    class="form-group__input"
+                    autocomplete="street-address"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-group__label" for="zipCode"
+                    >Código postal</label
+                  >
+                  <input
+                    type="text"
+                    id="zipCode"
+                    class="form-group__input"
+                    autocomplete="postal-code"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-group__label" for="country">País</label>
+                  <select
+                    id="country"
+                    class="form-group__select"
+                    autocomplete="country"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Seleccione un país
+                    </option>
+                    <option value="ES">España</option>
+                    <option value="PE">Perú</option>
+                    <option value="MX">México</option>
+                    <option value="CO">Colombia</option>
+                    <option value="AR">Argentina</option>
+                    <option value="CL">Chile</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-group__label" for="phone">Teléfono</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="form-group__input"
+                    autocomplete="tel"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-group__label" for="altPhone"
+                    >Teléfono alternativo (opcional)</label
+                  >
+                  <input
+                    type="tel"
+                    id="altPhone"
+                    class="form-group__input"
+                    autocomplete="tel-local-optional"
+                  />
+                </div>
+              </div>
+
+              <div class="save-info">
+                <p class="save-info__text">
+                  ¿Desea guardar su información de pago?
+                </p>
+                <div class="save-info__options">
+                  <label class="radio-option">
+                    <input
+                      type="radio"
+                      name="saveInfo"
+                      value="si"
+                      class="radio-option__input"
+                    />
+                    <span class="radio-option__custom"></span>
+                    <span class="radio-option__label">Sí</span>
+                  </label>
+                  <label class="radio-option">
+                    <input
+                      type="radio"
+                      name="saveInfo"
+                      value="no"
+                      class="radio-option__input"
+                      checked
+                    />
+                    <span class="radio-option__custom"></span>
+                    <span class="radio-option__label">No</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-form__actions">
+              <button type="submit" class="submit-button">
+                Finalizar compra
+              </button>
+            </div>
+          </form>
         </div>
 
-        <div class="qrContainer">
-            <img class="qrImage" src="../img/Sneak Empire SA.png" alt="">
+        <div class="qr-payment" id="qrContainer">
+          <h2 class="qr-payment__title">Pago con PagoEfectivo</h2>
+          <p class="qr-payment__text">
+            Escanea el código QR para realizar tu pago
+          </p>
+          <div class="qr-payment__image"></div>
+          <p class="qr-payment__instructions">
+            Una vez realizado el pago, recibirás un correo de confirmación
+          </p>
         </div>
-            <!-- Compra segura -->
-            <section class="security">
-                <h2>SIÉNTETE SEGURO CON TU COMPRA EN SNEAK EMPIRE</h2>
-                <div class="security-items">
-                    <div class="item">
-                        <span class="icon"><strong>V</strong></span>
-                        <strong>
-                            <p>Envío gratis por compras mayores a S/. 250</p>
-                        </strong>
-                    </div>
-                    <div class="item">
-                        <span class="icon"><strong>V</strong></span>
-                        <strong>
-                            <p>Hasta 6 cuotas sin intereses</p>
-                        </strong>
-                    </div>
-                    <div class="item">
-                        <span class="icon"><strong>V</strong></span>
-                        <strong>
-                            <p>Devolución gratuita y fácil hasta en 30 días</p>
-                        </strong>
-                    </div>
-                </div>
-            </section>
+      </section>
+
+      <section class="security">
+        <h2 class="security__title">
+          SIÉNTETE SEGURO CON TU COMPRA EN SNEAK EMPIRE
+        </h2>
+        <div class="security__list">
+          <div class="security-item">
+            <span class="security-item__icon">✓</span>
+            <p class="security-item__text">
+              Envío gratis por compras mayores a S/. 250
+            </p>
+          </div>
+          <div class="security-item">
+            <span class="security-item__icon">✓</span>
+            <p class="security-item__text">Hasta 6 cuotas sin intereses</p>
+          </div>
+          <div class="security-item">
+            <span class="security-item__icon">✓</span>
+            <p class="security-item__text">
+              Devolución gratuita y fácil hasta en 30 días
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
     <script src="../js/footer.js"></script>
     <script>
-        loadFooter();
+      loadFooter();
     </script>
     <script src="../js/header.js"></script>
     <script src="../js/pago.js"></script>
-</body>
-
+  </body>
 </html>

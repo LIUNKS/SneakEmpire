@@ -109,19 +109,19 @@ body {
 }
 
 .payment-option__logo--visa {
-  background-image: url("../img/visa-logo.png");
+  background-image: url("../img/visa-logo.webp");
 }
 
 .payment-option__logo--mastercard {
-  background-image: url("../img/mastercard-logo.png");
+  background-image: url("../img/mastercard-logo.webp");
 }
 
 .payment-option__logo--pagoefectivo {
-  background-image: url("../img/pagoefectivo-logo.png");
+  background-image: url("../img/pagoefectivo-logo.webp");
 }
 
 .payment-option__logo--paypal {
-  background-image: url("../img/paypal-logo.png");
+  background-image: url("../img/paypal-logo.webp");
 }
 
 .payment-option__name {

@@ -179,6 +179,7 @@ const initSneakerDisplay = (config) => {
   };
 
   // Namespace para funciones públicas
+  // Namespace para funciones públicas
   window.SneakerDisplay = {
     toggleWishlist: (sneakerId) => {
       let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -207,25 +208,10 @@ const initSneakerDisplay = (config) => {
     },
 
     addToCart: (sneakerId) => {
-      const sneaker = findSneakerById(sneakerId);
-      if (!sneaker) return;
-
-      // Mostrar modal de selección de talla
-      showSizeSelector(sneaker, (selectedSize) => {
-        if (selectedSize) {
-          let cart = JSON.parse(localStorage.getItem("cart")) || [];
-          cart.push({
-            id: sneaker.id,
-            name: sneaker.name,
-            price: sneaker.price,
-            size: selectedSize,
-            image: sneaker.image,
-            quantity: 1,
-          });
-          localStorage.setItem("cart", JSON.stringify(cart));
-          showToast("Producto añadido al carrito");
-        }
-      });
+      showToast("Producto añadido al carrito");
+      // AGREGAR UN CUADRO DONDE SE PREGUNTA LA TALLA
+      // EL VALOR 10 ES DE PRUEBA
+      addProduct(sneakerId, 10, `containerCard`);
     },
 
     viewDetails: (sneakerId) => {

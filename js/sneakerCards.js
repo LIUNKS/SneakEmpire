@@ -2,7 +2,7 @@ const initSneakerDisplay = (config) => {
   const {
     containerId,
     jsonUrl = "../data/sneakers.json",
-    cssPath = "../css/sneaker-display.css",
+    cssPath = "../css/cards_style.css",
   } = config;
 
   // Estado global para los filtros
@@ -41,64 +41,105 @@ const initSneakerDisplay = (config) => {
     });
   };
 
-  // Crear la estructura HTML
   const createStructure = () => {
     const container = document.getElementById(containerId);
     if (!container)
-      throw new Error(`Container with id "${containerId}" not found`);
+        throw new Error(`Container with id "${containerId}" not found`);
 
     container.innerHTML = `
-            <div class="sd-filters-container">
-                <div class="sd-filters-row">
-                    <div class="sd-filters-group">
-                        <label class="sd-filters-label">Marcas</label>
-                        <div class="sd-filters" id="sd-brandFilters"></div>
-                    </div>
+        <div class="sd-filters-container">
+            <!-- Cabecera de filtros con botón móvil -->
+            <div class="sd-filters-mobile-header">
+                <button class="sd-filters-toggle" id="sd-showFilters">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 21v-7m0-4V3m8 18v-9m0-4V3m8 18v-5m0-4V3M1 14h6m2-6h6m2 8h6"/>
+                    </svg>
+                    Filtros
+                </button>
+                <select id="sort-select" class="sd-sort-select" data-filter="sort">
+                    ${filterConfig.sortOptions
+                        .map(option => `
+                            <option value="${option.id}">${option.label}</option>
+                        `)
+                        .join('')}
+                </select>
+            </div>
 
-                    <div class="sd-filters-group">
-                        <label class="sd-filters-label">Precio</label>
-                        <div class="sd-filters" id="sd-priceFilters">
-                            ${filterConfig.priceRanges
-                              .map(
-                                (range) => `
-                                <button class="sd-filter-btn ${
-                                  range.id === "all" ? "active" : ""
-                                }" 
+            <!-- Panel de filtros (visible/oculto en móvil) -->
+            <div class="sd-filters-panel" id="sd-filtersPanel">
+                <div class="sd-filters-panel-header">
+                    <h2>Filtros</h2>
+                    <button class="sd-close-filters" id="sd-closeFilters">&times;</button>
+                </div>
+
+                <!-- Grupo de filtros de marca -->
+                <div class="sd-filters-group">
+                    <label class="sd-filters-label">Marcas</label>
+                    <div class="sd-filters" id="sd-brandFilters">
+                        <button class="sd-filter-btn active" data-filter="brand" data-value="all">
+                            Todas las marcas
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grupo de filtros de precio -->
+                <div class="sd-filters-group">
+                    <label class="sd-filters-label">Precio</label>
+                    <div class="sd-filters" id="sd-priceFilters">
+                        ${filterConfig.priceRanges
+                            .map(range => `
+                                <button class="sd-filter-btn ${range.id === 'all' ? 'active' : ''}" 
                                         data-filter="priceRange" 
                                         data-value="${range.id}">
                                     ${range.label}
                                 </button>
-                            `
-                              )
-                              .join("")}
-                        </div>
-                    </div>
-
-                    <div class="sd-filters-group">
-                        <label for="sort-select" class="sd-filters-label">Ordenar por</label>
-                        <select id="sort-select" class="sd-sort-select" data-filter="sort">
-                            ${filterConfig.sortOptions
-                              .map(
-                                (option) => `
-                                <option value="${option.id}">${option.label}</option>
-                            `
-                              )
-                              .join("")}
-                        </select>
+                            `)
+                            .join('')}
                     </div>
                 </div>
 
-                <div class="sd-active-filters" id="sd-activeFilters">
-                    <!-- Aquí se mostrarán los filtros activos -->
+                <!-- Filtros activos -->
+                <div class="sd-active-filters" id="sd-activeFilters"></div>
+
+                <!-- Botón aplicar filtros (móvil) -->
+                <div class="sd-apply-filters">
+                    <button class="sd-btn sd-btn-primary" id="sd-applyFilters">
+                        Aplicar filtros
+                    </button>
                 </div>
             </div>
-            <div id="sd-loadingState" class="sd-loading-state">
-                <div class="sd-loading-spinner"></div>
-                <p>Cargando colección...</p>
-            </div>
-            <div class="sd-grid" id="sd-sneakersGrid"></div>
-        `;
-  };
+        </div>
+        <div id="sd-loadingState" class="sd-loading-state">
+            <div class="sd-loading-spinner"></div>
+            <p>Cargando colección...</p>
+        </div>
+        <div class="sd-grid" id="sd-sneakersGrid"></div>
+    `;
+
+    // Añadir event listeners para la funcionalidad móvil
+    const showFilters = document.getElementById('sd-showFilters');
+    const closeFilters = document.getElementById('sd-closeFilters');
+    const filtersPanel = document.getElementById('sd-filtersPanel');
+    const applyFilters = document.getElementById('sd-applyFilters');
+
+    if (showFilters && closeFilters && filtersPanel && applyFilters) {
+        showFilters.addEventListener('click', () => {
+            filtersPanel.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeFilterPanel = () => {
+            filtersPanel.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeFilters.addEventListener('click', closeFilterPanel);
+        applyFilters.addEventListener('click', () => {
+            closeFilterPanel();
+            displaySneakers(window.sneakersData);
+        });
+    }
+};
 
   // Crear una card individual
   const createSneakerCard = (sneaker) => {

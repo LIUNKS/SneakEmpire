@@ -1,9 +1,10 @@
+/* Contenedor principal */
 .sd-container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Grid*/
+/* Grid */
 .sd-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -554,4 +555,153 @@
   .sd-sort-select {
     max-width: 100%;
   }
+}
+
+/* Modificaciones al archivo de estilos */
+
+/* Contenedor de filtros */
+.sd-filters-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* Cabecera móvil de filtros */
+.sd-filters-mobile-header {
+  display: none;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sd-filters-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Panel de filtros */
+.sd-filters-panel {
+  padding: 1.5rem;
+}
+
+.sd-filters-panel-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sd-close-filters {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Grupos de filtros */
+.sd-filters-group {
+  margin-bottom: 1.5rem;
+}
+
+.sd-filters-label {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* Botones de filtro */
+.sd-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Botón de aplicar filtros (móvil) */
+.sd-apply-filters {
+  display: none;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  margin: 1rem -1rem -1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sd-filters-mobile-header {
+    display: flex;
+  }
+
+  .sd-filters-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 1000;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .sd-filters-panel.active {
+    display: block;
+  }
+
+  .sd-filters-panel-header {
+    display: flex;
+  }
+
+  .sd-apply-filters {
+    display: block;
+  }
+
+  .sd-filters {
+    flex-direction: column;
+  }
+
+  .sd-filter-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .sd-active-filters {
+    margin-top: 1rem;
+  }
+}
+
+/* Animaciones */
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.sd-filters-panel.active {
+  animation: slideIn 0.3s ease-out;
 }

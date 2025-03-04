@@ -56,6 +56,7 @@ const initSneakerDisplay = (config) => {
                     </svg>
                     Filtros
                 </button>
+                <label for="sort-select"></label>
                 <select id="sort-select" class="sd-sort-select" data-filter="sort">
                     ${filterConfig.sortOptions
                         .map(option => `

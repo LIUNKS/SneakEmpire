@@ -112,8 +112,6 @@ Agradecemos tu interés en mejorar SneakEmpire. Para contribuir:
 
 - Johann Gudwig Camiloaga Cuenca
 - Luis Kersin Zambrano Ramírez
-- Bruno Gonzalo Ocaña Rojas
-- Samuel Fabrizio Martínez Esparza
 
 ## 👏 Agradecimientos
 
